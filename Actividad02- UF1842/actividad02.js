@@ -10,6 +10,7 @@ var resultado = 0;
 
 resultado = x + y;
 console.log(resultado);
+// document.write(resultado +"<br/>");
 
 resultado = x - y;
 console.log(resultado);
