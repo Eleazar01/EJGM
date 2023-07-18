@@ -1,0 +1,9 @@
+Inicio de proceso
+Escribe "Introduce la contraseña"
+Lee la contraseña
+Desde i=0 hasta 2
+Si la contraseña es igual a 123456
+Escribe "la contraseña es correcta"
+Si la contraseña no es igual a 123456
+Escribe "la contraseña es incorrecta"
+Fin del proceso
