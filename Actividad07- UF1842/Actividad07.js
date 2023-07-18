@@ -54,7 +54,7 @@ function validar{
 
         if(contraseña=="123456"){
         document.write("Es correcto");
-        i=3;
+        break;
         }
     }
 }
