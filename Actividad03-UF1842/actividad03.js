@@ -13,3 +13,11 @@ if (x>=y){
 }else{
     console.log(y +" es el mayor de los dos")
 }
+
+// if (x==y){
+//     console.log("Los números "+x +" y "+y+" son iguales");
+// }else if(x>y){
+//     console.log(x +" es el mayor de los dos");
+// }else if(x<y){
+//     console.log(y +" es el mayor de los dos")
+// }
