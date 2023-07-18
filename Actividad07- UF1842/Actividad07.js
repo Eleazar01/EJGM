@@ -1,3 +1,7 @@
+var x=parseInt(prompt("introduce la x"));
+var y=parseInt(prompt("introduce la y"));
+// var mes=promt("Introduce el mes");
+// var contrasena=promt("Introduce la contraseña");
 // Actividad2
 function calculos(x,y){
     var resultado = 0;
@@ -9,32 +13,35 @@ function calculos(x,y){
     document.write(resultado +"<br/>");
 
     resultado = x * y;
-    document.write(resultado +"<br/>");
+    document.write(resultado.toFixed(2) +"<br/>");
 
     resultado = x / y;
-    document.write(resultado +"<br/>");
+    document.write(resultado.toFixed(2) +"<br/>");
 }
+calculos(x,y);
 // Actividad3
-function comparativa{
+function comparativa(x,y){
     if (x>=y){
    
         if (x==y){
-        console.log("Los números "+x +" y "+y+" son iguales");
+        document.write("Los números "+x +" y "+y+" son iguales");
         }else{
-        console.log(x +" es el mayor de los dos");
+        document.write(x +" es el mayor de los dos");
         }   
     }else{
-        console.log(y +" es el mayor de los dos")
+        document.write(y +" es el mayor de los dos");
     }
 }
+comparativa(x,y);
 // Actividad4
 function porcentninos(niños,niñas){
     var tniños = niños*100/(niños+niñas);
     var tniñas = 100-tniños;
 
-    console.log("Hay un "+tniños+" % de niños");
-    console.log("Hay un "+tniñas+" % de niñas");
+    document.write("Hay un "+tniños.toFixed(2)+" % de niños");
+    document.write("Hay un "+tniñas.toFixed(2)+" % de niñas");
 }
+porcentninos(x,y)
 // Actividad5
 function descuento(precio,mes){
     var pfinal= 0;
@@ -47,8 +54,9 @@ function descuento(precio,mes){
     }
 document.write("El precio final es "+pfinal +"<br/>");
 }
+descuento(x,mes);
 //Actividad6
-function validar{
+function validar(contraseña){
     for(var i=0;i<3; i++){
         var contraseña = prompt("Introduce la contraseña");
 
@@ -57,4 +65,5 @@ function validar{
         break;
         }
     }
+    validar(contrasena);
 }
