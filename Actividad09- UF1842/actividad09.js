@@ -1,4 +1,3 @@
-// var x =parseInt(prompt("¿Introducir el número de la tabla que quieres ver?"));
 for(var x=0; x<=10; x++)
 switch (x) {
     case 1:
