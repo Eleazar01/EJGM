@@ -1,6 +1,7 @@
 console.log("Introduce el primer número");
 
 var x = parseInt(prompt("Introduce el primer número"));// parseInt solo coge numeros y anula el texto q entre, no admite decimales
+    // console.log(typeof x);
 
 console.log("Introduce el segundo número");
 
