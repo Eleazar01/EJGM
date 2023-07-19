@@ -24,12 +24,12 @@ function comparativa(x,y){
     if (x>=y){
    
         if (x==y){
-        document.write("Los números "+x +" y "+y+" son iguales");
+        document.write("Los números "+x +" y "+y+" son iguales"+"<br/>");
         }else{
-        document.write(x +" es el mayor de los dos");
+        document.write(x +" es el mayor de los dos"+"<br/>");
         }   
     }else{
-        document.write(y +" es el mayor de los dos");
+        document.write(y +" es el mayor de los dos"+"<br/>");
     }
 }
 comparativa(x,y);
@@ -38,8 +38,8 @@ function porcentninos(niños,niñas){
     var tniños = niños*100/(niños+niñas);
     var tniñas = 100-tniños;
 
-    document.write("Hay un "+tniños.toFixed(2)+" % de niños");
-    document.write("Hay un "+tniñas.toFixed(2)+" % de niñas");
+    document.write("Hay un "+tniños.toFixed(2)+" % de niños"+"<br/>");
+    document.write("Hay un "+tniñas.toFixed(2)+" % de niñas"+"<br/>");
 }
 porcentninos(x,y)
 // Actividad5
