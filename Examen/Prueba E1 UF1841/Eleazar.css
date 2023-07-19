@@ -1,0 +1,42 @@
+body{
+    /* Estilo de el body */
+    background-color: #51d3f5;
+}
+header{
+    /* Estilo del header */
+    background-color: #3e77de;
+}
+footer{
+    /* Estilo del footer */
+    background-color: #3e77de;
+}
+.section1{
+    display: flex;
+    justify-content: center;
+}
+iframe{
+    border-radius: 10%;
+}
+/* section1 */
+h2{
+    text-align: center;
+    color: #000000;
+}
+p{
+    text-align: center;
+    color: #282907;
+}
+.img{
+    display: flex;
+    justify-content: center;
+}
+img{
+    border-radius: 10%;
+}
+/* section2 */
+.map{
+    border-radius: 15%;
+    width: 550px;
+    height: 550px;
+}
+/* section3 */

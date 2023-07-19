@@ -1,0 +1,82 @@
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f1ece7;
+}
+body{
+    background-color: #114358;
+    color: #090909;
+}
+.form{
+    /* body de loggin,registro */
+    padding-top: 40px;
+    padding-left: 15vw;
+    padding-bottom: 40px;
+    color: #114358;
+    background-color: #f2aa1f;
+    border-radius: 100px;
+}
+.formulario{
+    /* Body página de contacto */
+    display: flex;
+    text-align: justify;
+    flex-direction: column;
+    color: #f1ece7;
+    padding-top: 40px;
+    padding-left: 10vw;
+    padding-right: 20vw;
+    padding-bottom: 40px;
+}
+
+.txtcl{
+    color: #f1ece7;
+    text-align: center;
+}
+a{
+    padding-left: 20px;
+}
+ul{
+    display: flex;
+    padding-right: 10vw;
+    text-align: end;
+    justify-content: end;
+}
+li{
+    list-style: none;
+}
+.logo{
+    width: 100px;
+    height: 100px;
+}
+.section1{
+    background-image: url(img/descarga.jpg);
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+.section2{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+    background-color: #f2aa1f;
+    padding: 10px;
+    border-radius: 100px;
+}
+.tarjeta{
+    background-image: url(img/images.jpg);
+    border-radius: 10%;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f1ece7;
+    padding: 10px;
+}
+footer p{
+    text-align: center;
+}
