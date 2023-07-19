@@ -9,7 +9,7 @@ switch(mes) {
         pfinal = precio*0.80;
         document.write("El precio final es "+pfinal +"<br/>");
     break;
-    case "julio" || "agosto":
+    case "julio" || "agosto" || "octubre":
         pfinal = precio*0.85;
         document.write("El precio final es "+pfinal +"<br/>");
     break;
