@@ -137,5 +137,4 @@ do{
         } 
         z++;
     }
-    z++;
 }while(z<tabla)
