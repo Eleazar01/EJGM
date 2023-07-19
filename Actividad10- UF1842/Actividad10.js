@@ -1,7 +1,6 @@
 var precio = parseInt(prompt("Escribe el importe de la compra"));
 var mes = prompt("Introduce el mes");
 var pfinal= 0;
-var dato = "";
 document.write("El precio es  "+precio + " €"+"<br/>");
 document.write("El mes es "+mes +"<br/>");
 mes = (mes.toLowerCase());
