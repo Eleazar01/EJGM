@@ -4,5 +4,7 @@
         if(contraseña=="123456"){
             document.write("Es correcto");
             break;
+        }else{
+            alert("Vuelve a Intentarlo");
         }
     }
