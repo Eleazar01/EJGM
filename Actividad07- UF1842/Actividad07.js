@@ -1,5 +1,5 @@
-var x=parseInt(prompt("introduce la x"));
-var y=parseInt(prompt("introduce la y"));
+// var x=parseInt(prompt("introduce la x"));
+// var y=parseInt(prompt("introduce la y"));
 // var mes=promt("Introduce el mes");
 // var contrasena=promt("Introduce la contraseña");
 // Actividad2
@@ -18,7 +18,6 @@ function calculos(x,y){
     resultado = x / y;
     document.write(resultado.toFixed(2) +"<br/>");
 }
-calculos(x,y);
 // Actividad3
 function comparativa(x,y){
     if (x>=y){
@@ -32,7 +31,6 @@ function comparativa(x,y){
         document.write(y +" es el mayor de los dos"+"<br/>");
     }
 }
-comparativa(x,y);
 // Actividad4
 function porcentninos(niños,niñas){
     var tniños = niños*100/(niños+niñas);
@@ -41,7 +39,7 @@ function porcentninos(niños,niñas){
     document.write("Hay un "+tniños.toFixed(2)+" % de niños"+"<br/>");
     document.write("Hay un "+tniñas.toFixed(2)+" % de niñas"+"<br/>");
 }
-porcentninos(x,y)
+
 // Actividad5
 function descuento(precio,mes){
     var pfinal= 0;
@@ -54,7 +52,6 @@ function descuento(precio,mes){
     }
 document.write("El precio final es "+pfinal +"<br/>");
 }
-descuento(x,mes);
 //Actividad6
 function validar(contraseña){
     for(var i=0;i<3; i++){
@@ -65,5 +62,62 @@ function validar(contraseña){
         break;
         }
     }
-    validar(contrasena);
+}
+//Actividad9
+function tabla(tabla){
+    for(b=0; b<tabla; b++){
+        x = 1;
+        for(i=0; i<10; i++){
+            document.write(x+" x "+z+" = "+(y=x*z+"<br/>"));
+            x++;
+        } 
+        z++;
+    }
+}
+//Actividad10
+function descuento(mes,precio){
+    switch(mes) {
+        case "enero":
+        case "febrero":
+            pfinal = precio*0.80;
+            document.write("El precio final es "+pfinal +"<br/>");
+            break;
+        case "julio":
+        case "agosto":
+            pfinal = precio*0.85;
+            document.write("El precio final es "+pfinal +"<br/>");
+            break;
+        case "noviembre":
+        case "diciembre":
+            pfinal = precio*0.75;
+            document.write("El precio final es "+pfinal +"<br/>");
+        break;
+        default:
+            pfinal = precio;
+            document.write("El precio final es "    +pfinal +"<br/>");
+        break;
+    }
+}
+//Actividad11
+function login(usuario,pasword){
+    if(usuario == "Admin"){
+        var pasword = prompt("Introduce la contraseña");
+        if (pasword == "Webmaster"){
+            document.write("Bienvenido");
+        }else if(pasword ==""|| pasword == null){
+            document.write("Cancelado");
+        }else{
+            document.write("Contraseña incorrecta");
+        }
+    }else if(usuario=="" || usuario == null){
+        document.write("Cancelado");
+    }else{
+        document.write("Incorrecto");
+    }   
+}
+//Actividad12
+function comprobar() {
+    let operador = document.getElementById("operadores").value;
+    resultado = eval(operador);
+    document.getElementById("resultado").innerHTML="Resultado: "+ resultado;
 }
