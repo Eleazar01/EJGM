@@ -128,13 +128,11 @@ var tabla = parseInt(prompt("Introduce hasta que tabla quieres ver"));
 var z = 1;
 var y = 0;
 var x = 0;
-do{
-    for(b=0; b<tabla; b++){
-        x = 1;
-        for(i=0; i<10; i++){
-            document.write(x+" x "+z+" = "+(y=x*z+"<br/>"));
-            x++;
-        } 
-        z++;
-    }
-}while(z<tabla)
+for(b=0; b<tabla; b++){
+    x = 1;
+    for(i=0; i<10; i++){
+        document.write(x+" x "+z+" = "+(y=x*z+"<br/>"));
+        x++;
+    } 
+    z++;
+}
