@@ -11,7 +11,7 @@ switch(mes) {
         pfinal = precio*0.80;
         document.write("El precio final es "+pfinal +"<br/>");
         break;
-    case "julio" && "agosto" && "octubre"://quita octubre la actividad ponia solo julio y agosto
+    case "julio" && "agosto":
         pfinal = precio*0.85;
         document.write("El precio final es "+pfinal +"<br/>");
         break;
