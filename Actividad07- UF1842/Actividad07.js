@@ -2,42 +2,51 @@
 // var y=parseInt(prompt("introduce la y"));
 // var mes=promt("Introduce el mes");
 // var contrasena=promt("Introduce la contraseña");
+
+
 // Actividad2
-function calculos(x,y){
-    var resultado = 0;
+function calculos(){
+    let resultado = 0;
+    let x = parseInt(document.getElementById("cala").value);
+    let y = parseInt(document.getElementById("calb").value);
 
     resultado = x + y;
-    document.write(resultado +"<br/>");
+    document.getElementById("resultadoc").innerHTML="Resultado: "+ resultado.toFixed(2) +"<br/>";
 
     resultado = x - y;
-    document.write(resultado +"<br/>");
+    document.getElementById("resultadoc2").innerHTML="Resultado: "+ resultado.toFixed(2) +"<br/>";
 
-    resultado = x * y;
-    document.write(resultado.toFixed(2) +"<br/>");
+    resultado  = x * y;
+    document.getElementById("resultadoc3").innerHTML="Resultado: "+ resultado.toFixed(2) +"<br/>";
 
     resultado = x / y;
-    document.write(resultado.toFixed(2) +"<br/>");
+    document.getElementById("resultadoc4").innerHTML="Resultado: "+ resultado.toFixed(2) +"<br/>";
 }
 // Actividad3
-function comparativa(x,y){
+function comparativa(){
+    let x = parseInt(document.getElementById("coma").value);
+    let y = parseInt(document.getElementById("comb").value);
     if (x>=y){
    
         if (x==y){
-        document.write("Los números "+x +" y "+y+" son iguales"+"<br/>");
+        document.getElementById("compara").innerHTML=("Los números "+x +" y "+y+" son iguales"+"<br/>");
         }else{
-        document.write(x +" es el mayor de los dos"+"<br/>");
+        document.getElementById("compara").innerHTML=(x +" es el mayor de los dos"+"<br/>");
         }   
     }else{
-        document.write(y +" es el mayor de los dos"+"<br/>");
+        document.getElementById("compara").innerHTML=(y +" es el mayor de los dos"+"<br/>");
     }
 }
 // Actividad4
-function porcentninos(niños,niñas){
+function porcentninos(){
+    let niños = parseInt(document.getElementById("niños").value);
+    let niñas = parseInt(document.getElementById("niñas").value);
     var tniños = niños*100/(niños+niñas);
     var tniñas = 100-tniños;
 
-    document.write("Hay un "+tniños.toFixed(2)+" % de niños"+"<br/>");
-    document.write("Hay un "+tniñas.toFixed(2)+" % de niñas"+"<br/>");
+    document.getElementById("tniños").innerHTML=("Hay un "+tniños.toFixed(2)+" % de niños"+"<br/>");
+    document.getElementById("tniñas").innerHTML=("Hay un "+tniñas.toFixed(2)+" % de niños"+"<br/>");
+    
 }
 
 // Actividad5
