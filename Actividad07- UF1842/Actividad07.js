@@ -1,5 +1,6 @@
 
-// Actividad2
+// Actividad 02
+
 function calculos(){
     let resultado = 0;
     let x = parseInt(document.getElementById("cala").value);
@@ -18,7 +19,8 @@ function calculos(){
     document.getElementById("resultadoc4").innerHTML="Resultado: "+ resultado.toFixed(2) +"<br/>";
 }
 
-// Actividad3
+// Actividad 03
+
 function comparativa(){
     let x = parseInt(document.getElementById("coma").value);
     let y = parseInt(document.getElementById("comb").value);
@@ -34,7 +36,8 @@ function comparativa(){
     }
 }
 
-// Actividad4
+// Actividad 04
+
 function porcentninos(){
     let niños = parseInt(document.getElementById("niños").value);
     let niñas = parseInt(document.getElementById("niñas").value);
@@ -46,7 +49,8 @@ function porcentninos(){
     
 }
 
-// Actividad5
+// Actividad 05
+
 function descuento(){
     let precio = parseInt(document.getElementById("precio").value);
     let mes = document.getElementById("mes").value;
@@ -61,7 +65,8 @@ function descuento(){
     document.getElementById("pfinal").innerHTML=("El precio final es "+pfinal +"<br/>");
 }
 
-//Actividad6
+//Actividad 06
+
 function validar(){
     for(var i=0;i<3; i++){
         let contrasena = prompt("Introduce tu contraseña");
@@ -74,7 +79,8 @@ function validar(){
     }
 }
 
-//Actividad9
+//Actividad 09
+
 function tabla(){
     let tablaa = document.getElementById("tablas").value;
     let g = 1;
@@ -87,11 +93,12 @@ function tabla(){
         } 
         g++;
     }
-    
+
 }
 
 
-//Actividad10
+//Actividad 10
+
 function descuentos(){
     let precios = parseInt(document.getElementById("precios").value);
     let meses = document.getElementById("meses").value;
@@ -120,7 +127,8 @@ function descuentos(){
     }
 }
 
-//Actividad11
+//Actividad 11
+
 function login(){
     let usuario = document.getElementById("user").value;
     let pasword = document.getElementById("pass").value;
@@ -139,7 +147,8 @@ function login(){
     }   
 }
 
-//Actividad12
+//Actividad 12
+
 function comprobar() {
     let operador = document.getElementById("operadores").value;
     resultado = eval(operador);
