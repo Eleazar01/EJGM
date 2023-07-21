@@ -64,8 +64,7 @@ function descuento(){
 //Actividad6
 function validar(){
     for(var i=0;i<3; i++){
-        let contrasena = document.getElementById("password").value;
-        console.log(contrasena);
+        let contrasena = prompt("Introduce tu contraseña");
         if(contrasena == "123456"){
             document.getElementById("correcto").innerHTML = ("Bienvenido"+"<br/>");
             break;
@@ -79,9 +78,9 @@ function validar(){
 function tabla(){
     let tablaa = document.getElementById("tablas").value;
     let g = 1;
-    let h = 1;
     let j = 1;
     for(b=0; b<tablaa; b++){
+        let h = 1;
         for(i=0; i<10; i++){
             document.getElementById("mtabla").innerHTML = (g+" x "+h+" = "+(j = g * h+"<br/>"));
             h++;
