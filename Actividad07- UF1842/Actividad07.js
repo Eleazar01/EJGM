@@ -50,7 +50,11 @@ function porcentninos(){
 }
 
 // Actividad5
-function descuento(precio,mes){
+function descuento(){
+    let precio = parseInt(document.getElementById("precio").value);
+    let mes = document.getElementById("mes").value;
+    console.log(precio);
+    console.log(mes);
     var pfinal= 0;
     document.write("El precio es  "+precio + " €"+"<br/>");
     document.write("El mes es "+mes +"<br/>");
@@ -59,7 +63,7 @@ function descuento(precio,mes){
     }else{
     pfinal = precio;
     }
-document.write("El precio final es "+pfinal +"<br/>");
+    document.getElementById("pfinal").innerHTML=("El precio final es "+pfinal +"<br/>");
 }
 //Actividad6
 function validar(contraseña){
@@ -84,26 +88,26 @@ function tabla(tabla){
     }
 }
 //Actividad10
-function descuento(mes,precio){
-    switch(mes) {
+function descuento(){
+    switch(meses) {
         case "enero":
         case "febrero":
-            pfinal = precio*0.80;
-            document.write("El precio final es "+pfinal +"<br/>");
+            ptotal = precio*0.80;
+            document.write("El precio final es "+ptotal +"<br/>");
             break;
         case "julio":
         case "agosto":
-            pfinal = precio*0.85;
-            document.write("El precio final es "+pfinal +"<br/>");
+            ptotal = precio*0.85;
+            document.write("El precio final es "+ptotal +"<br/>");
             break;
         case "noviembre":
         case "diciembre":
-            pfinal = precio*0.75;
-            document.write("El precio final es "+pfinal +"<br/>");
+            ptotal = precio*0.75;
+            document.write("El precio final es "+ptotal +"<br/>");
         break;
         default:
-            pfinal = precio;
-            document.write("El precio final es "    +pfinal +"<br/>");
+            ptotal = precio;
+            document.write("El precio final es "    +ptotal +"<br/>");
         break;
     }
 }
