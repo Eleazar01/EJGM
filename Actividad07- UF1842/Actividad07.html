@@ -11,71 +11,142 @@
     <header></header>
 
     <!-- Actividad 02 -->
-    <section>
-        <label for="x">Intrduce la primera variable</label><br><br>
-        <input type="number" id="cala" name="x"><br><br>
-        <label for="y">Introduce la segunda variable</label><br><br>
-        <input type="number" id="calb" name="y"><br><br>
+    <section class="uno">
+        <h2>Cálculos básicos</h2>
+        <label for = "x">Intrduce la primera variable</label><br><br>
+        <input type = "number" id ="cala" name = "x"><br><br>
+        <label for = "y">Introduce la segunda variable</label><br><br>
+        <input type = "number" id = "calb" name = "y"><br><br>
         <button onclick="calculos()">Calcula</button>
 
-        <p id="resultadoc"></p><br>
-        <p id="resultadoc2"></p><br>
-        <p id="resultadoc3"></p><br>
-        <p id="resultadoc4"></p><br>
+        <p id = "resultadoc"></p><br>
+        <p id = "resultadoc2"></p><br>
+        <p id = "resultadoc3"></p><br>
+        <p id = "resultadoc4"></p><br>
 
     </section>
 
     <!-- Actividad 03 -->
-    <section>
-        <label for="x">Intrduce la primera variable</label><br><br>
-        <input type="number" id="coma" name="x"><br><br>
-        <label for="y">Introduce la segunda variable</label><br><br>
-        <input type="number" id="comb" name="y"><br><br>
-        <button onclick="comparativa()">Compara</button>
+    <section class="dos">
+        <h2>Comparador</h2>
+        <label for = "x">Intrduce la primera variable</label><br><br>
+        <input type = "number" id = "coma" name = "x"><br><br>
+        <label for = "y">Introduce la segunda variable</label><br><br>
+        <input type = "number" id = "comb" name = "y"><br><br>
+        <button onclick = "comparativa()">Compara</button>
 
-        <p id="compara"></p><br>
+        <p id = "compara"></p><br>
 
     </section>
     
     <!-- Actividad 04 -->
 
-    <section>
-        <label for="x">Intrduce el número de niños</label><br><br>
-        <input type="number" id="niños" name="nniños"><br><br>
-        <label for="y">Introduce el número de niñas</label><br><br>
-        <input type="number" id="niñas" name="nniñas"><br><br>
-        <button onclick="porcentninos()">Calcular</button>
+    <section class="tres">
+        <h2>Porcentual</h2>
+        <label for = "x">Intrduce el número de niños</label>
+        <br><br>
+        <input type = "number" id = "niños" name = "nniños">
+        <br><br>
+        <label for = "y">Introduce el número de niñas</label>
+        <br><br>
+        <input type = "number" id = "niñas" name = "nniñas">
+        <br><br>
+        <button onclick = "porcentninos()">Calcular</button>
 
-        <p id="tniños"></p><br>
-        <p id="tniñas"></p><br>
+        <p id = "tniños"></p><br>
+        <p id = "tniñas"></p><br>
 
     </section>
 
     <!-- Actividad 05 -->
 
-    <section>
-        <label for="x">Intrduce el precio</label><br><br>
-        <input type="number" id="precio" name="precio"><br><br>
-        <label for="y">Introduce el mes</label><br><br>
-        <input type="text" id="mes" name="mes"><br><br>
-        <button onclick="descuento()">Calcular</button>
-
-        <p id="pfinal"></p><br>
+    <section class="uno">
+        <h2>Calcula descuento por mes</h2>
+        <label for = "x">Intrduce el precio</label><br><br>
+        <input type = "number" id="precio" name = "precio">
+        <br><br>
+        <label for = "y">Introduce el mes</label><br><br>
+        <input type = "text" id="mes" name = "mes">
+        <br><br>
+        <button onclick = "descuento()">Calcular</button>
+        <p id = "eprecio"></p><br>
+        <p id = "emes"></p><br>
+        <p id = "pfinal"></p><br>
     </section>
 
-    <section></section>
-    <section></section>
-    <section></section>
-    <section></section>
+    <!-- Actividad 06 -->
+
+    <section class="dos">
+        <h2>Contraseña</h2>
+        <label for = "x">Intrduce la contraseña</label><br><br>
+        <input type = "password" id = "password" name = "contrasena">
+        <br><br>
+        <button onclick = "validar()">Validar</button>
+        <p id = "correcto"></p><br>
+        <p id = "incorrecto"></p><br>
+    </section>
+
+    <!-- Actividad 09 -->
+
+    <section class="tres">
+        <h2>Tablas de multiplicar</h2>
+        <label for = "x">Intrduce el número de la tabla que quieres ver</label>
+        <br><br>
+        <input type = "number" id = "tablas" name = "tabla">
+        <br><br>
+
+        <button onclick = "tabla()">Muestra</button>
+
+        <p id = "mtabla" class="mtabla"></p><br>
+        
+        
+    </section>
+
+    <!-- Actividad 10 -->
+
+    <section class="uno">
+        <h2>Precio por mes</h2>
+        <label for = "x">Intrduce el precio</label><br><br>
+        <input type = "number" id = "precios" name = "precio">
+        <br><br>
+        <label for = "y">Introduce el mes</label><br><br>
+        <input type = "text" id = "meses" name = "meses">
+        <br><br>
+        <button onclick = "descuentos()">Calcular</button>
+        <p id = "cprecio"></p><br>
+        <p id = "cmes"></p><br>
+        <p id = "cfinal"></p><br>
+    </section>
+
+    <!-- Actividad 11 -->
+
+    <section class="dos">
+        <h2>Login</h2>
+        <label for = "x">Intrduce tu Usuario</label><br><br>
+        <input type = "text" id = "user" name = "usuario">
+        <br><br>
+        <label for = "y">Introduce tu contraseña</label><br><br>
+        <input type = "password" id = "pass" name = "password">
+        <br><br>
+        <button onclick = "login()">Validar</button>
+        <p id = "Bienvenido"></p><br>
+        <p id = "Cancelado"></p><br>
+        <p id = "Contraseñai"></p><br>
+        <p id = "Cancelado2"></p><br>
+        <p id = "Incorrecto2"></p><br>
+    </section>
+
     <!-- Actividad 12 -->
-    <section><h2>Soluciones</h2>
-        <label for="operadores">Introduce el operador a comprobar</label>
+
+    <section class="tres">
+        <h2>Soluciones</h2>
+        <label for = "operadores">Introduce el operador a comprobar</label>
         <br><br>
-        <input type="text" id="operadores" name="operadores" style="text-align: center;">
+        <input type = "text" id = "operadores" name = "operadores">
         <br><br>
-        <button onclick="comprobar()">Comprobar</button>
+        <button onclick = "comprobar()">Comprobar</button>
         <br><br>
-        <h2 id="resultado"><br></h2>
+        <h2 id = "resultado"><br></h2>
     </section>
     <footer></footer>
 </body>

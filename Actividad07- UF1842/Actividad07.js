@@ -1,8 +1,3 @@
-// var x=parseInt(prompt("introduce la x"));
-// var y=parseInt(prompt("introduce la y"));
-// var mes=promt("Introduce el mes");
-// var contrasena=promt("Introduce la contraseña");
-
 
 // Actividad2
 function calculos(){
@@ -22,6 +17,7 @@ function calculos(){
     resultado = x / y;
     document.getElementById("resultadoc4").innerHTML="Resultado: "+ resultado.toFixed(2) +"<br/>";
 }
+
 // Actividad3
 function comparativa(){
     let x = parseInt(document.getElementById("coma").value);
@@ -37,6 +33,7 @@ function comparativa(){
         document.getElementById("compara").innerHTML=(y +" es el mayor de los dos"+"<br/>");
     }
 }
+
 // Actividad4
 function porcentninos(){
     let niños = parseInt(document.getElementById("niños").value);
@@ -53,11 +50,9 @@ function porcentninos(){
 function descuento(){
     let precio = parseInt(document.getElementById("precio").value);
     let mes = document.getElementById("mes").value;
-    console.log(precio);
-    console.log(mes);
     var pfinal= 0;
-    document.write("El precio es  "+precio + " €"+"<br/>");
-    document.write("El mes es "+mes +"<br/>");
+    document.getElementById("eprecio").innerHTML=("El precio es  "+precio + " €"+"<br/>");
+    document.getElementById("emes").innerHTML=("El mes es "+mes +"<br/>");
     if (mes == "octubre"){
     pfinal = precio*0.85;
     }else{
@@ -65,69 +60,86 @@ function descuento(){
     }
     document.getElementById("pfinal").innerHTML=("El precio final es "+pfinal +"<br/>");
 }
-//Actividad6
-function validar(contraseña){
-    for(var i=0;i<3; i++){
-        var contraseña = prompt("Introduce la contraseña");
 
-        if(contraseña=="123456"){
-        document.write("Es correcto");
-        break;
+//Actividad6
+function validar(){
+    for(var i=0;i<3; i++){
+        let contrasena = document.getElementById("password").value;
+        console.log(contrasena);
+        if(contrasena == "123456"){
+            document.getElementById("correcto").innerHTML = ("Bienvenido"+"<br/>");
+            break;
+        }else{
+            document.getElementById("incorrecto").innerHTML=("Contraseña incorrecta"+"<br/>");
         }
     }
 }
+
 //Actividad9
-function tabla(tabla){
-    for(b=0; b<tabla; b++){
-        x = 1;
+function tabla(){
+    let tablaa = document.getElementById("tablas").value;
+    let g = 1;
+    let h = 1;
+    let j = 1;
+    for(b=0; b<tablaa; b++){
+        console.log("tablaa");
         for(i=0; i<10; i++){
-            document.write(x+" x "+z+" = "+(y=x*z+"<br/>"));
-            x++;
+            document.getElementById("mtabla").innerHTML = (g+" x "+h+" = "+(j = g * h+"<br/>"));
+            h++;
         } 
-        z++;
+        g++;
     }
 }
+
+
 //Actividad10
-function descuento(){
+function descuentos(){
+    let precios = parseInt(document.getElementById("precios").value);
+    let meses = document.getElementById("meses").value;
+    document.getElementById("cprecio").innerHTML = ("El precio es "+precios +"<br/>");
+    document.getElementById("cmes").innerHTML = ("El mes es "+meses +"<br/>");
     switch(meses) {
         case "enero":
         case "febrero":
-            ptotal = precio*0.80;
-            document.write("El precio final es "+ptotal +"<br/>");
+            ptotal = precios*0.80;
+            document.getElementById("cfinal").innerHTML = ("El precio final es "+ptotal +"<br/>");
             break;
         case "julio":
         case "agosto":
-            ptotal = precio*0.85;
-            document.write("El precio final es "+ptotal +"<br/>");
+            ptotal = precios*0.85;
+            document.getElementById("cfinal").innerHTML = ("El precio final es "+ptotal +"<br/>");
             break;
         case "noviembre":
         case "diciembre":
-            ptotal = precio*0.75;
-            document.write("El precio final es "+ptotal +"<br/>");
+            ptotal = precios*0.75;
+            document.getElementById("cfinal").innerHTML = ("El precio final es "+ptotal +"<br/>");
         break;
         default:
-            ptotal = precio;
-            document.write("El precio final es "    +ptotal +"<br/>");
+            ptotal = precios;
+            document.getElementById("cfinal").innerHTML = ("El precio final es "+ptotal +"<br/>");
         break;
     }
 }
+
 //Actividad11
-function login(usuario,pasword){
+function login(){
+    let usuario = document.getElementById("user").value;
+    let pasword = document.getElementById("pass").value;
     if(usuario == "Admin"){
-        var pasword = prompt("Introduce la contraseña");
         if (pasword == "Webmaster"){
-            document.write("Bienvenido");
+            document.getElementById("Bienvenido").innerHTML = ("Bienvenido");
         }else if(pasword ==""|| pasword == null){
-            document.write("Cancelado");
+            document.getElementById("Cancelado").innerHTML = "Intento de acceso Cancelado";
         }else{
-            document.write("Contraseña incorrecta");
+            document.getElementById("Contraseñai").innerHTML = ("Contraseña incorrecta");
         }
     }else if(usuario=="" || usuario == null){
-        document.write("Cancelado");
+        document.getElementById("Cancelado2").innerHTML = ("Intento de acceso cancelado");
     }else{
-        document.write("Incorrecto");
+        document.getElementById("Incorrecto2").innerHTML = ("Usuario incorrecto");
     }   
 }
+
 //Actividad12
 function comprobar() {
     let operador = document.getElementById("operadores").value;
