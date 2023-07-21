@@ -5,19 +5,25 @@ function calculos(){
     let resultado = 0;
     let x = parseInt(document.getElementById("cala").value);
     let y = parseInt(document.getElementById("calb").value);
+    let myarray =[];
 
     resultado = x + y;
-    document.getElementById("resultadoc").innerHTML="Resultado: "+ resultado.toFixed(2) +"<br/>";
+    myarray.push("Resultado: "+ resultado.toFixed(2) +"<br/>");
 
     resultado = x - y;
-    document.getElementById("resultadoc2").innerHTML="Resultado: "+ resultado.toFixed(2) +"<br/>";
+    myarray.push("Resultado: "+ resultado.toFixed(2) +"<br/>");
+    
 
     resultado  = x * y;
-    document.getElementById("resultadoc3").innerHTML="Resultado: "+ resultado.toFixed(2) +"<br/>";
+    myarray.push("Resultado: "+ resultado.toFixed(2) +"<br/>");
+   
 
     resultado = x / y;
-    document.getElementById("resultadoc4").innerHTML="Resultado: "+ resultado.toFixed(2) +"<br/>";
+    myarray.push("Resultado: "+ resultado.toFixed(2) +"<br/>");
+    
+document.getElementById("resultadoc").innerHTML= myarray.join("<br/>");
 }
+
 
 // Actividad 03
 
@@ -85,18 +91,18 @@ function tabla(){
     let tablaa = document.getElementById("tablas").value;
     let g = 1;
     let j = 1;
+    let xtabla = [];
     for(b=0; b<tablaa; b++){
         let h = 1;
         for(i=0; i<10; i++){
-            document.getElementById("mtabla").innerHTML = (g+" x "+h+" = "+(j = g * h+"<br/>"));
+            xtabla.push(`${g} x ${h} =  ${j = g * h}<br/>`);
             h++;
         } 
         g++;
     }
+    document.getElementById("mtabla").innerHTML = xtabla.join("<br/>");
 
 }
-
-
 //Actividad 10
 
 function descuentos(){
