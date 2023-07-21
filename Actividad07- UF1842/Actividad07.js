@@ -82,13 +82,13 @@ function tabla(){
     let h = 1;
     let j = 1;
     for(b=0; b<tablaa; b++){
-        console.log("tablaa");
         for(i=0; i<10; i++){
             document.getElementById("mtabla").innerHTML = (g+" x "+h+" = "+(j = g * h+"<br/>"));
             h++;
         } 
         g++;
     }
+
 }
 
 
