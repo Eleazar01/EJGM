@@ -47,8 +47,8 @@ function comparativa(){
 function porcentninos(){
     let niños = parseInt(document.getElementById("niños").value);
     let niñas = parseInt(document.getElementById("niñas").value);
-    var tniños = niños*100/(niños+niñas);
-    var tniñas = 100-tniños;
+    let tniños = niños*100/(niños+niñas);
+    let tniñas = 100-tniños;
 
     document.getElementById("tniños").innerHTML=("Hay un "+tniños.toFixed(2)+" % de niños"+"<br/>");
     document.getElementById("tniñas").innerHTML=("Hay un "+tniñas.toFixed(2)+" % de niños"+"<br/>");
@@ -60,7 +60,7 @@ function porcentninos(){
 function descuento(){
     let precio = parseInt(document.getElementById("precio").value);
     let mes = document.getElementById("mes").value;
-    var pfinal= 0;
+    let pfinal= 0;
     document.getElementById("eprecio").innerHTML=("El precio es  "+precio + " €"+"<br/>");
     document.getElementById("emes").innerHTML=("El mes es "+mes +"<br/>");
     if (mes == "octubre"){
@@ -74,7 +74,7 @@ function descuento(){
 //Actividad 06
 
 function validar(){
-    for(var i=0;i<3; i++){
+    for(let i=0;i<3; i++){
         let contrasena = prompt("Introduce tu contraseña");
         if(contrasena == "123456"){
             document.getElementById("correcto").innerHTML = ("Bienvenido"+"<br/>");
