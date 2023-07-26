@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="E2 UF1842.js"></script>
+    <link rel="stylesheet" href="E2 UF1842.css">
+</head>
+<body>
+    <header>
+        <img src="img/img1.jpg" height="100px"  id="matrix" width="100%" onmouseover="cambiar();" onmouseleave="volver()">
+    </header>
+    
+    <!-- Actividad 02 -->
+    <div class="uno" onmouseover="backimage1('id1')" id="id1" onmouseleave="backimage2('id1')">
+        <h2>Cálculos básicos</h2>
+        <label for = "x">Intrduce la primera variable</label><br><br>
+        <input type = "number" id ="cala" name = "x"><br><br>
+        <label for = "y">Introduce la segunda variable</label><br><br>
+        <input type = "number" id = "calb" name = "y"><br><br>
+        <button onclick="calculos()">Calcula</button>
+
+        <p id = "resultadoc"></p><br>
+
+    </div>
+
+    <!-- Actividad 03 -->
+    <div class="dos" onmouseover="backimage1('id2')" id="id2" onmouseleave="backimage2('id2')">
+        <h2>Comparador</h2>
+        <label for = "x">Intrduce la primera variable</label><br><br>
+        <input type = "number" id = "coma" name = "x"><br><br>
+        <label for = "y">Introduce la segunda variable</label><br><br>
+        <input type = "number" id = "comb" name = "y"><br><br>
+        <button onclick = "comparativa()">Compara</button>
+
+        <p id = "compara"></p><br>
+
+    </div>
+    
+    <!-- Actividad 04 -->
+
+    <div class="tres" onmouseover="backimage1('id3')" id="id3" onmouseleave="backimage2('id3')">
+        <h2>Calcular número de niños</h2>
+        <label for = "x">Intrduce el número de niños</label>
+        <br><br>
+        <input type = "number" id = "niños" name = "nniños">
+        <br><br>
+        <label for = "y">Introduce el número de niñas</label>
+        <br><br>
+        <input type = "number" id = "niñas" name = "nniñas">
+        <br><br>
+        <button onclick = "porcentninos()">Calcular</button>
+
+        <p id = "tniños"></p><br>
+        <p id = "tniñas"></p><br>
+
+    </div>
+
+    <!-- Actividad 05 -->
+
+    <div class="uno" onmouseover="backimage1('id4')" id="id4" onmouseleave="backimage2('id4')">
+        <h2>Calcula descuento por mes</h2>
+        <label for = "x">Intrduce el precio</label><br><br>
+        <input type = "number" id="precio" name = "precio">
+        <br><br>
+        <label for = "y">Introduce el mes</label><br><br>
+        <input type = "text" id="mes" name = "mes">
+        <br><br>
+        <button onclick = "descuento()">Calcular</button>
+        <p id = "eprecio"></p><br>
+        <p id = "emes"></p><br>
+        <p id = "pfinal"></p><br>
+    </div>
+
+    <!-- Actividad 06 -->
+
+    <div class="dos" onmouseover="backimage1('id5')" id="id5" onmouseleave="backimage2('id5')">
+        <h2>Validación de Contraseña</h2>
+        <label for = "x">Pulsa para introducir contraseña</label><br><br>
+        <br><br>
+        <button onclick = "validar()">Validar</button>
+        <p id = "correcto"></p><br>
+        <p id = "incorrecto"></p><br>
+    </div>
+
+    <!-- Actividad 09 -->
+
+    <div class="tres" onmouseover="backimage1('id6')" id="id6" onmouseleave="backimage2('id6')">
+
+        <h2>Tablas de multiplicar</h2>
+        <label for = "x">Intrduce el número de la tabla que quieres ver</label>
+        <br><br>
+        <input type = "number" id = "tablas" name = "tabla">
+        <br><br>
+
+        <button onclick = "tabla()">Muestra</button>
+
+        <p id = "mtabla"></p><br>
+        
+        
+    </div>
+
+    <!-- Actividad 10 -->
+
+    <div class="uno" onmouseover="backimage1('id8')" id="id8" onmouseleave="backimage2('id8')">
+        <h2>Precio por mes</h2>
+        <label for = "x">Intrduce el precio</label><br><br>
+        <input type = "number" id = "precios" name = "precio">
+        <br><br>
+        <label for = "y">Introduce el mes</label><br><br>
+        <input type = "text" id = "meses" name = "meses">
+        <br><br>
+        <button onclick = "descuentos()">Calcular</button>
+        <p id = "cprecio"></p><br>
+        <p id = "cmes"></p><br>
+        <p id = "cfinal"></p><br>
+    </div>
+
+    <!-- Actividad 11 -->
+
+    <div class="dos" onmouseover="backimage1('id9')" id="id9" onmouseleave="backimage2('id9')">
+        <h2>Login</h2>
+        <label for = "x">Intrduce tu Usuario</label><br><br>
+        <input type = "text" id = "user" name = "usuario">
+        <br><br>
+        <label for = "y">Introduce tu contraseña</label><br><br>
+        <input type = "password" id = "pass" name = "password">
+        <br><br>
+        <button onclick = "login()">Validar</button>
+        <p id = "Bienvenido"></p><br>
+        <p id = "Cancelado"></p><br>
+        <p id = "Contraseñai"></p><br>
+        <p id = "Cancelado2"></p><br>
+        <p id = "Incorrecto2"></p><br>
+    </div>
+
+    <!-- Actividad 12 -->
+
+    <div class="tres" onmouseover="backimage1('id10')" id="id10" onmouseleave="backimage2('id10')">
+        <h2>Soluciones</h2>
+        <label for = "operadores">Introduce el operador a comprobar</label>
+        <br><br>
+        <input type = "text" id = "oper" name = "operadores">
+        <br><br>
+        <button onclick = "comprobar()">Comprobar</button>
+        <br><br>
+        <h2 id = "resultado"><br></h2>
+    </div>
+
+    <!-- Actividad 14 -->
+
+    <div class="uno" onmouseover="backimage1('id11')" id="id11" onmouseleave="backimage2('id11')">
+        <h2>Días de la semana</h2>
+        <button onclick = "semana()">Comprobar</button>
+        <br><br>
+        
+        <p id = "semanas"><br></p>
+    </div>
+
+    <!-- Actividad 15 -->
+
+    <div class="dos" onmouseover="backimage1('id12')" id="id12" onmouseleave="backimage2('id12')">
+        <h2>Día de la semana</h2>
+        <button onclick = "dias()">Comprobar</button>
+        <br><br>
+        
+        <p id = "dia"><br></p>
+    </div>
+
+    <!-- Actividad 16 -->
+
+    <div class="tres" onmouseover="backimage1('id13')" id="id13" onmouseleave="backimage2('id13')">
+        <h2>Mostrar una matriz</h2>
+        <button onclick = "matriz()">Comprobar</button>
+        <br><br>
+        
+        <p id = "matri"><br></p>
+    </div>
+
+    <!-- Actividad 17 -->
+
+    <div class="uno" onmouseover="backimage1('id14')" id="id14" onmouseleave="backimage2('id14')">
+        <h2>Separar un script en array</h2>
+        <form action="" name="ario">
+            <textarea name="cadena" placeholder="Introduce un texto" cols="30" rows="5"></textarea>
+            <br><br>
+            <input type = "button" value = "click" onclick = "array()">
+            <br><br>
+        </form>
+        <br><br>
+        
+        <p id = "array1"><br></p>
+        <p id = "array2"><br></p>
+        <p id = "array3"><br></p>
+    </div>
+
+    <!-- Actividad 18 -->
+
+    <div class="dos" onmouseover="backimage1('id15')" id="id15" onmouseleave="backimage2('id15')">
+        <h2>Ficha alumno</h2>
+        <form action="" name="formulario">
+            <label name="codigo"></label>
+            <br><br>
+            <input type = "number" id="codigo"
+            placeholder="Introduce el código">
+            <br><br>
+    
+            <label name="nombre"></label>
+            <br><br>
+            <input type = "text" id="nombre"
+            placeholder="Introduce tu nombre y apellidos">
+            <br><br>
+    
+            <label name="edad"></label>
+            <br><br>
+            <input type = "number" id="edad"
+            placeholder="Introduce tu edad">
+            <br><br>
+    
+            <label name="email"></label>
+            <br><br>
+            <input type = "email" id="email"
+            placeholder="Introduce el correo electronico">
+            <br><br>
+    
+            <label name="movil"></label>
+            <br><br>
+            <input type = "tel" id="movil"
+            placeholder="Introduce el número de teléfono">
+            <br><br>
+    
+            <select name="tipos" id="tipos">
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="JavaScript">JavaScript</option>
+            </select>
+            <br><br>
+            <input type="button" value="enviar" onclick="arrays()"></input>
+        </form>
+    
+        <div id="ficha"></div>
+    </div>
+
+
+    <footer></footer>
+</body>
+</html>
