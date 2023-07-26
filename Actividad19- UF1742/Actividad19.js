@@ -14,6 +14,8 @@ function fichaalumno() {
     alumno.push(document.getElementById("tipos").value);
 
     alumnos.push(alumno);
+
+    console.log(alumnos);
     
    document.getElementById("resultado").innerHTML = alumnos.join("<br/>");
 }
