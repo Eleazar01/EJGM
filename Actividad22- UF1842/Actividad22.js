@@ -33,7 +33,7 @@ document.getElementById('botonAñadir').addEventListener('click', function (even
         mensaje.classList.add('llenarCampos');
         setTimeout(() => {
             mensaje.classList.remove('llenarCampos')
-        }, 5000);
+        }, 5000)
         van = false;
     }else{
         for (let i = 0; i < alumnos.length ; i++) {
@@ -41,7 +41,7 @@ document.getElementById('botonAñadir').addEventListener('click', function (even
                 mensaje.classList.add('repetidoError');
                 setTimeout(() => {
                     mensaje.classList.remove('repetidoError')
-                }, 2500);
+                }, 2500)
                 van = false;
             }
             
@@ -58,8 +58,35 @@ document.getElementById('botonAñadir').addEventListener('click', function (even
         setTimeout(() => {
             mensaje.classList.remove('realizado');
             window.location.reload();
-        }, 1500);
+        }, 1500)
     }
     guardarAlmacenamientoLocal('alumnos', alumnos);
     
+})
+
+window.addEventListener('load',() =>{
+    let alumnoEd = document.getElementById('alumnoEditar');
+    let alumnoEl = document.getElementById('alumnoEliminar')
+    for (let i = 0; i < alumnos.length; i++) {
+        alumnoEd.innerHTML += `<option>${alumnos[i].nombre}</option>`;
+        alumnoEl.innerHTML += `<option>${alumnos[i].nombre}</option>`;
+    }
+    Object.keys(alumnos[0]).forEach(element => {
+        atributoEd.innerHTML +=  `<option>${element}</option>`
+    });
+    
+    let muestraalumnos = document.getElementById('mostrarAlumnos');
+    muestraalumnos.innerHTML = '';
+    for (let i = 0; i < alumnos.length; i++) {
+        muestraalumnos.innerHTML += ` 
+        <div class= "contenedorAlumnos">
+            <img src="${alumnos[i].urlImagen}">
+            <div class="informacion">
+                <p>${alumnos[i].nombre}</p>
+                <p class="apellido"><span>Apellido: ${alumnos[i].apellido}</span></p>
+                email : ${alumnos[i].email}<p></p>
+            </div>
+        </div>`
+       
+    }
 })
