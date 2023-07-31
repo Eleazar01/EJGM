@@ -1,0 +1,12 @@
+body{
+    display: flex;
+}
+.box{
+    width: 200px;
+    height: 250px;
+    margin: 20px;
+}
+.info{
+    border: 3px dashed black;
+    padding: 3px;
+}
