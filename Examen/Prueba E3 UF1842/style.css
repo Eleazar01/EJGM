@@ -14,7 +14,7 @@ body{
 }
 
 :root{
-    --product-img: url('img/balon1.png'), url('img/balon2.png'), url('img/balon3.png'), url('img/balon4.png'), url('img/balon5.png'), url('img/balon6.png');
+    --product-img: url('img/color.png'), url('img/color2.png'), url('img/color3.png'), url('img/color4.png'), url('img/color5.png'), url('img/color6.png');
     --bg-color: #e5031d;
 }
 
@@ -81,7 +81,6 @@ body{
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    border-radius: 0 10px 10px 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
     transition: 1s;
     transition-delay: .7s;
