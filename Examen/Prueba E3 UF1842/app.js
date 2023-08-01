@@ -1,7 +1,7 @@
 const card = document.querySelector('.card');
 const colors = document.querySelectorAll('.colors div');
 
-let hexCodes = ['#e5031d', '#1503e5', '#15e503', '#e5ce03'];
+let hexCodes = ['#cdeae8', '#0d3f7c', '#00214a', '#04bbec', '#ea25b5', '#ff82f4'];
 
 colors.forEach((item, i) => {
     item.addEventListener('click', () => {

@@ -14,7 +14,7 @@ body{
 }
 
 :root{
-    --product-img: url('img/balon1-removebg-preview.png'), url('img/balon2-removebg-preview.png'), url('img/balon3-removebg-preview.png'), url('img/balon4-removebg-preview.png'), url('img/balon5-removebg-preview.png'), url('img/balon6-removebg-preview.png');
+    --product-img: url('img/balon1.png'), url('img/balon2.png'), url('img/balon3.png'), url('img/balon4.png'), url('img/balon5.png'), url('img/balon6.png');
     --bg-color: #e5031d;
 }
 
@@ -73,7 +73,7 @@ body{
 .colors{
     width: 30px;
     height: 0px;
-    background: #fff;
+    background: #ed8787;
     position: absolute;
     right: 0%;
     top: 0;
@@ -91,26 +91,33 @@ body{
 .colors div{
     min-width: 22px;
     min-height: 22px;
-    border-radius: 50%;
     background: transparent;
     margin: 6px 0;
     cursor: pointer;
 }
 
 .colors div:nth-child(1){
-    background: #e5031d;
+    background: #cdeae8;
 }
 
 .colors div:nth-child(2){
-    background: #1503e5;
+    background: #0d3f7c;
 }
 
 .colors div:nth-child(3){
-    background: #15e503;
+    background: #00214a;
 }
 
 .colors div:nth-child(4){
-    background: #e5ce03;
+    background: #04bbec;
+}
+
+.colors div:nth-child(5){
+    background: #ea25b5;
+}
+
+.colors div:nth-child(6){
+    background: #ff82f4;
 }
 
 .card-body{
@@ -155,7 +162,7 @@ body{
 }
 
 .card.active .colors{
-    height: 140px;
+    height: 210px;
 }
 
 .card.active .card-body{
