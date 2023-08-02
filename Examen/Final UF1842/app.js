@@ -1,14 +1,18 @@
 
-    function click() {
+   addEventListener('click', ()=>{
         var alumno = {
-            nombre : document.querySelector('#nombre'), 
-            email : document.querySelector('#email'),
-            asunto : document.querySelector('#asunto'),
-            mensaje : document.querySelector('#mensaje')
+            nombre : document.getElementById('nombre').value, 
+            email : document.querySelector('#email').value,
+            asunto : document.querySelector('#asunto').value,
+            mensaje : document.querySelector('#mensaje').value
         }
         localStorage.setItem("alumno", JSON.stringify(alumno));
-        body.style.color='white';
-    }
+
+        var cuerpo = document.getElementById('cuerpo');
+        cuerpo.style.color='white';
+    }) 
+        
+    
         
 
    
