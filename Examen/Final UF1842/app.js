@@ -6,8 +6,8 @@
             asunto : document.querySelector('#asunto'),
             mensaje : document.querySelector('#mensaje')
         }
-        localStorage.clear();
         localStorage.setItem("alumno", JSON.stringify(alumno));
+        body.style.color='white';
     }
         
 
