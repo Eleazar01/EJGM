@@ -6,16 +6,18 @@ function inicio() {
         <h3>ACCEDE A TU USUARIO</h3>
         <input class="button" type="button" id="accesoalumno" value="Alumno">
         <input class="button" type="button" id="accesoprofesor" value="Profesor">
-    </div>
-    `
+    </div>`
+
     document.querySelector('.cuerpo').innerHTML =`
     <div class="cuerpo">
         <h1>Nuestro curso</h1>
         <p>Si necesitas información clica aquí</p>
         <button onclick="contacto()">CONTACTO</button>
-    </div>
-    
-    ` 
+    </div> `
+    let back = document.querySelector('.cuerpo');
+    back.style.backgroundImage = "url('media/imagen-fondo.png')";
+    back.style.backgroundRepeat = "repeat-y";
+    back.style.backgroundSize = 'cover'; 
 }
 
 function curso() {
@@ -23,16 +25,20 @@ function curso() {
     <div class= "perfil">
             <h3>Nombre de Usuario</h3>
             <p>Rol</p>
-    </div>
-    `
+    </div>`
+
     document.querySelector('.cuerpo').innerHTML =`
     <div class= "cuerpo">
         <div>
             <video src="media/VideoClase.mp4" controls></video>
         </div>
         <p>Si te interesa este curso contactanos</p>
-    </div>
-    `
+    </div>`
+
+    let back = document.querySelector('.cuerpo');
+    back.style.backgroundImage = "url('media/imagen-fondo.png')";
+    back.style.backgroundRepeat = "repeat-y";
+    back.style.backgroundSize = 'cover'; 
 }
 
 function contacto() {
@@ -40,8 +46,8 @@ function contacto() {
     <div class="perfil">
         <h3>Nombre de Usuario</h3>
         <p>Rol</p>
-    </div>
-    `
+    </div>`
+
     document.querySelector('.cuerpo').innerHTML=`
     <div class="cuerpo">
         <form action="">
@@ -62,9 +68,12 @@ function contacto() {
 
     <div class="legal">
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis officia unde architecto ut ipsum, quisquam omnis nulla id adipisci delectus excepturi cumque deserunt odit error illo aut quas, nemo consequatur.</p> 
-    </div>
-    `
-    
+    </div>`
+    let back = document.querySelector('.cuerpo');
+    back.style.backgroundImage = "url('media/imagen-fondo.png')";
+    back.style.backgroundRepeat = "repeat-y";
+    back.style.backgroundSize = 'cover'; 
+
 }
    
 
