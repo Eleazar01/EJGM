@@ -12,7 +12,7 @@ function inicio() {
     <div class="cuerpo">
         <h1>Nuestro curso</h1>
         <p>Si necesitas información clica aquí</p>
-        <button>CONTACTO</button>
+        <button onclick="contacto()">CONTACTO</button>
     </div>
     
     ` 
@@ -53,7 +53,7 @@ function contacto() {
 
             <input type="text" placeholder="mensaje" id="mensaje">
 
-            <button onclick="click()">ENVIAR</button>
+            <button onclick="formulario()">ENVIAR</button>
             <p></p>
         </form>
     </div>
@@ -69,16 +69,22 @@ function contacto() {
    
 
 function formulario() {
-    var alumno = {
-        nombre : document.getElementById('#nombre').value, 
+    var ficha = {
+        nombre : document.querySelector('#nombre').value, 
         email : document.querySelector('#email').value,
         asunto : document.querySelector('#asunto').value,
         mensaje : document.querySelector('#mensaje').value
     }
-    localStorage.setItem("alumno", JSON.stringify(alumno));
-}
-    
 
-    // var cuerpo = document.getElementById('cuerpo');
-    // cuerpo.style.color='blue';   
+
+    if (ficha[nombre] == ''||ficha[email] == ''||ficha[asunto] == ''||ficha[mensaje] == '') {
+        mensaje.classList.add('LlenarCampos')
+        setTimeout(() => {
+           mensaje.classList.remove('LlenarCampos')
+        }, 5000)
+    } else {
+        localStorage.setItem("alumno", JSON.stringify(ficha));
+    }
+     
+} 
 

@@ -87,6 +87,7 @@ button{
 .cuerpo input{
     margin-top: 10px;
     width: 40vw;
+    margin-bottom: 10px;
 }
 
 .cuerpo video{
