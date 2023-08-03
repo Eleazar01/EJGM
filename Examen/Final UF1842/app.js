@@ -1,26 +1,47 @@
 
+
 function inicio() {
+    document.querySelector('.perfil').innerHTML =`
+    <div class="perfil">
+        <h3>ACCEDE A TU USUARIO</h3>
+        <input class="button" type="button" id="accesoalumno" value="Alumno">
+        <input class="button" type="button" id="accesoprofesor" value="Profesor">
+    </div>
+    `
     document.querySelector('.cuerpo').innerHTML =`
     <div class="cuerpo">
-    <h1>Nuestro curso</h1>
-    <p>Si necesitas información clica aquí</p>
-    <button>CONTACTO</button>
+        <h1>Nuestro curso</h1>
+        <p>Si necesitas información clica aquí</p>
+        <button>CONTACTO</button>
     </div>
+    
     ` 
 }
 
 function curso() {
+    document.querySelector('.perfil').innerHTML =`
+    <div class= "perfil">
+            <h3>Nombre de Usuario</h3>
+            <p>Rol</p>
+    </div>
+    `
     document.querySelector('.cuerpo').innerHTML =`
     <div class= "cuerpo">
-    <div>
-       <video src="media/VideoClase.mp4" controls></video>
-    </div>
-    <p>Si te interesa este curso contactanos</p>
+        <div>
+            <video src="media/VideoClase.mp4" controls></video>
+        </div>
+        <p>Si te interesa este curso contactanos</p>
     </div>
     `
 }
 
 function contacto() {
+    document.querySelector('.perfil').innerHTML =`
+    <div class="perfil">
+        <h3>Nombre de Usuario</h3>
+        <p>Rol</p>
+    </div>
+    `
     document.querySelector('.cuerpo').innerHTML=`
     <div class="cuerpo">
         <form action="">
