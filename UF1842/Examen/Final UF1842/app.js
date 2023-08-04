@@ -1,4 +1,5 @@
 
+var usuarios = [];
 
 function inicio() {
     document.querySelector('.perfil').innerHTML =`
@@ -36,7 +37,7 @@ function curso() {
     </div>`
 
     let back = document.querySelector('.cuerpo');
-    back.style.backgroundImage = "url('media/imagen-fondo.png')";
+    back.style.backgroundImage = "url('media/imagen-curso.jpg')";
     back.style.backgroundRepeat = "repeat-y";
     back.style.backgroundSize = 'cover'; 
 }
@@ -84,16 +85,17 @@ function formulario() {
         asunto : document.querySelector('#asunto').value,
         mensaje : document.querySelector('#mensaje').value
     }
+    usuarios.push(ficha);
+    localStorage.setItem("usuarios", JSON.stringify(usuarios));
 
-
-    if (ficha[nombre] == ''||ficha[email] == ''||ficha[asunto] == ''||ficha[mensaje] == '') {
-        mensaje.classList.add('LlenarCampos')
-        setTimeout(() => {
-           mensaje.classList.remove('LlenarCampos')
-        }, 5000)
-    } else {
-        localStorage.setItem("alumno", JSON.stringify(ficha));
-    }
+    // if (ficha[nombre] == ''||ficha[email] == ''||ficha[asunto] == ''||ficha[mensaje] == '') {
+    //     mensaje.classList.add('LlenarCampos')
+    //     setTimeout(() => {
+    //        mensaje.classList.remove('LlenarCampos')
+    //     }, 5000)
+    // } else {
+        
+    // }
      
 } 
 
