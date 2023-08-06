@@ -1,0 +1,245 @@
+:root{
+    --color1: #cdeae8;
+    --color2: #0d3f7c; 
+    --color3: #00214a;
+    --color4: #04bbec;
+    --color5: #ea25b5;
+    --color6: #ff82f4;
+}
+
+body{
+    display: grid;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color1);
+    grid-row: 1/2;
+    grid-column: 1/5;
+
+}
+
+ header img{
+    height: 15vh;
+    width: 15vw;
+ }
+
+ul{
+    display: flex;
+    padding-top: 5vh;
+    text-align: center;
+    margin-right: 5vw;
+}
+
+button{
+    padding: 1vh;
+    background: var(--color4);
+    border-radius: 10%;
+    list-style: none;
+    margin-left: 20px;
+}
+
+.perfil{
+    grid-column: 1/2;
+    grid-row: 2/4;
+    background: var(--color2);
+    text-align: center;
+    padding-top: 2vh;
+    width: 30vw;
+    padding-bottom: 8vh;
+    color: var(--color1);
+    
+}
+
+.cursos{
+    grid-column: 1/2;
+    grid-row: 4/6;
+    padding-top: 2vh;
+    padding-bottom: 8vh;
+    width: 30vw;
+    background-color: var(--color3);
+    text-align: center;
+    color: var(--color1);
+}
+
+.cursos img{
+    width: 25vh;
+}
+
+.cuerpo{
+    grid-column: 2/5;
+    grid-row: 2/6;
+    text-align: center;
+    color: var(--color3);
+    padding-top: 8vh;
+    width: 70vw;
+}
+.cuerpo form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 5vw;
+}
+.cuerpo input{
+    margin-top: 10px;
+    width: 40vw;
+    margin-bottom: 10px;
+}
+
+.cuerpo video{
+    width: 60vw;
+    height: 60vh;
+}
+
+.legal{
+    grid-column: 2/5;
+    grid-row: 5/6;
+    background-color: var(--color4);
+}
+
+footer{
+    grid-row: 6/7;
+    grid-column: 1/5;
+    background-color: var(--color1);
+    padding-left: 15vw;
+}
+
+
+
+/* VENANAS MODALES */
+
+
+
+.app {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: justify;
+    box-sizing: border-box;
+    grid-column: 2/5;
+    grid-row: 2/6;
+  }
+  .app img{
+    width: 20em;
+  }
+   .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   }
+   .card ul{
+    text-align: left;
+   }
+  /* MODAL */
+  
+  .modal {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.459);
+  }
+  
+  .modal-content {
+    width: 95%;
+    max-width: 500px;
+    padding: 20px;
+    position: relative;
+    background: white;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  .modal img{
+    width: 100%;
+  }
+  
+  .modal-btn-closed {
+    position: absolute;
+    top: 5px;
+    right: 3px;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .modal-title {
+    text-align: center;
+    font-size: 20px;
+  }
+  
+  .modal-description {
+    font-size: 17px;
+    color: rgb(61, 61, 61);
+  }
+  
+  .modal-btn {
+    display: block;
+    padding: 10px 15px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    margin-left: auto;
+  }
+  
+  .modal-link {
+    color: red;
+  }
+  
+  .modal-aparecer {
+    animation: aparecer 1s;
+  }
+  
+  .modal-desdeArriba {
+    animation: desdeArriba 1s;
+    
+  }
+  
+  .modal-desdeAbajo {
+    animation: desdeAbajo 1s;
+  }
+  
+  @keyframes aparecer {
+    from {
+      transform: scale(0);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes desdeArriba {
+    from {
+      transform: translateY(-50vh);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes desdeAbajo {
+    from {
+      transform: translateY(50vh);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
