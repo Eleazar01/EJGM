@@ -5,8 +5,9 @@
     function inicio() {
         document.querySelector('.perfil').innerHTML =`
             <h3>ACCEDE A TU USUARIO</h3>
-            <input class="botona" type="button" id="accesoalumno" value="Alumno">
-            <input class="botonp1" type="button" id="modal_btn1" value="Profesor">`
+            <input class="botona" type="button"  value="Alumno">
+            <input class="botonp1" type="button"  value="Profesor">`
+            
 
         document.querySelector('.cursos').innerHTML=`
             <h4>Nuestros cursos</h4>

@@ -10,9 +10,6 @@ $(document).ready(function () {
         $(this).css('color','#00214a');
         $(this).css('border-radius','0%');
     });
-    $('.botona').click(function () {
-        location.reload();
-    })
 
     $('.botonp1').hover(function () {
         $(this).css('background-color','#00214a');
@@ -26,6 +23,16 @@ $(document).ready(function () {
     });
     $('.botonp1').click(function () {
         
+    })
+
+    $('#botonp')
+    .click(function () {
+        $('.profesorEmergente').addClass('active');
+    })
+
+    $('.cerrar')
+    .click(function () {
+        $('.profesorEmergente').removeClass('active');
     })
 
 });
