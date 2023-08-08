@@ -20,7 +20,7 @@ $(document)
       } else {
         $( ".puntos1" )
         .animate({  
-            width: 0,
+            backgroundColor: '#f0f8ff00',
             color: "#000"
         }, 1000 );
 
@@ -46,7 +46,7 @@ $(document)
       } else {
         $( ".puntos2" )
         .animate({
-          backgroundColor: "#fff",
+          backgroundColor: "#f0f8ff00",
           color: "#000",
           width: 240
         }, 1000 );
@@ -72,7 +72,7 @@ $(document)
       } else {
         $( ".puntos3" )
         .animate({
-          backgroundColor: "#fff",
+          backgroundColor: "#f0f8ff00",
           color: "#000",
           width: 240
         }, 1000 );
@@ -98,7 +98,7 @@ $(document)
       } else {
         $( ".puntos4" )
         .animate({
-          backgroundColor: "#fff",
+          backgroundColor: "#f0f8ff00",
           color: "#000",
           width: 240
         }, 1000 );
@@ -124,7 +124,7 @@ $(document)
       } else {
         $( ".puntos5" )
         .animate({
-          backgroundColor: "#fff",
+          backgroundColor: "#f0f8ff00",
           color: "#000",
           width: 240
         }, 1000 );

@@ -23,7 +23,9 @@ header{
 div {
     margin: auto;
     width: 240px; height: 170px; padding: 0.4em; 
-    position: relative; }
+    position: relative; 
+    
+}
 div p{
     visibility: hidden;
 }
