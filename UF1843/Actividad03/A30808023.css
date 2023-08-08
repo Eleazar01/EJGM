@@ -20,10 +20,19 @@ header{
     align-items: center;
 }
 
-.puntos {
+div {
     margin: auto;
+    width: 240px; height: 170px; padding: 0.4em; 
+    position: relative; }
+div p{
+    visibility: hidden;
 }
 
 footer{
     min-height: 5vh;
 }
+
+
+
+
+
