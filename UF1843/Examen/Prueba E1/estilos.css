@@ -70,7 +70,14 @@ color: #00676c;
     margin: auto;
     background-color: #00676c;
     color: #ffffff;
+    display: flex;
+    flex-direction: column;
 }
+#seccion3 div a{
+    display: inline-block;
+    width: 5em;
+  }
+
 #seccion4{
     background-color: #cbdbeb;
 }
@@ -80,7 +87,13 @@ color: #00676c;
 }
 footer{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+footer button{
+    border-radius: 50%;
+    height: 120px;
 }
 footer img{
     width: 15em;

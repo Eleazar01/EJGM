@@ -34,6 +34,7 @@ $(document).ready(function () {
     .click(function () {
         $('.profesorEmergente').removeClass('active');
     })
+    
 
 });
 // location.reload();
