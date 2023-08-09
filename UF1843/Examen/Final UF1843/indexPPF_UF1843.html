@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,117 +8,171 @@
 
     <link rel="stylesheet" href="estilosPPF_UF1843.css">
 
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-    <script src="PPF_UF1843.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <script src="jquery-ui-1.13.2/jquery-ui.min.js"></script>
+    <script src="PPF_UF1843.js"></script>
 
 
 </head>
+
 <body>
     <header>
         <img src="media/logo_m.png" alt="Logo de la página ">
         <nav class="botonerappal">
-            <button id="uno">1</button>
-            <button id="dos">2</button>
-            <button id="tres">3</button>
-            <button id="cuatro">4</button>
-            <button id="cinco">5</button>
-            <button id="seis">6</button>
-            <button id="siete">7</button>
-            <button id="ocho">8</button>
-            <button id="nueve">9</button>
-            <button id="diez">10</button>
-            <button id="once">11</button>
-            <button id="doce">12</button>
+
+            <button id="button" class="ui-state-default ui-corner-all">1</button>
+
+            <button id="button2" class="ui-state-default ui-corner-all">2</button>
+
+            <button id="button3" class="ui-state-default ui-corner-all">3</button>
+
+            <button id="button4" class="ui-state-default ui-corner-all" value="blind">4</button>
+
+            <button id="button5" class="ui-state-default ui-corner-all">5</button>
+
+            <div class="boton" id="draggable" class="ui-widget-content">6</div>
+
+            <button id="button7" class="ui-state-default ui-corner-all">7</button>
+
+            <button id="button8" class="ui-state-default ui-corner-all">8</button>
+
+            <div class="boton" id="draggable9" class="ui-state-highlight">9</div>
+
+            <button id="button10" class="ui-state-default ui-corner-all">10</button>
+
+            <button id="button11" class="ui-state-default ui-corner-all">11</button>
+
+            <button id="button12" class="ui-state-default ui-corner-all">12</button>
         </nav>
     </header>
-    <main>
-    
-        <div class="contenedor cont1">
-            <h3 class="textcont1">Mostrar Avatar</h3>
+    <main >
+
+        <!-- boton1 -->
+
+        <div id="effect" class="div ui-widget-content ui-corner-all">
+            <h3 class="ui-widget-header ui-corner-all">Mostrar Avatar</h3>
             <p class="parrafocont">
                 Pulsa en el botón nro, 1 para ver el avatar.
             </p>
         </div>
-        <div class="contenedor cont2">
+
+        <!-- boton2 -->
+
+        <div id="effect2" class="div ui-corner-all">
             <h3 class="textcont">Contenedor 2 de Sección 1</h3>
             <p class="parrafocont">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, quaerat. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, quaerat.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, quaerat. Lorem, ipsum dolor sit amet
+                consectetur adipisicing elit. Porro, quaerat.
             </p>
         </div>
-        <div class="contenedor cont3">
+
+        <!-- boton3 -->
+
+        <div id="effect3" class="div ui-corner-all">
             <h3 class="textcont">Contenedor 3 de Sección 1</h3>
             <p class="parrafocont">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, quaerat. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, quaerat.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, quaerat. Lorem, ipsum dolor sit amet
+                consectetur adipisicing elit. Porro, quaerat.
             </p>
+
         </div>
-   
-    
-        <div class="contenedor cont4">
-            <h3 class="textcont">Contenedor 1 de Sección 2</h3>
+
+        <!-- boton4 -->
+
+        <div id="effect4" class="newClass4 ui-corner-all">
+            <h3 class="textcont">Show</h3>
             <p class="parrafocont">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, quaerat. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, quaerat.
+                Etiam libero neque, luctus a, eleifend nec, semper at, lorem. Sed pede. Nulla lorem metus, adipiscing
+                ut, luctus sed, hendrerit vitae, mi.
             </p>
         </div>
-        <div class="contenedor cont5">
+
+        <!-- boton5 -->
+
+        <div id="effect5" class="div ui-corner-all">
             <h3 class="textcont">Contenedor 2 de Sección 2</h3>
             <p class="parrafocont">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, quaerat. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, quaerat.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, quaerat. Lorem, ipsum dolor sit amet
+                consectetur adipisicing elit. Porro, quaerat.
             </p>
         </div>
-        <div class="contenedor cont6">
+
+        <!-- boton6 -->
+
+        <div id="droppable" class="div ui-widget-header">
             <h3 class="textcont">Contenedor 3 de Sección 2</h3>
             <p class="parrafocont">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, quaerat. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, quaerat.
+                Traeme el boton con el número 6.
             </p>
         </div>
-   
-    
-        <div class="contenedor cont7">
-            <h3 class="textcont">Contenedor 1 de Sección 3</h3>
+
+        <!-- boton7 -->
+
+        <div id="effect7" class="div ui-widget-content ui-corner-all">
+            <h3 class="textcont" class="ui-widget-header ui-corner-all">Contenedor 1 de Sección 3</h3>
             <p class="parrafocont">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, quaerat. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, quaerat.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, quaerat. Lorem, ipsum dolor sit amet
+                consectetur adipisicing elit. Porro, quaerat.
             </p>
         </div>
-        <div class="contenedor cont8">
-            <h3 class="textcont">Contenedor 2 de Sección 3</h3>
+
+        <!-- boton8 -->
+
+        <div id="effect8" class="div ui-corner-all">
+            <h3 class="textcont">Contenedor 2 de Sección 1</h3>
             <p class="parrafocont">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, quaerat. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, quaerat.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, quaerat. Lorem, ipsum dolor sit amet
+                consectetur adipisicing elit. Porro, quaerat.
             </p>
         </div>
-        <div class="contenedor cont9">
+
+        <!-- boton9 -->
+
+        <div id="droppable9" class="div">
             <h3 class="textcont">Contenedor 3 de Sección 3</h3>
-            <p class="parrafocont">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, quaerat. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, quaerat.
+            <p class="parrafocont" id="newClass9">
+                Traeme el boton con el número 9
             </p>
         </div>
-    
-        <div class="contenedor cont10">
-            <h3 class="textcont">Sección 4</h3>
+
+        <!-- boton10 -->
+
+        <div id="effect10" class="div ui-corner-all">
+            <h3 class="textcont">Contenedor 3 de Sección 1</h3>
             <p class="parrafocont">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, quaerat. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, quaerat.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, quaerat. Lorem, ipsum dolor sit amet
+                consectetur adipisicing elit. Porro, quaerat.
+            </p>
+
+        </div>
+
+        <!-- boton11 -->
+
+        <div id="effect11" class="newClass11 ui-corner-all">
+            <h3 class="textcont">Show</h3>
+            <p class="parrafocont">
+                Etiam libero neque, luctus a, eleifend nec, semper at, lorem. Sed pede. Nulla lorem metus, adipiscing
+                ut, luctus sed, hendrerit vitae, mi.
             </p>
         </div>
-        <div class="contenedor cont11">
-            <h3 class="textcont">Contenedor 2 de Sección 4</h3>
+
+        <!-- boton12 -->
+
+        <div id="effect12" class="div ui-corner-all">
+            <h3 class="textcont">Contenedor 2 de Sección 2</h3>
             <p class="parrafocont">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, quaerat. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, quaerat.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, quaerat. Lorem, ipsum dolor sit amet
+                consectetur adipisicing elit. Porro, quaerat.
             </p>
         </div>
-        <div class="contenedor cont12">
-            <h3 class="textcont">Contenedor 3 de Sección 4</h3>
-            <p class="parrafocont">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, quaerat. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, quaerat.
-            </p>
-        </div>
-   
-</main>
+
+    </main>
     <div id="modal_container"></div>
     <footer>
         <img src="media/logo_m.png" alt="Logo de la página ">
     </footer>
 
-    <script src="js070823_01.js"></script>
-
 </body>
+
 </html>
