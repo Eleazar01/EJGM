@@ -34,8 +34,10 @@ $(document)
 
     $( "#button3" ).on( "click", function() {
         $( "#effect3" )
-        .css( "margin-left", "50px" )
-        .css('margin-top', '50px')
+        .animate({
+            marginTop: 50,
+            marginLeft: 40
+        }, 800 );
       });
    
 
@@ -92,8 +94,10 @@ $(document)
 
     $( "#button8" ).on( "click", function() {
         $( "#effect8" )
-        .css( "background", 'yellow' )
-        .css('width','200px')
+        .animate({
+            backgroundColor: 'yellow',
+            width: 200
+        }, 4500 );
       });
 
 
