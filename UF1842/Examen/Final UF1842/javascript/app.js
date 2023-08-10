@@ -9,7 +9,7 @@
     
         document.querySelector('.cursos').innerHTML=`
             <h4>Nuestros cursos</h4>
-            <img src="media/imagen-curso.jpg" alt="">
+            <img src="../media/imagen-curso.jpg" alt="">
             <p>Tienes toda la información aquí</p>
             <button onclick="curso()" class="principal">SOLICÍTAR</button>`
     
@@ -18,7 +18,7 @@
             <p>Si necesitas información clica aquí</p>
             <button onclick="contacto()">CONTACTO</button>`
         let back = document.querySelector('.cuerpo');
-        back.style.backgroundImage = "url('media/imagen-fondo.png')";
+        back.style.backgroundImage = "url('../media/imagen-fondo.png')";
         back.style.backgroundRepeat = "repeat-y";
         back.style.backgroundSize = 'cover'; 
     }
@@ -30,18 +30,18 @@
         
          document.querySelector('.cursos').innerHTML=`
             <h4>Nuestros cursos</h4>
-            <img src="media/imagen-curso.jpg" alt="">
+            <img src="../media/imagen-curso.jpg" alt="">
             <p>Tienes toda la información aquí</p>
             <button onclick="curso()" class="principal">SOLICÍTAR</button>`
     
         document.querySelector('.cuerpo').innerHTML =`
             <div>
-                <video src="media/VideoClase.mp4" controls></video>
+                <video src="../media/VideoClase.mp4" controls></video>
             </div>
             <p>Si te interesa este curso contactanos</p>`
     
         let back = document.querySelector('.cuerpo');
-        back.style.backgroundImage = "url('media/imagen-curso.jpg')";
+        back.style.backgroundImage = "url('../media/imagen-curso.jpg')";
         back.style.backgroundRepeat = "repeat-y";
         back.style.backgroundSize = 'cover'; 
     }
@@ -53,7 +53,7 @@
     
         document.querySelector('.cursos').innerHTML=`
         <h4>Nuestros cursos</h4>
-            <img src="media/imagen-curso.jpg" alt="">
+            <img src="../media/imagen-curso.jpg" alt="">
             <p>Tienes toda la información aquí</p>
             <button onclick="curso()" class="principal">SOLICÍTAR</button>`
     
@@ -77,7 +77,7 @@
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis officia unde architecto ut ipsum, quisquam omnis nulla id adipisci delectus excepturi cumque deserunt odit error illo aut quas, nemo consequatur.</p> 
         </div>`
         let back = document.querySelector('.cuerpo');
-        back.style.backgroundImage = "url('media/imagen-fondo.png')";
+        back.style.backgroundImage = "url('../media/imagen-fondo.png')";
         back.style.backgroundRepeat = "repeat-y";
         back.style.backgroundSize = 'cover'; 
     
