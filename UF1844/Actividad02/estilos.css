@@ -3,18 +3,21 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 :root{
     --fondo : #484857e9;
     --detalle : #b0bd62;
     --letra : #d4d1ce;
-    --cabecera: #3c23a1;
+    --cabeceras: #3c23a1;
 }
+
 body{
     background-color: var(--fondo);
     color: var(--letra);
     display: flex;
     flex-direction: column;
 }
+
 header{
     display: flex;
     justify-content: space-between;
@@ -22,33 +25,40 @@ header{
     background-color: var(--detalle);
     border-radius: 10px;
 }
+
 header nav{
     margin-top: 3em;
     margin-left: 5em;
 }
+
 header img{
     width: 6em;
     border-radius: 30px;
     margin-left: 1.4em;
 }
+
 header button{
     margin-left: 10px;
     margin-top: 0.4em;
 }
+
 .cuerpo{
     display: flex;
     margin: 2em;
 }
+
 aside {
     width: 30%;
     height: 25em;
     overflow: scroll;
 }
+
 .contenido{
     width: 70%;
     height: 25em;
     margin-left: 3em;
 }
+
 .contenido div form{
     display: flex;
     flex-direction: column;
@@ -56,12 +66,16 @@ aside {
     justify-content: center;
     margin-top: 1.5em;
 }
+
 .contenido div form input{
     margin-top: .8em;
+    text-align: center;
 }
+
 .contenido div p{
     margin-top: .8em;
 }
+
 footer{
     padding: 1em;
     background-color: var(--detalle);
@@ -70,6 +84,7 @@ footer{
     justify-content: space-between;
     
 }
+
 footer nav{
     display: flex;
     flex-direction: column;
@@ -79,16 +94,20 @@ footer a{
     margin-top: 1em;
     padding-left: 2em;
 }
+
 footer img{
     width: 6em;
     border-radius: 30px;
     margin-right: 1.4em;
 }
+
 .ui-accordion-content{
     background-color: var(--fondo);
     color: var(--letra);
 }
+
 .ui-accordion-header{
-    background-color: var(--cabecera);
+    background-color: var(--cabeceras);
     color: var(--letra);
+    text-align: center;
 }
