@@ -31,6 +31,14 @@ header nav{
     margin-left: 5em;
 }
 
+header nav button{
+    background-color: var(--fondo);
+    color: var(--letra);
+    width: 6em;
+    height: 3em;
+    border-radius: 10px;
+}
+
 header img{
     width: 6em;
     border-radius: 30px;
