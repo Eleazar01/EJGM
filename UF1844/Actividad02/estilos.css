@@ -7,6 +7,7 @@
     --fondo : #484857e9;
     --detalle : #b0bd62;
     --letra : #d4d1ce;
+    --cabecera: #3c23a1;
 }
 body{
     background-color: var(--fondo);
@@ -82,4 +83,12 @@ footer img{
     width: 6em;
     border-radius: 30px;
     margin-right: 1.4em;
+}
+.ui-accordion-content{
+    background-color: var(--fondo);
+    color: var(--letra);
+}
+.ui-accordion-header{
+    background-color: var(--cabecera);
+    color: var(--letra);
 }
