@@ -84,19 +84,19 @@ var alumno = {
 
   // validacion
 
-  document.querySelector('#validar').addEventListener('click',function () {
-    let validacion =['#usuario','#password'];
+//   document.querySelector('#validar').addEventListener('click',function () {
+//     let validacion =['#usuario','#password'];
 
-    if (validacion[0] == alumno[0] && validacion[1] == alumno[4]) {
-        document.querySelector('#perfil')
-        .innerHTML(alumno[0]+alumno[1]);
+//     if (validacion[0] == alumno[0] && validacion[1] == alumno[4]) {
+//         document.querySelector('#perfil')
+//         .innerHTML(alumno[0]+alumno[1]);
 
-    } else {
-        document.querySelector('#perfil')
-        .innerHTML('Usuario o Contraseña incorrecta');
-    }
+//     } else {
+//         document.querySelector('#perfil')
+//         .innerHTML('Usuario o Contraseña incorrecta');
+//     }
 
-  })
+//   })
 
 
 
