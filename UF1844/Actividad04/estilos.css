@@ -61,6 +61,17 @@ aside {
     overflow: scroll;
 }
 
+.config{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.config button{
+    margin-top: 10px;
+    width: 8em;
+}
+
 .contenido{
     width: 70%;
     height: 25em;
@@ -84,6 +95,15 @@ aside {
     margin-top: .8em;
 }
 
+.contenido div button{
+    margin-top: 30px;
+    background-color: var(--cabeceras);
+    color: var(--letra);
+    width: 6em;
+    height: 3em;
+    border-radius: 10px;
+}
+
 footer{
     padding: 1em;
     background-color: var(--detalle);
@@ -101,6 +121,13 @@ footer nav{
 footer a{
     margin-top: 1em;
     padding-left: 2em;
+    text-decoration: none;
+    color: var(--letra);
+    background-color: var(--fondo);
+    height: 3em;
+    width: 10em;
+    text-align: left;
+    border-radius: 10px;
 }
 
 footer img{
@@ -112,6 +139,7 @@ footer img{
 .ui-accordion-content{
     background-color: var(--fondo);
     color: var(--letra);
+
 }
 
 .ui-accordion-header{
