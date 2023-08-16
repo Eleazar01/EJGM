@@ -17,7 +17,7 @@ document.querySelector("#acceso").addEventListener("click", function acceso() {
         <div>
             <form id="formulario" method="post">
             <input type="text" name="usuario id ='usuario'" placeholder="Introduce el usuario"/>
-            <input type="password" name="password" id = 'pasword' placeholder="Introduce la contraseña"/>
+            <input type="password" name="password" id = 'password' placeholder="Introduce la contraseña"/>
             <button id="validar">Acceder</button>
             </form>
         </div>`
@@ -85,7 +85,7 @@ var alumno = {
   // validacion
 
   document.querySelector('#validar').addEventListener('click',function () {
-    let validacion =['#usuario','#pasword'];
+    let validacion =['#usuario','#password'];
 
     if (validacion[0] == alumno[0] && validacion[1] == alumno[4]) {
         document.querySelector('#perfil')
