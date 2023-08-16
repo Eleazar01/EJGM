@@ -73,6 +73,9 @@ document.querySelector("#contacto").addEventListener("click", function contacto(
         </div>`
 });
 
+// validar
+
+
 
 
 
