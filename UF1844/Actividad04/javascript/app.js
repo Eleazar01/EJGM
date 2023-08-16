@@ -30,7 +30,7 @@ document.querySelector("#acceso").addEventListener("click", function acceso() {
 document.querySelector("#registro").addEventListener("click", function registro() {
     document.querySelector('.contenido').innerHTML = `
         <div>
-            <form id="formulario" method="post">
+            <form id="formulario">
             <input type="text" name="nombre" placeholder="Introduce el nombre"/>
             <input type="text" name="apellidos" placeholder="Introduce los apellidos"/>
             <input type="email" name="email" placeholder="Introduce el correo electronico"/>
