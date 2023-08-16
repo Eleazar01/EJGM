@@ -73,30 +73,9 @@ document.querySelector("#contacto").addEventListener("click", function contacto(
         </div>`
 });
 
-var alumno = {
-    nombre : 'Eleazar', 
-    apellido: 'Gonzalez',
-    correo : 'eleazar@gmail.com',
-    edad : '15',
-    contraseña: '1234',
-    avatar:'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.adslzone.net%2Fcomo-se-hace%2Fphotoshop%2Fquitar-fondo-imagen%2F&psig=AOvVaw0CSG97WRRv032NwvwHl7og&ust=1692295577376000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCIDS6M3h4YADFQAAAAAdAAAAABAE'
-  }
-
-  // validacion
-
-//   document.querySelector('#validar').addEventListener('click',function () {
-//     let validacion =['#usuario','#password'];
-
-//     if (validacion[0] == alumno[0] && validacion[1] == alumno[4]) {
-//         document.querySelector('#perfil')
-//         .innerHTML(alumno[0]+alumno[1]);
-
-//     } else {
-//         document.querySelector('#perfil')
-//         .innerHTML('Usuario o Contraseña incorrecta');
-//     }
-
-//   })
+document.querySelector('#validar').addEventListener(function () {
+    document.querySelector('.contenido').innerHTML('hola');
+})
 
 
 
