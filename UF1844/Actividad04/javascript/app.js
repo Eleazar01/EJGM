@@ -15,7 +15,7 @@ document.querySelector("#acceso").addEventListener("click", function acceso() {
     
     document.querySelector('.contenido').innerHTML = `
         <div>
-            <form id="formulario" method="post">
+            <form id="formulario">
             <input type="text" name="usuario id ='usuario'" placeholder="Introduce el usuario"/>
             <input type="password" name="password" id = 'password' placeholder="Introduce la contraseña"/>
             <button id="validar">Acceder</button>
