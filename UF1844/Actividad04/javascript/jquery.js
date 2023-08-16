@@ -23,7 +23,7 @@ $(document)
   $('#color2')
   .click(function () {
     $(':root')
-    .css({'--fondo': '#090774','--detalle': '#403e48','--letra': '#a8a8a8','--cabeceras': '#755ed4'})
+    .css({'--fondo': '#090774','--detalle': '#051a31','--letra': '#a8a8a8','--cabeceras': '#dec7f9'})
 
     $('*')
     .css('font-size','1em');
