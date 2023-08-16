@@ -73,10 +73,6 @@ document.querySelector("#contacto").addEventListener("click", function contacto(
         </div>`
 });
 
-document.querySelector('#validar').addEventListener(function () {
-    document.querySelector('.contenido').innerHTML='hola';
-})
-
 
 
 
