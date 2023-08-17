@@ -75,7 +75,9 @@ document.querySelector("#contacto").addEventListener("click", function contacto(
 
 // validar
 
-
+document.querySelector('#validar').addEventListener('click', function () {
+    document.querySelector('#perfil').innerHTML = 'hola'
+});
 
 
 
