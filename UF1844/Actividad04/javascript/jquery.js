@@ -47,9 +47,15 @@ $(document)
     $(':root')
     .css({'--fondo': '#000000','--detalle': '#181515','--letra': '#ffffff','--cabeceras': '#181515'});
 
-    $('*')
+    $('.contenido')
     .css('font-size','1.2em');
-  });
+    $('header')
+    .css('font-size','1.2em');
+    $('footer')
+    .css('font-size','1.2em');
+    $('aside')
+    .css('font-size','1.2em');
+   });
   
 });
  

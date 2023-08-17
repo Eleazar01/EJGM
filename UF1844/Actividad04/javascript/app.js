@@ -21,6 +21,13 @@ document.querySelector("#acceso").addEventListener("click", function acceso() {
             <button id="validar">Acceder</button>
             </form>
         </div>`
+
+    // validar
+
+    document.querySelector('#validar').addEventListener('click', function () {
+        document.querySelector('#perfil').innerHTML = `<p>hola</p>`;
+    });
+
 });
 
 //Da el contenido del boton de registro
@@ -73,11 +80,7 @@ document.querySelector("#contacto").addEventListener("click", function contacto(
         </div>`
 });
 
-// validar
 
-document.querySelector('#validar').addEventListener('click', function () {
-    document.querySelector('#perfil').innerHTML = 'hola'
-});
 
 
 
