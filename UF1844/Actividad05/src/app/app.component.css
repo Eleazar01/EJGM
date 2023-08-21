@@ -1,0 +1,75 @@
+:root{
+    --color1 : #cdeae8;
+    --color2 : #0d3f7c;
+    --color3 : #00214a;
+    --color4 : #04bbec;
+    --color5 : #ea25b5;
+    --color6 : #ff82f4;
+}
+body{
+    background-color: var(--color2);
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color4);
+}
+header img {
+    width: 8em;
+    height: 8em;
+}
+header ul{
+    display: flex;
+    padding-top: 5em;
+}
+header ul li{
+    margin-left: 20px;
+    text-decoration: none;
+}
+.cuerpo{
+    display: flex;
+    color: var(--color1);
+}
+.perfil {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+aside{
+    width: 30%;
+}
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+.login form{
+    display: flex;
+    flex-direction: column;
+}
+.login form input{
+    margin-top: 10px;
+}
+.perfil img{
+    width: 10em;
+    height: 10em;
+}
+.cursoalumno{
+    width: 70%;
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color4);
+}
+footer img {
+    width: 8em;
+    height: 8em;
+    padding-top: 3em;
+}
+footer ul{
+    padding-top: 5em;
+}
+button{
+    margin-top: 10px;
+}
