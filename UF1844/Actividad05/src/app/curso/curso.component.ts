@@ -7,8 +7,10 @@ import { Component } from '@angular/core';
 })
 export class CursoComponent {
   public imagen : string 
+  public avatar : string
   
   constructor(){
     this.imagen = '../../assets/logo.jpeg'
+    this.avatar = '../../assets/avatar.png'
   }
 }
