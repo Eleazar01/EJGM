@@ -11,6 +11,8 @@ import { ProfesorComponent } from './profesor/profesor.component';
 import { AccesoComponent } from './acceso/acceso.component';
 import { RegistroComponent } from './registro/registro.component';
 import { ConsultaComponent } from './consulta/consulta.component';
+import { CabeceraComponent } from './cabecera/cabecera.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { ConsultaComponent } from './consulta/consulta.component';
     ProfesorComponent,
     AccesoComponent,
     RegistroComponent,
-    ConsultaComponent
+    ConsultaComponent,
+    CabeceraComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule
