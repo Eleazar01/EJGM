@@ -8,7 +8,7 @@ import { AlumnosComponent } from './alumnos/alumnos.component';
 import { AlumnoComponent } from './alumno/alumno.component';
 import { ProfesoresComponent } from './profesores/profesores.component';
 import { ProfesorComponent } from './profesor/profesor.component';
-import { AccesoComponent } from './acceso/acceso.component';
+import { AccesoComponent } from './componentes/acceso/acceso.component';
 import { RegistroComponent } from './registro/registro.component';
 import { ConsultaComponent } from './consulta/consulta.component';
 import { CabeceraComponent } from './cabecera/cabecera.component';
