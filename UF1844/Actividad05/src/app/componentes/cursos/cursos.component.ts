@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { profesorBase } from 'src/app/models/modelos';
-import { AlumnoBD } from 'src/app/models/modelos';
+import { cursosBD } from 'src/app/models/curso';
 
 @Component({
   selector: 'app-cursos',
@@ -9,23 +8,18 @@ import { AlumnoBD } from 'src/app/models/modelos';
 })
 export class CursosComponent 
 implements OnInit{
-  public alumnosAll: Array<AlumnoBD>
-  public imagen : string 
-  public nombreProfesor : string
-  public fotoProfesor : string
-  public notaAlumno : number
+  public cursosAll: Array<cursosBD>
+ 
   
   constructor(){
-    this.notaAlumno = 5
-    this.imagen = '../../../assets/logo.jpeg'
-    this.nombreProfesor = profesorBase.nombre
-    this.fotoProfesor = profesorBase.foto
-    this.alumnosAll = [
-      new AlumnoBD('Miguel','Ramírez', 39, 'miguel@gmail.com','555 555 555 ', '../../assets/avatar.png',true),
-      new AlumnoBD('Javier','Ramírez', 19, 'javier@gmail.com','555 555 555 ', '../../assets/avatar.png',false)
+
+    this.cursosAll = [
+      new cursosBD('Electricidad','Principios básicos de la electricidad', 100),
+      new cursosBD('AppWeb','Desarrollo de aplicaciones web', 400,),
+      new cursosBD('Soldadura','Soldadura bonita', 50,)
     ]
   }
   ngOnInit(): void {
-    console.log(this.alumnosAll)
+    console.log(this.cursosAll)
   }
 }

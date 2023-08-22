@@ -1,26 +1,13 @@
 <aside>
-    <p>Profesor asignado</p>
-    <h2>{{nombreProfesor}}</h2>
-    <img src="{{fotoProfesor}}" alt="Foto del profesor" width="40px">
 </aside>
 <div class="alumnos">
     <div>
         <!-- <p>{{alumosAll}}</p> -->
         <ul>
-            <li *ngFor="let listado of alumnosAll">
-                {{listado.nombreA}} - {{listado.apellidosA}}
-                <span *ngIf = 'listado. estadoA != false'> MATRICULADO</span>
+            <li *ngFor="let listado of cursosAll">
+                {{listado.nombreC}} {{listado.descripcionC}} {{listado.duracionC}}
+                
             </li>
-        </ul>
-
-        <p>La no ta media final es: </p>
-
-        <ul [ngSwitch]='notaAlumno'>
-
-            <li *ngswitchCase ='5'>Aprobado</li>
-            <li *ngswitchCase ='4'>No Aprobado</li>
-            <li *ngswitchCase ='7'>Aprobado</li>
-
         </ul>
     </div>
     <div></div>

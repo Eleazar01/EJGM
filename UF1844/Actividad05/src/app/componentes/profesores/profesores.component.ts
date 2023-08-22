@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { profesorBD } from 'src/app/models/profesor';
 
 @Component({
   selector: 'app-profesores',
@@ -7,8 +8,12 @@ import { Component } from '@angular/core';
 })
 export class ProfesoresComponent {
   public imagen : string 
+  public profesoresAll : Array<profesorBD>
   
   constructor(){
     this.imagen = '../../../assets/logo.jpeg'
+    this.profesoresAll = [
+      new profesorBD('Manuel','Gil','manuel@gmail.com','../../../assets/avatar.png'),
+    ]
   }
 }
