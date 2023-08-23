@@ -9,46 +9,53 @@
 body{
     background-color: var(--color2);
 }
+
+/* header */
+
 header{
     display: flex;
     justify-content: space-between;
     background-color: var(--color4);
+    border-radius: 10px;
+}
+header nav{
+    margin-top: 3em;
+    text-align: end;
+    padding: 1.5em;
 }
 header img {
     width: 8em;
     height: 8em;
-    padding: 3em;
+    padding: 1.5em;
+    border-radius: 400px;
 }
-header ul{
-    display: flex;
-    padding: 3em;
+header button{
+    width: 7.5em;
+    height: 2em;
+    margin-left: 6px;
+    background-color: var(--color2);
+    border-radius: 10px;
+    color: var(--color4);
 }
-header ul li{
-    margin-left: 20px;
-    text-decoration: none;
+button{
+    width: 7.5em;
+    height: 2em;
+    margin-left: 6px;
+    background-color: var(--color2);
+    border-radius: 10px;
+    color: var(--color4);
 }
 .cuerpo{
     display: flex;
-    color: var(--color1);
+    color: var(--color4);
 }
-.perfil {
+
+/* aside */
+
+.perfil{
     display: flex;
-    flex-direction: column;
     width: 30%;
-}
-aside{
-    width: 30%;
-}
-.alumnos{
-    display: flex;
-    justify-content: center;
-}
-.alumnos div{
-    border: 1px solid black;
-    background-color: var(--color6);
-    width: 40px;
-    height: 40px;
-    margin: 3px;
+    margin: 3em;
 }
 .login{
     display: flex;
@@ -62,26 +69,112 @@ aside{
 .login form input{
     margin-top: 10px;
 }
+.perfil{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .perfil img{
     width: 10em;
     height: 10em;
+    justify-content: center;
 }
 .cursoalumno{
     width: 70%;
+    text-align: center;
 }
+
+/* cuerpo */
+
+.alumnos{
+    text-align: center;
+}
+.alumnos ul{
+    list-style: none;
+    color: var(--color1);
+    font-size: 1.2em;
+}
+.alumnos ul li{
+    margin-top: 0.8em;
+}
+.cursos{
+    text-align: center;
+}
+.cursos ul{
+    list-style: none;
+    color: var(--color1);
+    font-size: 1.2em;
+}
+.cursos ul li{
+    margin-top: 0.8em;
+}
+.profesores{
+    text-align: center;
+}
+.profesores ul{
+    list-style: none;
+    color: var(--color1);
+    font-size: 1.2em;
+}
+.profesores ul li{
+    margin-top: 0.8em;
+}
+.registro form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3em;
+}
+.registro form input{
+    margin-top: 5px;
+    border-radius: 5px;
+    width: 200px;
+}
+.registro form button{
+    margin-top: 5px;
+}
+.contacto form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3em;
+}
+.contacto form input{
+    margin-top: 5px;
+    border-radius: 5px;
+    width: 260px;
+}
+.contacto form textarea{
+    margin-top: 5px;
+    border-radius: 5px;
+    width: 400px;
+}
+.contacto form button{
+    margin-top: 5px;
+}
+
+/* footer */
+
 footer{
     display: flex;
     justify-content: space-between;
     background-color: var(--color4);
+    border-radius: 10px;
 }
 footer img {
     width: 8em;
     height: 8em;
     padding: 3em;
+    border-radius: 400px;
 }
 footer ul{
     padding: 3em;
 }
-button{
-    margin-top: 10px;
+footer ul li{
+    list-style: none;
+    margin-top:  1.2em;
 }

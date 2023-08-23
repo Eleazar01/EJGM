@@ -14,6 +14,8 @@ export class ProfesoresComponent {
     this.imagen = '../../../assets/logo.jpeg'
     this.profesoresAll = [
       new profesorBD('Manuel','Gil','manuel@gmail.com','../../../assets/avatar.png'),
+      new profesorBD('Carlos','Gil','manuel@gmail.com','../../../assets/avatar.png'),
+      new profesorBD('Elena','Gil','manuel@gmail.com','../../../assets/avatar.png')
     ]
   }
 }
