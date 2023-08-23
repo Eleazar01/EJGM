@@ -13,6 +13,7 @@ import { RegistroComponent } from './componentes/registro/registro.component';
 import { ConsultaComponent } from './componentes/consulta/consulta.component';
 import { CabeceraComponent } from './componentes/cabecera/cabecera.component';
 import { FooterComponent } from './componentes/footer/footer.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { FooterComponent } from './componentes/footer/footer.component';
     FooterComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

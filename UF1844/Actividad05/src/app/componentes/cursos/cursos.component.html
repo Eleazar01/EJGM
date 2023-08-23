@@ -3,8 +3,19 @@
 <div class="cursos">
     <ul>
         <li *ngFor="let listado of cursosAll">
-                {{listado.nombreC}} {{listado.descripcionC}} {{listado.duracionC}}
+                {{listado.nombreC}} {{listado.descripcionC}} {{listado.duracionC}} horas.
                 
         </li>
     </ul>
 </div>
+
+<!-- [ng-templates] -->
+<div *ngIf="registrado; then Siregistrado else Noregistrado"></div>
+<ng-template #Siregistrado>
+    <p>Estás registrado en la aplicación</p>
+    <button (click)="unsetRegistrado()">Salir</button>
+</ng-template>
+<ng-template #Noregistrado>
+    <p>No estás resgistrado en la aplicación, pulsa este botón para identificarte</p>
+    <button (click)="setRegistrado()">Identificarse</button>
+</ng-template>
