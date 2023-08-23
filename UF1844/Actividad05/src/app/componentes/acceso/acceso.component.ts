@@ -7,8 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AccesoComponent {
   public imagen : string 
+  public nombre : string
+  public contrasena : string
   
   constructor(){
     this.imagen = '../../../assets/logo.jpeg'
+    this.nombre = ''
+    this.contrasena = ''
   }
 }

@@ -15,7 +15,7 @@ implements OnInit{
   
   constructor(){
     this.registrado = false
-    this.Nota =0
+    this.Nota = 0
 
     this.cursosAll = [
       new cursosBD('Electricidad','Principios básicos de la electricidad', 100),
