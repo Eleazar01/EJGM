@@ -7,8 +7,16 @@ import { Component } from '@angular/core';
 })
 export class ConsultaComponent {
   public imagen : string 
+  public contacton :string
+  public contactoe :string
+  public contactoa :string
+  public contactot :string
   
   constructor(){
     this.imagen = '../../../assets/logo.jpeg'
+    this.contacton=''
+    this.contactoe=''
+    this.contactoa=''
+    this.contactot=''
   }
 }
