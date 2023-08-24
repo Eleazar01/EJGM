@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cabecera',
@@ -8,7 +9,11 @@ import { Component } from '@angular/core';
 export class CabeceraComponent {
   public imagen : string 
   
-  constructor(){
+  constructor(private route : Router){
     this.imagen = '../../../assets/logo.jpeg'
+
+  }
+  IraPagina(url:string): void{
+    this.route.navigate([url]);
   }
 }
