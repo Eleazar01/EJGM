@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+    --cabecera: #79c947;
+    --letraCabecera:#1a0765;
+    --fondo:#091b66d8;
+    --detalle: #650707;
+    --letra: #9bd67de0;
+}
+header{
+    background-color: var(--cabecera);
+}
+body{
+    background-color: var(--fondo);
+}
+footer{
+    background-color: var(--cabecera);
+}

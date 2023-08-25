@@ -1,0 +1,18 @@
+.footer{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    margin-top: 2vh;
+}
+.footer nav{
+    display: flex;
+    flex-direction: column;
+}
+.footer div nav a{
+    margin-top: 2vh;
+    text-decoration: none;
+}
+.footer div img{
+    width: 6vw;
+}

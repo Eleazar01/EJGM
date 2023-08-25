@@ -1,0 +1,17 @@
+.cabecera{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    margin-top: 2vh;
+}
+.cabecera div img{
+    width: 6vw;
+}
+.botonera{
+    display: flex;
+    align-items: center;
+}
+.botonera button{
+   margin-left: 6px;
+}

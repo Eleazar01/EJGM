@@ -1,1 +1,12 @@
-<p>contacto works!</p>
+<div class="contacto">
+    <form>
+        <input type="text" name="usuario" placeholder="Introduce un nombre de contacto" [(ngModel)]='contacton'/>
+
+        <input type="email" name="email" placeholder="Introduce un correo electrónico de contacto" [(ngModel)]='contactoe'/>
+
+        <input type="text" name="asunto" placeholder="Introduce el motivo de la consulta" [(ngModel)]='contactoa'/>
+
+        <textarea name="consulta" cols="30" rows="10" placeholder="Introduce brevemente tu consulta" [(ngModel)]='contactot'></textarea>
+        <button>Enviar</button>
+    </form>
+</div>

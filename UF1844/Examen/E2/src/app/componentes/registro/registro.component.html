@@ -1,1 +1,21 @@
-<p>registro works!</p>
+<div class="registro">
+    <form>
+
+        <input type="text" name="nombre" placeholder="Introduce el nombre" [(ngModel)]='registron'/>
+
+        <input type="text" name="apellidos" placeholder="Introduce los apellidos" [(ngModel)]='registroa'/>
+
+        <input type="email" name="email" placeholder="Introduce el correo electronico" [(ngModel)]='registroe'/>
+
+        <input type="password" name="password" placeholder="Introduce una contraseña" [(ngModel)]='registrop1'/>
+
+        <input type="password" name="password2" placeholder="Repite la contraseña" [(ngModel)]='registrop2'/>
+
+        <input type="number" name="edad" placeholder="Introduce la edad" [(ngModel)]='registroed'/>
+
+        <input type="url" name="fotografia" placeholder="Introduce una url de una fotografia" [(ngModel)]='registroi'/>
+
+        <button>Registrar</button>
+
+    </form>
+</div>
