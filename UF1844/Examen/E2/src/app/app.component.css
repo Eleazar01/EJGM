@@ -46,10 +46,10 @@ margin: 3vw;
     overflow: scroll;
 }
 .catalogo aside{
-    width: 30vw;
+    width: 30%;
 }
 .catalogo div{
-    width: 70vw;
+    width: 70%;
 }
 .lis{
     display: grid;
@@ -61,6 +61,7 @@ margin: 3vw;
     margin: 2em;
     display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
     text-align: center;

@@ -3,6 +3,7 @@
     <div class="lis">
         <div *ngFor=" let listado of catalogoAll">
             <img src="{{listado.imagen}}" alt="{{listado.Id}}" > {{listado.precio}}€
+            <button (click)="Ir('Carrito')">Comprar</button>
         </div>
     </div>
 </div>

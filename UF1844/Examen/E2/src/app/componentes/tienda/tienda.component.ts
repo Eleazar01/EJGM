@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { catalogoBD } from '../modulos/catalogo';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tienda',
@@ -8,7 +9,7 @@ import { catalogoBD } from '../modulos/catalogo';
 })
 export class TiendaComponent {
   public catalogoAll: Array<catalogoBD>
-  constructor(){
+  constructor(private routes: Router){
     this.catalogoAll=[
       new catalogoBD('1',36,48,50,'../../../assets/producto1.jpeg'),
       new catalogoBD('2',36,48,50,'../../../assets/producto2.jpeg'),
@@ -19,5 +20,8 @@ export class TiendaComponent {
       new catalogoBD('7',36,48,50,'../../../assets/producto7.jpeg'),
       new catalogoBD('8',36,48,50,'../../../assets/producto8.jpeg'),
     ]
+  }
+  Ir(url:string):void{
+    this.routes.navigate([url])
   }
 }
