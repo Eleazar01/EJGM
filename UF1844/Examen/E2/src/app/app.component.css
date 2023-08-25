@@ -39,23 +39,21 @@ margin: 3vw;
 /* Catalogo */
 
 .catalogo{
-    height: 70vh;
     color: var(--letra);
-    margin: 3vw;
     display: flex;
-    overflow: scroll;
 }
 .catalogo aside{
-    width: 30%;
+    width: 20%;
 }
 .catalogo div{
-    width: 70%;
+    width: 80%;
 }
 .lis{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: .8em;
     height: 70vh;
+    overflow: scroll;
 }
 .lis div{
     margin: 2em;
@@ -72,7 +70,7 @@ margin: 3vw;
     
 }
 .lis div img{
-    width: 100%;
+    width: 80%;
     border-radius: 40%;
     transition: 1s;
 }
