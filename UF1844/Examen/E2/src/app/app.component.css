@@ -1,39 +1,56 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
 :root{
-    --cabecera: #79c947;
+    --cabecera: #ffffff;
     --letraCabecera:#1a0765;
-    --fondo:#091b66d8;
+    --fondo:#6977b3;
     --detalle: #650707;
-    --letra: #9bd67de0;
+    --letra: #b7fc95;
 }
 
 /* Descripción */
 
-.Cuerpo{
-display: grid;
-height: 65vh;
-color: var(--letra);
-margin: 3vw;
-}
-.imagen{
-    grid-column: 1/5;
-    grid-row: 1/3;
-    width: 30vw;
+.contenedor{
+color: var(--detalle);
+display: flex;
+align-items: initial;
+width: 100%;
+height: 50vh;
+padding-left: 6vw;
+align-items: end;
 }
 .imagen img{
-    border-radius: 40%;
+    width: 20vw;
+    transition: .5s;
+    border-radius: 10px;
+}
+.imagen img:hover{
+    transition: 1s;
+    border-radius: 40px;
+}
+
+.imagen{
+    display: inline-table;
+    cursor: pointer;
+    transform: rotate(-15deg);
+    transition: .5s;
+}
+.imagen:hover{
+    transform: rotate(0deg);
+    transition: 1s;
+    scale: 1.5;
 }
 .texto{
-    color: var(--detalle);
-    grid-column: 4/6;
-    grid-row: 2/4;
+    color: var(--letra);
+    position: relative;
+    text-align: center;
+    padding: 40px;
 }
-.imagen2{
-    grid-column: 7/8;
-    grid-row: 3/4;
-    width: 30vw;
-}
-.imagen2 img{
-    border-radius: 40%;
+.texto p{
+    margin-top: 10px;
 }
 
 /* Catalogo */
@@ -77,7 +94,7 @@ margin: 3vw;
 .lis div img:hover{
     width: 80%;
     height: auto;
-    scale: 1.8;
+    scale: 1.5;
     transition: 1s;
     border-radius: 20%;
 }
@@ -89,6 +106,7 @@ margin: 3vw;
     justify-content: center;
     align-items: center;
     height: 70vh;
+    color: var(--cabecera);
 }
 .login form{
     display: flex;
@@ -98,7 +116,7 @@ margin: 3vw;
     margin: 3em;
 }
 .login form a{
-    color: var(--letra);
+    color: var(--detalle);
 }
 .login form input{
     margin-top: 10px;
@@ -156,4 +174,10 @@ margin: 3vw;
 .contacto form button{
     margin-top: 5px;
 }
-
+button{
+    background-color: var(--letraCabecera);
+    color: var(--letra);
+    border-radius: 20%;
+    width: 100px;
+    height: 30px;
+}
