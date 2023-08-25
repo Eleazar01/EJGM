@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { ModuleWithProviders } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 // Importar componentes
@@ -32,4 +31,3 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
-export const routing: ModuleWithProviders<RouterModule>=RouterModule.forRoot(routes)
