@@ -14,34 +14,35 @@
 /* Descripción */
 
 .contenedor{
-color: var(--detalle);
-display: flex;
-align-items: initial;
-width: 100%;
-height: 50vh;
-padding-left: 6vw;
-align-items: end;
+    display: flex;
+    height: 55vh;
+}
+.galeria{
+    align-items: center;
+    /* justify-content: center; */
+    padding: 10%;
+    display: flex;
+    height: 100%;
+    width: 0px;
 }
 .imagen img{
-    width: 20vw;
-    transition: .5s;
+    object-fit: cover;
+    height: 55vh;
+    width: 20vh;
+    filter: brightness(80%);
     border-radius: 10px;
+    transform: rotate(-10deg);
+    transition: 1s ease-in-out;
+    overflow: scroll;
 }
 .imagen img:hover{
-    transition: 1s;
+    width: 500px;
+    opacity: 1;
+    filter: brightness(130%);
     border-radius: 40px;
-}
-
-.imagen{
-    display: inline-table;
-    cursor: pointer;
-    transform: rotate(-15deg);
-    transition: .5s;
-}
-.imagen:hover{
     transform: rotate(0deg);
-    transition: 1s;
-    scale: 1.5;
+    transition: 1s ease-in-out;
+    
 }
 .texto{
     color: var(--letra);
