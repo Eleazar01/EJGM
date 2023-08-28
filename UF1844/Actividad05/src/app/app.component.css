@@ -88,6 +88,9 @@ button{
     align-items: center;
     margin: 3em;
 }
+.login form p a{
+    color: var(--color1);
+}
 .login form input{
     margin-top: 10px;
 }
@@ -104,6 +107,10 @@ button{
 .alumnos ul li{
     margin-top: 0.8em;
 }
+.alumnos ul li a{
+    text-decoration:  none;
+    color: var(--color1);
+}
 .cursos{
     text-align: center;
     height: 20vh;
@@ -116,6 +123,10 @@ button{
 .cursos ul li{
     margin-top: 0.8em;
 }
+.cursos ul li a{
+    text-decoration:  none;
+    color: var(--color1);
+}
 .profesores{
     height: 45vh;
     text-align: center;
@@ -127,6 +138,10 @@ button{
 }
 .profesores ul li{
     margin-top: 0.8em;
+}
+.profesores ul li a{
+    text-decoration:  none;
+    color: var(--color1);
 }
 .registro{
     height: 45vh;
