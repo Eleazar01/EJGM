@@ -5,7 +5,7 @@ import { AlumnoBD } from "../models/alumno";
 @Injectable({
     providedIn: 'root'
 })
-export class CursosService{
+export class AlumnoService{
     private alumnosall: Array<AlumnoBD>
 
     constructor(){
