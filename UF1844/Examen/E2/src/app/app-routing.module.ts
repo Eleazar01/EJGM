@@ -11,6 +11,7 @@ import { CabeceraComponent } from './componentes/cabecera/cabecera.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 
 const routes: Routes = [
+  {path: '', component: InfoComponent},
   {path: 'Header', component: CabeceraComponent},
   {path: 'MiTienda', component: InfoComponent},
   {path: 'Catalogo', component: TiendaComponent},
