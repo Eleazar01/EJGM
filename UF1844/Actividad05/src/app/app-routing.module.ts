@@ -14,6 +14,7 @@ import { ProfesoresComponent } from './componentes/profesores/profesores.compone
 import { RegistroComponent } from './componentes/registro/registro.component';
 
 const routes: Routes = [
+  {path: '', component: AccesoComponent},
   {path: 'alumno', component: AlumnoComponent},
   {path: 'alumnos', component: AlumnosComponent},
   {path: 'acceso', component: AccesoComponent},
