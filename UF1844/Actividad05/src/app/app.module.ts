@@ -16,6 +16,10 @@ import { ConsultaComponent } from './componentes/consulta/consulta.component';
 import { CabeceraComponent } from './componentes/cabecera/cabecera.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 
+// import { AlumnoService } from './Servicios/alumno.service';
+// import { CursosService } from './Servicios/curso.service';
+// import { profesorService } from './Servicios/profesor.service';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +34,10 @@ import { FooterComponent } from './componentes/footer/footer.component';
     RegistroComponent,
     ConsultaComponent,
     CabeceraComponent,
-    FooterComponent
+    FooterComponent,
+    // AlumnoService,
+    // CursosService,
+    // profesorService
   ],
   imports: [
     BrowserModule,

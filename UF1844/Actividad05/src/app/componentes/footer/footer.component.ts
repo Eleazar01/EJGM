@@ -7,6 +7,10 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
   public imagen : string 
+  public face : string = '../../../assets/face.png'
+  public x : string = '../../../assets/instagram.png'
+  public ins : string = '../../../assets/x.jpeg'
+
   
   constructor(){
     this.imagen = '../../../assets/logo.jpeg'
