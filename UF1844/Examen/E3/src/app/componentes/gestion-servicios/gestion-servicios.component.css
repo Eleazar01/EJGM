@@ -1,3 +1,10 @@
+:root{
+    --cabecera: #ffffff;
+    --letraCabecera:#1a0765;
+    --fondo:#6977b3;
+    --detalle: #650707;
+    --letra: #b7fc95;
+}
 .servicios{
     margin-top: 3em;
     display: flex;
@@ -13,13 +20,14 @@
     height: 35em;
     display: flex;
     flex-direction: column;
-    border: 2px solid #cdeae8;
+    border: 2px solid var(--detalle);
     border-radius: 10% 0;
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    box-shadow: 5px 10px 20px 1px #0d3f7c;
-    background-color: #cdeae8;
+    box-shadow: 5px 10px 20px 1px var(--letraCabecera);
+    background-color: var(--detalle);
+    color: var(--cabecera);
    
 }
 .servicio img{
@@ -27,8 +35,8 @@
     border-radius: 10%;
 }
 .servicio button{
-    background-color: #ea25b5;
-    color:#cdeae8;
+    background-color: var(--letraCabecera);
+    color:var(--cabecera);
     font-weight: 600;
     border: none;
     height: 3em;
@@ -37,12 +45,12 @@
 }
 
 .servicio button:hover{
-    background-color: #00214a;
-    color:#cdeae8;
+    background-color: var(--fondo);
+    color:var(--letra);
 }
 
 .avisos{
-    color: #ea25b5;
+    color: var(--letraCabecera);
     font-size: 30px;
     text-align: center;
 }

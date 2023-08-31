@@ -1,17 +1,20 @@
-<h1 [ngStyle]="propiedadesH1">Gestión de Servicios</h1>
+<div class="servicios">
+    <h1 [ngStyle]="propiedadesH1">Gestión de Servicios</h1>
 
-<div class="content">
-<ul>
-    <li *ngFor="let listado of listaServicios">{{listado.codSer}} - {{listado.nombreSer}} - {{listado.descripcionSer}}
-        <span *ngIf="listado.stockSer != false" class="marcado"> DISPONIBLE </span>
-    </li>
+    <div class="content">
+        <ul>
+            <li *ngFor="let listado of listaServicios">{{listado.codSer}} - {{listado.nombreSer}} - {{listado.descripcionSer}}
+                <span *ngIf="listado.stockSer != false" class="marcado"> DISPONIBLE </span>
+            </li>
     
-</ul>   
-    <button (click)="verDetalles()">Ver por detalles</button>
+        </ul>   
+        <button (click)="verDetalles()">Ver por detalles</button>
     
     
-<app-gestion-servicios *ngIf="verdetalle != false"></app-gestion-servicios>
+        <app-gestion-servicios *ngIf="verdetalle != false"></app-gestion-servicios>
     
-</div>  
+    </div>  
+
+</div>
 
 

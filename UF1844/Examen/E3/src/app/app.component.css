@@ -19,7 +19,7 @@ h1{
 
 .contenedor{
     display: flex;
-    height: 55vh;
+    height: 48vh;
 }
 .galeria{
     flex-grow: 1;
@@ -31,7 +31,7 @@ h1{
 }
 .imagen img{
     object-fit: cover;
-    height: 55vh;
+    height: 48vh;
     width: 20vh;
     filter: brightness(80%);
     border-radius: 10px;
