@@ -1,0 +1,37 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+:root{
+    --cabecera: #ffffff;
+    --letraCabecera:#1a0765;
+    --fondo:#6977b3;
+    --detalle: #650707;
+    --letra: #b7fc95;
+}
+.cabecera{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    margin-top: 2vh;
+    background-color: var(--cabecera);
+}
+.cabecera div img{
+    width: 6vw;
+}
+.botonera{
+    display: flex;
+    align-items: center;
+}
+.botonera button{
+   margin-left: 6px;
+}
+button{
+    background-color: var(--letraCabecera);
+    color: var(--letra);
+    border-radius: 20%;
+    width: 100px;
+    height: 30px;
+}
