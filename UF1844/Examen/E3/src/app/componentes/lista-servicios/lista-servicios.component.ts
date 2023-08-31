@@ -9,27 +9,25 @@ import { ListaserviciosService } from '../servicios/listaservicios.service'
   providers: [ListaserviciosService]
 })
 export class ListaServiciosComponent implements OnInit{
- public listaServicios: Array<ServiciosBD>
- public codServicios: string[] = []
- public verdetalle: boolean = false
- propiedadesH1: any
+  public listaServicios: Array<ServiciosBD>
+  public codServicios: string[] = []
+  public verdetalle: boolean = false
+  propiedadesH1: any
 
- constructor(private _listaServicios: ListaserviciosService){
-  this.listaServicios = new Array<ServiciosBD>()
-  this.propiedadesH1 = {
-    color: '#00214a',
-    fontSize: '2em'
+  constructor(private _listaServicios: ListaserviciosService){
+    this.listaServicios = new Array<ServiciosBD>()
+    this.propiedadesH1 = {
+      color: '#00214a',
+      fontSize: '2em'
+    }
   }
- }
 
- ngOnInit(): void {
+  ngOnInit(): void {
    this.listaServicios = this._listaServicios.getServicios()
    
- }
+  }
 
- verDetalles(){
-this.verdetalle = true
- }
-
-
+  verDetalles(){
+    this.verdetalle = true
+  }
 }

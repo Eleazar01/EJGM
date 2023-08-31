@@ -11,7 +11,8 @@
         <button (click)="verDetalles()">Ver por detalles</button>
     
     
-        <app-gestion-servicios *ngIf="verdetalle != false"></app-gestion-servicios>
+        <app-gestion-servicios [hidden]="!verdetalle"></app-gestion-servicios>
+        
     
     </div>  
 
