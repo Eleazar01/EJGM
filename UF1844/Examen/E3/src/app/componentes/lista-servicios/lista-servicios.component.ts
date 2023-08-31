@@ -12,10 +12,14 @@ export class ListaServiciosComponent implements OnInit{
  public listaServicios: Array<ServiciosBD>
  public codServicios: string[] = []
  public verdetalle: boolean = false
-
+ propiedadesH1: any
 
  constructor(private _listaServicios: ListaserviciosService){
   this.listaServicios = new Array<ServiciosBD>()
+  this.propiedadesH1 = {
+    color: '#00214a',
+    fontSize: '2em'
+  }
  }
 
  ngOnInit(): void {

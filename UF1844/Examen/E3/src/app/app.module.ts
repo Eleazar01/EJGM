@@ -12,6 +12,8 @@ import { RegistroComponent } from './componentes/registro/registro.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { CarritoComponent } from './componentes/carrito/carrito.component';
 import { ContactoComponent } from './componentes/contacto/contacto.component';
+import { ListaServiciosComponent } from './componentes/lista-servicios/lista-servicios.component';
+import { GestionServiciosComponent } from './componentes/gestion-servicios/gestion-servicios.component';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import { ContactoComponent } from './componentes/contacto/contacto.component';
     RegistroComponent,
     FooterComponent,
     CarritoComponent,
-    ContactoComponent
+    ContactoComponent,
+    ListaServiciosComponent,
+    GestionServiciosComponent
   ],
   imports: [
     BrowserModule,

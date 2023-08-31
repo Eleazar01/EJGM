@@ -8,13 +8,5 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'E2';
-  propiedadesH1: any
 
-  constructor(){
-
-    this.propiedadesH1 = {
-      color: '#00214a',
-      fontSize: '2em'
-    }
-  }
 }

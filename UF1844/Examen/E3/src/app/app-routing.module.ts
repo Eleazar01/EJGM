@@ -9,6 +9,8 @@ import { RegistroComponent } from './componentes/registro/registro.component';
 import { CarritoComponent } from './componentes/carrito/carrito.component';
 import { CabeceraComponent } from './componentes/cabecera/cabecera.component';
 import { FooterComponent } from './componentes/footer/footer.component';
+import { ListaServiciosComponent } from './componentes/lista-servicios/lista-servicios.component';
+import { GestionServiciosComponent } from './componentes/gestion-servicios/gestion-servicios.component';
 
 const routes: Routes = [
   {path: '', component: InfoComponent},
@@ -20,6 +22,10 @@ const routes: Routes = [
   {path: 'Registro', component: RegistroComponent}, 
   {path: 'Carrito', component: CarritoComponent}, 
   {path: 'Footer', component: FooterComponent},
+  {path: 'ListaServicios', component: ListaServiciosComponent,
+  children:[
+    {path:'GestionServicios', component: GestionServiciosComponent}
+  ]},
   {path: '**', component: AppComponent} 
 ];
 
