@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { usuarioBD } from '../modulos/registro';
 
 @Component({
   selector: 'app-registro',
@@ -6,20 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['../../app.component.css']
 })
 export class RegistroComponent {
-  public registron : string
-  public registroa : string
-  public registroe : string
-  public registrop1 : string
-  public registrop2 : string
-  public registroed : string
-  public registroi : string
+  public registron = '';
+  public registroa = '';
+  public registroe = '';
+  public registrop1 = '';
+  public registrop2 = '';
+  public registroed = '';
+  public registroi = ''
+ public usuario : Array<usuarioBD>
   constructor(){
-    this.registron = '';
-    this.registroa = '';
-    this.registroe = '';
-    this.registrop1 = '';
-    this.registrop2 = '';
-    this.registroed = '';
-    this.registroi = '';
+    this.usuario =[
+      new usuarioBD(this.registron,this.registroa,this.registroe,this.registrop1,this.registrop2,this.registroed,this.registroi)
+    ]
   }
 }

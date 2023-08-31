@@ -76,6 +76,7 @@ h1{
     gap: .8em;
     height: 70vh;
     overflow: scroll;
+    
 }
 .lis div{
     margin: 2em;
@@ -86,6 +87,7 @@ h1{
     align-items: center;
     text-align: center;
     background-color: var(--detalle);
+    
     border-radius: 10px;
     width: 17vw;
     height: 40vh;
@@ -94,6 +96,7 @@ h1{
 .lis div img{
     width: 80%;
     border-radius: 40%;
+
     transition: 1s;
 }
 .lis div img:hover{
@@ -102,6 +105,7 @@ h1{
     scale: 1.5;
     transition: 1s;
     border-radius: 20%;
+    box-shadow: 5px 2px 2px 5px var(--cabecera);
 }
 
 /*Login*/
