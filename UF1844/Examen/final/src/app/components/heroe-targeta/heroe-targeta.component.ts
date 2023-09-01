@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class HeroeTargetaComponent implements OnInit {
 
   @Input() heroe: any={};
-  @Input() index: number;
+  @Input() index: number=0;
 
   @Output() heroeSeleccionado: EventEmitter<number>;
 

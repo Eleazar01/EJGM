@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 
 // Routas
-import { APP_ROUTING } from './app.routes';
+import { APP_ROUTING } from './app.routing';
 
 // Servicios
 import {HeroesService} from './servicios/heroes.service';
