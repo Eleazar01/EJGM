@@ -11,7 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 export class Heroe2Component implements OnInit {
 
   heroes:any[] = [];
-  termino:string='';
+  termino?:string;
 
   constructor(private activatedRoute:ActivatedRoute, private _heroesService:HeroesService) { }
 
