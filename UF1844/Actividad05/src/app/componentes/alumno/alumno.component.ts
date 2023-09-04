@@ -1,5 +1,5 @@
 import { Component} from '@angular/core';
-import { AlumnoService } from 'src/app/Servicios/alumno.service';
+
 
 @Component({
   selector: 'app-alumno',
@@ -9,10 +9,10 @@ import { AlumnoService } from 'src/app/Servicios/alumno.service';
 export class AlumnoComponent{
   public imagen : string 
   public avatar : string
-  public alumnos: Array<AlumnoService>
+  
   constructor(){
     this.imagen = '../../../assets/logo.jpeg'
     this.avatar = '../../../assets/avatar.png'
-    this.alumnos = []
+    
   }
 }
