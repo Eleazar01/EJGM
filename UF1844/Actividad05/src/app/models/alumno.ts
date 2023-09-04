@@ -4,7 +4,7 @@
 
 import { ObjectId } from "mongodb";
 
-export default class usuarios {
+export class usuarios {
   constructor(
     public nombre: string,
     public apellidos: string,

@@ -17,6 +17,8 @@ import { CabeceraComponent } from './componentes/cabecera/cabecera.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
