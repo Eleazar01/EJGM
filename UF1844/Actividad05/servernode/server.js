@@ -1,25 +1,28 @@
 const express = require('express')
 
+const initDB = require('./config/dbase')
+
 const app = express()
 
 const port = 3001
 
-app.get('/',(req,res)=>{
+const userRouter = require('./routes/user')
 
-    res.send({
-        data: 'Hola Mundo'
-    })
+// app.get('/',(req,res)=>{
+
+//     res.send({
+//         data: 'Hola Mundo'
+//     })
 
 
+// })
+
+app.use(userRouter)
+
+app.listen(port, () =>{
+    console.log('En linea !!!')
 })
 
+initDB()
 
 
-// var MongoClient = require("mongodb").MongoClient;
-// var url = "mongodb://localhost/EmployeeDB";
-// MongoClient.connect(url, function(err, db) {
-//     var cursor = db.collection("Employee").find();
-//         cursor.each(function(err, doc) {
-//         console.log(doc);
-//     });
-// });
