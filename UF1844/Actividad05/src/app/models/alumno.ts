@@ -1,20 +1,11 @@
-// External dependencies
-
-// Class Implementation
-
-import { ObjectId } from "mongodb";
-
-export class usuarios {
+export class AlumnoBD{
   constructor(
-    public nombre: string,
-    public apellidos: string,
-    public edad: number, 
-    public email: string,
-    public telefono: string, 
-    public password: string,
-    public matriculado: boolean,
-    public profesor: boolean,
-    public avatar: string,
-    public id?: ObjectId
-    ) {}
+    public nombreA : string,
+    public apellidosA : string,
+    public edadA : number,
+    public correoA : string,
+    public telefonoA : string,
+    public fotoA : string,
+    public estadoA : boolean,
+  ){}
 }
