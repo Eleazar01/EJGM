@@ -10,7 +10,7 @@ export class AlumnoService{
 
     constructor(){
         this.alumnosall = [
-                new AlumnoBD("Manuel", "M. P.", 54,"manuelmacpe@gmail.com", "667936811","../../assets/logo.jpeg", true,"",true,""), 
+                new AlumnoBD("Manuel", "M. P.", 54,"manuelmacpe@gmail.com", "667936811","../../assets/logo.jpeg", true), 
                 new AlumnoBD("Miguel", "R. R.", 39,"miguelrr@gmail.com", "123456789","../../assets/logo.jpeg", true), 
                 new AlumnoBD("Javier", "D. M.", 19,"javierdm@gmail.com", "123456789","../../assets/logo.jpeg", true)
         ]
