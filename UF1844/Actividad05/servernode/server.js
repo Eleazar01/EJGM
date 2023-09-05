@@ -10,7 +10,6 @@ app.get('/',(req,res)=>{
         data: 'Hola Mundo'
     })
 
-    // req.
 
 })
 
