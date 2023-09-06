@@ -22,7 +22,7 @@ const controller = {
         cursos.description = params.description;
         cursos.category = params.category;
         cursos.year = params.year;
-        cursos.lang = params.langs;+
+        cursos.lang = params.langs;
         cursos.save((err,cursosStored)=>{
             if(err) return res.status(500).send({message: 'Error al guardar el documento.'});
             if(!projectStored) return res.status(404).send({message: 'No se ha podido guardar.'});
