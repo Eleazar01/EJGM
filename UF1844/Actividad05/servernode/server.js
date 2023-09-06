@@ -1,28 +1,32 @@
 const express = require('express')
 
-const initDB = require('./config/dbase')
-
 const app = express()
 
 const port = 3001
-
-const userRouter = require('./routes/user')
-
-// app.get('/',(req,res)=>{
-
-//     res.send({
-//         data: 'Hola Mundo'
-//     })
-
-
-// })
-
-app.use(userRouter)
 
 app.listen(port, () =>{
     console.log('En linea !!!')
 })
 
-initDB()
+const userRouters = require('./routes/user')
+
+app.use(userRouters)
+
+//Conexion con base datos
+
+
+const mongoose = require('mongoose')
+
+mongoose.Promise = global.Promise
+mongoose.connect('mongodb://127.0.0.1:27017/Appweb',{
+    useNewUrlParser: true
+})
+
+.then(()=>{
+    console.log('Conexion establecida...')
+})
+
+.catch(err => console.log(err))
+
 
 
