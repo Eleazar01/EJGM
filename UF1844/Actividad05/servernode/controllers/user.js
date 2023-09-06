@@ -1,7 +1,8 @@
 const model = require('../models/user')
 
 const fs = require('fs');
-const { param } = require('../routes/user');
+const path = require('path');
+// const { param } = require('../routes/user');
 
 const controller = {
     home: function (req,res) {
