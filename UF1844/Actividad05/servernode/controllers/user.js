@@ -48,7 +48,7 @@ const controller = {
         User.find({}).sort('-year').exec((err, users)=>{
             if(err) return res.status(500).send({message: 'Error al devolver los datos'});
             if(!projects) return res.status(404).send({message: 'No hay usuarios ue mostrar'});
-            return res.status(200).sen({projects});
+            return res.status(200).send({projects});
         });
     },
 
@@ -65,7 +65,7 @@ const controller = {
     },
 
     deleteUser: function (req, res) {
-        
+
         var userId = req.params.id;
 
         User.findByIdAndRemove(userId, (err, userRemoved)=>{
