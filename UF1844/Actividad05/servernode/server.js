@@ -9,9 +9,10 @@ app.listen(port, () =>{
 })
 
 const userRouters = require('./routes/user')
-
 app.use(userRouters)
 
+const cursosRouters = require('./routes/cursos')
+app.use(cursosRouters)
 //Conexion con base datos
 
 

@@ -5,12 +5,12 @@ const path = require('path');
 const cursos = require('../models/cursos');
 
 const controller = {
-    home: function (req,res) {
+    homec: function (req,res) {
         return res.status(200).send({
             message: 'Soy home de cursos'
         });
     },
-    test: function (req,res) {
+    testc: function (req,res) {
         return res.status(200).send({
             message: 'Soy el metodo o acción test del controlador de cursos'
         });
