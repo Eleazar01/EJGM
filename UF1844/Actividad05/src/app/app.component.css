@@ -83,7 +83,7 @@ button{
 .login{
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: flex-end;
     height: 59.5vh;
 }
 .login form{
@@ -243,5 +243,5 @@ footer ul li{
 }
 .logos{
     display: flex;
-    align-items: end;
+    align-items: flex-end;
 }
