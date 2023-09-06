@@ -12,8 +12,6 @@ router.put('/user/:id', UserController.updateUser);
 router.delete('/user/:id', UserController.deleteUser);
 
 // const path = 'user'
-
-// router.get(
 //     `/${path}`,
 //     UserController.getData
 // )
