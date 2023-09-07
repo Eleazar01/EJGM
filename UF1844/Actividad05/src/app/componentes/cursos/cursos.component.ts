@@ -17,11 +17,7 @@ implements OnInit{
     this.registrado = false
     this.Nota = 0
 
-    this.cursosAll = [
-      new cursosBD('Electricidad','Principios básicos de la electricidad', 100),
-      new cursosBD('AppWeb','Desarrollo de aplicaciones web', 400,),
-      new cursosBD('Soldadura','Acabado bonito', 50,)
-    ]
+    this.cursosAll = [ ]
   }
   ngOnInit(): void {
     console.log(this.cursosAll)

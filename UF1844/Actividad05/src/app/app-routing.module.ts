@@ -12,6 +12,7 @@ import { CursosComponent } from './componentes/cursos/cursos.component';
 import { ProfesorComponent } from './componentes/profesor/profesor.component';
 import { ProfesoresComponent } from './componentes/profesores/profesores.component';
 import { RegistroComponent } from './componentes/registro/registro.component';
+import { CrearcursoComponent } from './componentes/crearcurso/crearcurso.component';
 
 const routes: Routes = [
   {path: '', component: AccesoComponent},
@@ -24,6 +25,7 @@ const routes: Routes = [
   {path: 'profesor', component: ProfesorComponent},
   {path: 'profesores', component: ProfesoresComponent},
   {path: 'registro', component: RegistroComponent},
+  {path: 'crear-curso',component: CrearcursoComponent},
   {path: '**', component: AppComponent}
 ];
 

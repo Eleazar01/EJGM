@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AlumnoBD } from 'src/app/models/alumno';
-import { CursosService } from 'src/app/Servicios/curso.service';
+import { save_cursoService } from 'src/app/Servicios/curso.service';
 
 @Component({
   selector: 'app-alumnos',
@@ -12,7 +12,7 @@ export class AlumnosComponent implements OnInit{
   public imagen : string 
   public alumnosAll: Array<AlumnoBD>
   
-  constructor(private _cursosService: CursosService){
+  constructor(private _cursosService: save_cursoService){
     this.imagen = '../../../assets/logo.jpeg'
     this.alumnosAll = [
       new AlumnoBD('Miguel','Ramírez', 39, 'miguel@gmail.com','555 555 555 ', '../../assets/avatar.png',true),
