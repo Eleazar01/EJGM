@@ -1,0 +1,15 @@
+ 
+<div class="login">
+    <form>
+
+        <input type="text" name="usuario" placeholder="Introduce el usuario" [(ngModel)]="nombre"/>
+
+        <input type="password" name="password" placeholder="Introduce la contraseña" [(ngModel)]="contrasena"/>
+        
+        <p>{{nombre}} {{contrasena}}</p>
+        
+        <button>Acceder</button>
+        <p>¿No te has registrado? Registrate <a href="/registro">aquí</a></p>
+    </form>
+</div>
+
