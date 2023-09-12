@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { AuthModule } from '@auth0/auth0-angular';
+import {DragDropModule} from '@angular/cdk/drag-drop';
 
 // Components
 import { AppComponent } from './app.component';
@@ -41,9 +42,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     CrearCursoComponent,
     ListarCursoComponent,
     HeaderComponent,
-    DashboardComponent
+    DashboardComponent,
   ],
   imports: [
+    DragDropModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
