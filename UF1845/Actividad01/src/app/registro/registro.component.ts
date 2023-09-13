@@ -1,31 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
+import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
+import {ErrorStateMatcher} from '@angular/material/core';
 
+export class MyErrorStateMatcher implements ErrorStateMatcher {
+  isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
+    const isSubmitted = form && form.submitted;
+    return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
+  }
+}
+
+/** @title Input with a custom ErrorStateMatcher */
 @Component({
   selector: 'app-registro',
   templateUrl: './registro.component.html',
   styleUrls: ['./registro.component.css']
 })
-export class RegistroComponent implements OnInit{
-  public nombreA: string
-  public emailA: string 
-  public contrasenaA: string
 
-  constructor(){
-    this.nombreA = ''
-    this.emailA = ''
-    this.contrasenaA = ''
+export class RegistroComponent {
+  emailFormControl = new FormControl('', [Validators.required, Validators.email]);
 
-  }
-
-  submitFormA() {
-    console.log('Formulario enviado:');
-    console.log('Nombre:', this.nombreA);
-    console.log('Email:', this.emailA);
-    console.log('Contraseña:', this.contrasenaA);
-  }
-
-  ngOnInit(): void {
-    
-  }
-
+  matcher = new MyErrorStateMatcher();
 }
+

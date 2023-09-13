@@ -7,7 +7,10 @@ import { HttpClientModule } from '@angular/common/http';
 //angular material
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {DragDropModule} from '@angular/cdk/drag-drop';
-
+import {MatCardModule} from '@angular/material/card'; 
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select'; 
+import {MatInputModule} from '@angular/material/input'; 
 //otros modulos
 import { ToastrModule } from 'ngx-toastr';
 import { AuthModule } from '@auth0/auth0-angular';
@@ -30,6 +33,7 @@ import { ListarCursoComponent } from './listar-curso/listar-curso.component';
 import { HeaderComponent } from './header/header.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,6 +53,11 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     DashboardComponent,
   ],
   imports: [
+
+    MatInputModule,
+    MatSelectModule,
+    MatFormFieldModule,
+    MatCardModule,
     DragDropModule,
     BrowserModule,
     AppRoutingModule,
