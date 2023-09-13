@@ -1,70 +1,85 @@
-import { Component, OnInit } from '@angular/core';
-import { Curso } from '../Models/curso';
-import { save_cursoService} from '../servicios/curso.service';
-import { UploadService } from '../servicios/upload.service';
-import { Global } from '../servicios/global';
+// Módulos y Librerías
+import { Component, OnInit } from '@angular/core'
+import {FormBuilder, FormGroup, Validators} from '@angular/forms'
+import {ActivatedRoute, Router} from '@angular/router'
+import { ToastrService } from 'ngx-toastr'
+// Servicio - Modelo
+import { GCurso } from '../Models/gcurso'
+import { GcursoService } from '../servicios/gcurso.service'
 
 @Component({
-  selector: 'app-crearcurso',
-  templateUrl: './crearcurso.component.html',
-  styleUrls: ['./crearcurso.component.css'],
-  providers: [save_cursoService, UploadService]
-
-
+  selector: 'app-crear-curso',
+  templateUrl: './crear-curso.component.html',
+  styleUrls: ['./crear-curso.component.css']
 })
-export class CrearcursoComponent implements OnInit {
+export class CrearCursoComponent implements OnInit{
+cursoForm: FormGroup;
+titulo = 'Crear curso';
+  id: string | null;
+  constructor(private fb: FormBuilder,
+              private router: Router,
+              private toastr: ToastrService,
+              private _cursoService: GcursoService,
+              private aRouter: ActivatedRoute) { 
+    this.cursoForm = this.fb.group({
+      nombre: ['', Validators.required],
+      descripcion: ['', Validators.required],
+      categoria: ['', Validators.required],
+      duracion: ['', Validators.required],
+      temas: ['', Validators.required]
+    })
+    this.id = this.aRouter.snapshot.paramMap.get('id');
+  }
 
-  public title: string;
-	public curso: Curso;
-	public save_curso: any;
-	public status: any;
-	public filesToUpload: Array<File> = [];
+  ngOnInit(): void {
+    this.esEditar();
+  }
 
-	constructor(
-		private _cursoService: save_cursoService,
-		private _uploadService: UploadService
-	){
-		this.title = "Crear Curso";
-		this.curso = new Curso('','','','',6,'','');
-	}
+  agregarCurso() {
 
-	ngOnInit() {
-	}
+    const CURSO: GCurso = {
+      nombre: this.cursoForm.get('nombre')?.value,
+      descripcion: this.cursoForm.get('descripcion')?.value,
+      categoria: this.cursoForm.get('categoria')?.value,
+      duracion: this.cursoForm.get('duracion')?.value,
+      temas: this.cursoForm.get('temas')?.value
+    }
 
-	onSubmit(form: { reset: () => void; }){
-		
-		// Guardar datos básicos
-		this._cursoService.saveCurso(this.curso).subscribe(
-			response => {
-				if(response.curso){
-					
-					// Subir la imagen
-					if(this.filesToUpload){
-						this._uploadService.makeFileRequest(Global.url+"upload-image/"+response.curso._id, [], this.filesToUpload, 'image')
-						.then((result:any) => {
+    if(this.id !== null){
+      // Editamos Curso
+      this._cursoService.editarCurso(this.id, CURSO).subscribe(data =>{
+        this.toastr.info('El curso fue actualizado con exito!', 'Curso Actualizado!');
+        this.router.navigate(['/']);
+      }, error => {
+        console.log(error);
+        this.cursoForm.reset();
+      })
+    } else{
+      // Agregamos Curso
+      console.log(CURSO);
+        this._cursoService.guardarCurso(CURSO).subscribe(data => {
+        this.toastr.success('El curso fue registrado con exito!', 'Curso Registrado!');
+        this.router.navigate(['/']);
+      }, error => {
+        console.log(error);
+        this.cursoForm.reset();
+      })
+    }
+  }
+  
+  esEditar() {
+    if(this.id !== null) {
+      this.titulo = 'Editar curso';
+      this._cursoService.obtenerCurso(this.id).subscribe(data => {
+        this.cursoForm.setValue({
+          nombre: data.nombre,
+          descripcion: data.descripcion,
+          categoria: data.categoria,
+          duracion: data.duracion,
+          temas: data.temas
+        })
+      })
+    }
+  }
 
-							this.save_curso = result.curso;
-
-							this.status = 'success';
-							form.reset();
-						});
-					}else{
-						this.save_curso = response.curso;
-						this.status = 'success';
-						form.reset();
-					}
-					
-				}else{
-					this.status = 'failed';
-				}
-			},
-			error => {
-				console.log(<any>error);
-			}
-		);
-	}
-
-	fileChangeEvent(fileInput: any){
-		this.filesToUpload = <Array<File>>fileInput.target.files;
-	}
 }

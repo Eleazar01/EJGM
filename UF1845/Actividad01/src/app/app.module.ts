@@ -31,7 +31,6 @@ import { ProfesoresComponent } from './profesores/profesores.component';
 import { AccesoComponent } from './acceso/acceso.component';
 import { RegistroComponent } from './registro/registro.component';
 import { ContactoComponent } from './contacto/contacto.component';
-import { CrearcursoComponent } from './crearcurso/crearcurso.component';
 import { CrearCursoComponent } from './crear-curso/crear-curso.component';
 import { ListarCursoComponent } from './listar-curso/listar-curso.component';
 import { HeaderComponent } from './header/header.component';
@@ -50,7 +49,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     AccesoComponent,
     RegistroComponent,
     ContactoComponent,
-    CrearcursoComponent,
     CrearCursoComponent,
     ListarCursoComponent,
     HeaderComponent,
