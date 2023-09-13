@@ -36,13 +36,12 @@
 
   <mat-form-field class="example-full-width">
     <mat-label>Contraseña</mat-label>
-    <input type="password" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
-           placeholder="Ej. pat@example.com">
+    <input type="password" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
     <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-      Introduce una direccion electrónica válida
+      La contraseña debe tener Mayusculas, minusculas, algún caracter y números.
     </mat-error>
     <mat-error *ngIf="emailFormControl.hasError('required')">
-      El correo es <strong>obligatorio</strong>
+      La contraseña es <strong>obligatoria</strong>
     </mat-error>
   </mat-form-field>
 
@@ -50,13 +49,12 @@
 
   <mat-form-field class="example-full-width">
     <mat-label>Repite la contraseña</mat-label>
-    <input type="password" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
-           placeholder="Ej. pat@example.com">
+    <input type="password" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
     <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-      Introduce una direccion electrónica válida
+      Las contraseñas deben coincidir
     </mat-error>
     <mat-error *ngIf="emailFormControl.hasError('required')">
-      El correo es <strong>obligatorio</strong>
+      La contraseña es <strong>obligatoria</strong>
     </mat-error>
   </mat-form-field>
 
@@ -69,9 +67,17 @@
     </mat-form-field>
     <mat-form-field class="example-full-width">
       <mat-label>Direccion adicional</mat-label>
-      <textarea matInput></textarea>
+      <textarea matInput placeholder="Ej. Calle Juan Rejón"></textarea>
     </mat-form-field>
   </p>
+
+  <!-- Telefono -->
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Teléfono</mat-label>
+    <span matPrefix>+34 &nbsp;</span>
+    <input type="tel" matInput placeholder="928 556 662">
+  </mat-form-field>
 
   <!-- Residencia -->
 
