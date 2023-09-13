@@ -18,23 +18,23 @@ import {
 })
 export class TareasComponent {
   // movies = [
-  //   'Episode I - The Phantom Menace',
-  //   'Episode II - Attack of the Clones',
-  //   'Episode III - Revenge of the Sith',
-  //   'Episode IV - A New Hope',
-  //   'Episode V - The Empire Strikes Back',
-  //   'Episode VI - Return of the Jedi',
-  //   'Episode VII - The Force Awakens',
-  //   'Episode VIII - The Last Jedi',
-  //   'Episode IX – The Rise of Skywalker',
+  //   'Episodio I - La amenaza fantasma',
+  //   'Episodio II - El ataque de los clones',
+  //   'Episodio III - Revenge of the Sith',
+  //   'Episodio IV - A New Hope',
+  //   'Episodio V - The Empire Strikes Back',
+  //   'Episodio VI - Return of the Jedi',
+  //   'Episodio VII - The Force Awakens',
+  //   'Episodio VIII - The Last Jedi',
+  //   'Episodio IX – The Rise of Skywalker',
   // ];
 
   // drop(event: CdkDragDrop<string[]>) {
   //   moveItemInArray(this.movies, event.previousIndex, event.currentIndex);
   // }
-  todo = ['Episode I - The Phantom Menace', 'Episode II - Attack of the Clones', 'Episode III - Revenge of the Sith', 'Episode IV - A New Hope'];
+  todo = ['Episodio I - La amenaza fantasma', 'Episodio II - El ataque de los clones', 'Episodio III - La venganza de los Sith', 'Episodio IV - Una nueva esperanza'];
 
-  done = ['Episode V - The Empire Strikes Back', 'Episode VI - Return of the Jedi', 'Episode VII - The Force Awakens', 'Episode VIII - The Last Jedi', 'Episode IX – The Rise of Skywalker'];
+  done = ['Episodio V - El imperio contraataca', 'Episodio VI - El retorno del Jedi', 'Episodio VII - El despertar de la fuerza', 'Episodio VIII - Los últimos Jedi', 'Episode IX – El ascenso de Skywalker'];
 
   drop(event: CdkDragDrop<string[]>) {
     if (event.previousContainer === event.container) {
