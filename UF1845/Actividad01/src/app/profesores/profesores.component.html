@@ -1,1 +1,24 @@
-<p>profesores works!</p>
+<div class="example-listbox-container">
+    <label class="example-listbox-label" id="example-language-label">
+      Listado de Profesores
+    </label>
+    <ul cdkListbox
+        [formControl]="languageCtrl"
+        aria-labelledby="example-language-label"
+        class="example-listbox">
+      <li *ngFor="let language of languages"
+          [cdkOption]="language"
+          class="example-option">
+        {{language}}
+      </li>
+    </ul>
+  </div>
+  <p>
+    Selecciona un profesor: <b>{{languageCtrl.value | json}}</b>&nbsp;
+    <button mat-fab extended color="warn" routerLink="/profesor">
+      <mat-icon>account_box</mat-icon>
+      Ver
+    </button>
+  
+  </p>
+  
