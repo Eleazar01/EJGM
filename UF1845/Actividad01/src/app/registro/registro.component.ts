@@ -20,5 +20,7 @@ export class RegistroComponent {
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
 
   matcher = new MyErrorStateMatcher();
+  hide = true;
+  hide2 = true;
 }
 

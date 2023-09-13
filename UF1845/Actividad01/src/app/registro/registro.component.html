@@ -34,28 +34,22 @@
 
   <!-- Contraseña -->
 
-  <mat-form-field class="example-full-width">
-    <mat-label>Contraseña</mat-label>
-    <input type="password" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
-    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-      La contraseña debe tener Mayusculas, minusculas, algún caracter y números.
-    </mat-error>
-    <mat-error *ngIf="emailFormControl.hasError('required')">
-      La contraseña es <strong>obligatoria</strong>
-    </mat-error>
+  <mat-form-field appearance="fill">
+    <mat-label>Introduce una contraseña</mat-label>
+    <input matInput [type]="hide ? 'password' : 'text'">
+    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
   </mat-form-field>
-
+  <br>
   <!-- Repite contraseña -->
 
-  <mat-form-field class="example-full-width">
+  <mat-form-field appearance="fill">
     <mat-label>Repite la contraseña</mat-label>
-    <input type="password" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
-    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-      Las contraseñas deben coincidir
-    </mat-error>
-    <mat-error *ngIf="emailFormControl.hasError('required')">
-      La contraseña es <strong>obligatoria</strong>
-    </mat-error>
+    <input matInput [type]="hide ? 'password' : 'text'">
+    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <mat-icon>{{hide2 ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
   </mat-form-field>
 
   <!-- Direccion -->
