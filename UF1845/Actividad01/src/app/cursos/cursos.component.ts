@@ -11,7 +11,7 @@ import { GCurso } from '../Models/gcurso';
 export class CursosComponent implements OnInit{
 
   listCursos: GCurso[] = []
-  // toastr: any;
+
 
 constructor(private _gcursoService: GcursoService,
             private toastr: ToastrService ){
