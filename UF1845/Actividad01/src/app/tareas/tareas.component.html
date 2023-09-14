@@ -1,11 +1,11 @@
    <div class="example-container" cdkDrag>
-    <h2>Entra en la saga</h2>
+    <h2>Lista de tareas</h2>
   
     <div
       cdkDropList
       #todoList="cdkDropList"
       [cdkDropListData]="todo"
-      [cdkDropListConnectedTo]="[doneList]"
+      [cdkDropListConnectedTo]="[inprogressList]"
       class="example-list"
       (cdkDropListDropped)="drop($event)">
       <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item}}</div>
@@ -13,18 +13,33 @@
   </div>
   
   <div class="example-container" cdkDrag>
-    <h2>No entra</h2>
+    <h2>Tareas en proceso</h2>
+  
+    <div
+      cdkDropList
+      #inprogressList="cdkDropList"
+      [cdkDropListData]="inprogress"
+      [cdkDropListConnectedTo]="[doneList, todoList]"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let item of inprogress" cdkDrag>{{item}}</div>
+    </div>
+    <span *ngIf="inprogress.length==todo.length" class="material-symbols-outlined">inprogress</span>
+  </div>
+
+  <div class="example-container" cdkDrag>
+    <h2>Tareas finalizadas</h2>
   
     <div
       cdkDropList
       #doneList="cdkDropList"
       [cdkDropListData]="done"
-      [cdkDropListConnectedTo]="[todoList]"
+      [cdkDropListConnectedTo]="[inprogressList]"
       class="example-list"
       (cdkDropListDropped)="drop($event)">
       <div class="example-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
     </div>
-    <span *ngIf="done.length==todo.length" class="material-symbols-outlined">done</span>
+    <span *ngIf="done.length==inprogress.length" class="material-symbols-outlined">done</span>
   </div>
   
   

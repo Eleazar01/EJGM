@@ -19,7 +19,7 @@ import {
 
 export class TareasComponent {
   todo = ['Episodio I - La amenaza fantasma', 'Episodio II - El ataque de los clones', 'Episodio III - La venganza de los Sith', 'Episodio IV - Una nueva esperanza','Episodio V - El imperio contraataca', 'Episodio VI - El retorno del Jedi', 'Episodio VII - El despertar de la fuerza', 'Episodio VIII - Los últimos Jedi', 'Episode IX – El ascenso de Skywalker'];
-
+  inprogress: string[] = [];
   done: string[] = [];
 
   drop(event: CdkDragDrop<string[]>) {
