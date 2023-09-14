@@ -12,19 +12,9 @@
   color: rgb(202, 194, 183);
   text-align: center;
   align-items: center;
+  font-weight:600;
 }
-.example-listbox-containe {
-  display: flex;
-  flex-direction: column;
-  width: 250px;
-  background-color: rgba(12, 12, 103, 0.772);
-  border: 1px solid black;
-  border-radius: 10px;
-  color: rgb(251, 249, 248);
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-}
+
 
 .example-listbox-label {
   display: block;
@@ -67,5 +57,6 @@
   display: inline-block;
 }
 mat-icon{
-  background-color: rgb(117, 49, 20);
+  background-color: rgb(33, 14, 85);
+  border-radius: 10px;
 }

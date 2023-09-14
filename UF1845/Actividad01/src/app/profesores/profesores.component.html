@@ -10,16 +10,10 @@
       <li *ngFor="let language of languages"
           [cdkOption]="language"
           class="example-option">
-        {{language}}
+        {{language}}  <mat-icon routerLink="/profesor">account_box</mat-icon>
       </li>
     </ul>
   </div>
-  <p class="example-listbox-containe">
-    Selecciona un profesor: <b>{{languageCtrl.value | json}}</b>&nbsp;
-
-      <mat-icon routerLink="/profesor">account_box</mat-icon>
-  
-  </p>
 </div>
 
   
