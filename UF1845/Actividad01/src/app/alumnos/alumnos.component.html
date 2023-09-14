@@ -1,23 +1,23 @@
-<div class="example-listbox-container">
-  <label class="example-listbox-label" id="example-language-label">
-    Listado de Alumnos
-  </label>
-  <ul cdkListbox
-      [formControl]="languageCtrl"
-      aria-labelledby="example-language-label"
-      class="example-listbox">
-    <li *ngFor="let language of languages"
-        [cdkOption]="language"
-        class="example-option">
-      {{language}}
-    </li>
-  </ul>
+<div class="caja">
+  <div class="example-listbox-container">
+    <label class="example-listbox-label" id="example-language-label">
+      Listado de Alumnos
+    </label>
+    <ul cdkListbox
+        [formControl]="languageCtrl"
+        aria-labelledby="example-language-label"
+        class="example-listbox">
+      <li *ngFor="let language of languages"
+          [cdkOption]="language"
+          class="example-option">
+        {{language}}
+      </li>
+    </ul>
+  </div>
+  <p class="example-listbox-containe">
+    Selecciona un alumno: {{languageCtrl.value | json}};
+      <mat-icon routerLink="/alumno">account_box</mat-icon>
+      <br><br>
+  </p>
 </div>
-<p>
-  Selecciona un alumno: <b>{{languageCtrl.value | json}}</b>&nbsp;
-  <button mat-fab extended color="warn" routerLink="/alumno">
-    <mat-icon>account_box</mat-icon>
-    Ver
-  </button>
 
-</p>

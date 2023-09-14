@@ -1,4 +1,5 @@
-<div class="example-listbox-container">
+<div class="caja">
+  <div class="example-listbox-container">
     <label class="example-listbox-label" id="example-language-label">
       Listado de Profesores
     </label>
@@ -13,12 +14,12 @@
       </li>
     </ul>
   </div>
-  <p>
+  <p class="example-listbox-containe">
     Selecciona un profesor: <b>{{languageCtrl.value | json}}</b>&nbsp;
-    <button mat-fab extended color="warn" routerLink="/profesor">
-      <mat-icon>account_box</mat-icon>
-      Ver
-    </button>
+
+      <mat-icon routerLink="/profesor">account_box</mat-icon>
   
   </p>
+</div>
+
   

@@ -1,8 +1,29 @@
+.caja{
+  display: flex;
+}
 .example-listbox-container {
-    display: block;
-    width: 250px;
-    border: 1px solid black;
-  }
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  background-color: rgba(12, 12, 103, 0.772);
+  border: 1px solid black;
+  border-radius: 10px;
+  color: rgb(202, 194, 183);
+  text-align: center;
+  align-items: center;
+}
+.example-listbox-containe {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  background-color: rgba(12, 12, 103, 0.772);
+  border: 1px solid black;
+  border-radius: 10px;
+  color: rgb(202, 194, 183);
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
   
   .example-listbox-label {
     display: block;
@@ -43,4 +64,7 @@
   
   .example-disabled {
     display: inline-block;
+  }
+  mat-icon{
+    background-color: rgb(117, 49, 20);
   }
