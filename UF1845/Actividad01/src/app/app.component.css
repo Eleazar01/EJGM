@@ -6,5 +6,10 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
   

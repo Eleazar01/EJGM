@@ -1,7 +1,8 @@
 .header{
-    background-color: #36D1DC;
+    background-color: #111551e1;
     padding: 20px;
     height: 60px;
+    border-radius: 20px;
     
 }
 .header ul{
@@ -19,7 +20,7 @@
 .header li a{
     text-decoration: none;
     font-size: 1.2rem;
-    color: #000;
+    color: #55dce3;
     font-weight: 700;
     
 }

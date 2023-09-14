@@ -1,5 +1,6 @@
 .caja{
   display: flex;
+  gap: 30px;
 }
 .example-listbox-container {
   display: flex;
@@ -19,7 +20,7 @@
   background-color: rgba(12, 12, 103, 0.772);
   border: 1px solid black;
   border-radius: 10px;
-  color: rgb(202, 194, 183);
+  color: rgb(251, 249, 248);
   text-align: center;
   align-items: center;
   justify-content: center;
