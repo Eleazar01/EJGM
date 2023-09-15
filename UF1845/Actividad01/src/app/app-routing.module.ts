@@ -14,6 +14,7 @@ import { ContactoComponent } from './contacto/contacto.component';
 import { CrearCursoComponent } from './crear-curso/crear-curso.component';
 import { ListarCursoComponent } from './listar-curso/listar-curso.component';
 import { TareasComponent } from './tareas/tareas.component';
+import { CrearUsuarioComponent } from './crear-usuario/crear-usuario.component';
 
 
 const routes: Routes = [
@@ -27,6 +28,7 @@ const routes: Routes = [
   {path: 'registro', component:  RegistroComponent},
   {path: 'contacto', component: ContactoComponent},
   {path: 'crearCurso', component: CrearCursoComponent},
+  {path: 'crearUsuario', component: CrearUsuarioComponent},
   {path: 'editarCurso/:id', component: CrearCursoComponent},
   {path: 'listado', component: ListarCursoComponent},
   {path: 'tareas', component: TareasComponent},

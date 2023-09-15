@@ -1,0 +1,111 @@
+<div class="container mt-15">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body text-center">
+                    <span class="titulo">{{ titulo | uppercase }}</span>
+                    <form class="mb-3" [formGroup]="usuarioForm" (ngSubmit)="agregarUsuario()">
+                        <div class="mb-3">
+
+                            <!-- Nombre -->
+
+                            <input type="text" formControlName="nombre" class="form-control" placeholder="Nombre">
+                            <div class="text-danger" *ngIf="usuarioForm.get('nombre')?.hasError('required') && usuarioForm.get('nombre')?.touched">
+                                <span>El nombre es obligatorio</span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+
+                            <!-- Apellidos -->
+
+                            <input type="text" formControlName="apellidos" class="form-control" placeholder="Apellidos">
+                            <div class="text-danger" *ngIf="usuarioForm.get('apellidos')?.hasError('required') && usuarioForm.get('apellidos')?.touched">
+                                <span>Los apellidos son obligatorios</span>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+
+                        <div class="mb-3">
+                            <input type="email" formControlName="email" class="form-control" placeholder="Correo electrónico">
+                            <div class="text-danger" *ngIf="usuarioForm.get('email')?.hasError('required') && usuarioForm.get('email')?.touched">
+                                <span>El correo electrónico es obligatoria</span>
+                            </div>
+                        </div>
+
+                        <!-- Contraseña -->
+
+                        <div class="mb-3">
+                            <input type="password" formControlName="password" class="form-control" placeholder="Introduce la Contraseña">
+                            <div class="text-danger" *ngIf="usuarioForm.get('password')?.hasError('required') && usuarioForm.get('password')?.touched">
+                                <span>La contraseña es obligatoria</span>
+                            </div>
+                        </div>
+
+                        <!-- Direccion -->
+
+                        <div class="mb-3">
+                            <input type="text" formControlName="direccion" class="form-control" placeholder="Introduce tu dirección">
+                            <div class="text-danger" *ngIf="usuarioForm.get('direccion')?.hasError('required') && usuarioForm.get('direccion')?.touched">
+                                <span>La dirección es obligatoria</span>
+                            </div>
+                        </div>
+
+                        <!-- Direccion adicional -->
+
+                        <div class="mb-3">
+                            <input type="text" formControlName="direccion2" class="form-control" placeholder="Introduce una dirreción adicional">
+                            <!-- <div class="text-danger" *ngIf="usuarioForm.get('direccion2')?.hasError('required') && usuarioForm.get('direccion2')?.touched">
+                                <span>Los temas son obligatorios</span>
+                            </div> -->
+                        </div>
+
+                        <!-- Telefono -->
+
+                        <div class="mb-3">
+                            <input type="tel" formControlName="telefono" class="form-control" placeholder="Introduce un teléfono de contacto">
+                            <div class="text-danger" *ngIf="usuarioForm.get('telefono')?.hasError('required') && usuarioForm.get('telefono')?.touched">
+                                <span>El teléfono es obligatorio</span>
+                            </div>
+                        </div>
+
+                        <!-- Ciudad -->
+
+                        <div class="mb-3">
+                            <input type="text" formControlName="ciudad" class="form-control" placeholder="Introduce el nombre de la ciudad donde vives">
+                            <div class="text-danger" *ngIf="usuarioForm.get('ciudad')?.hasError('required') && usuarioForm.get('ciudad')?.touched">
+                                <span>La ciudad es obligatoria</span>
+                            </div>
+                        </div>
+
+                        <!-- Pais -->
+
+                        <div class="mb-3">
+                            <input type="text" formControlName="pais" class="form-control" placeholder="Introduce tu país de residencia">
+                            <div class="text-danger" *ngIf="usuarioForm.get('pais')?.hasError('required') && usuarioForm.get('pais')?.touched">
+                                <span>La país es obligatorio</span>
+                            </div>
+                        </div>
+
+                        <!-- Código Postal -->
+
+                        <div class="mb-3">
+                            <input type="number" formControlName="cpostal" class="form-control" placeholder="Introduce tu código postal">
+                            <div class="text-danger" *ngIf="usuarioForm.get('cpostal')?.hasError('required') && usuarioForm.get('cpostal')?.touched">
+                                <span>El código postal es obligatorio</span>
+                            </div>
+                        </div>
+
+
+                        <!-- Enviar -->
+
+                        <div class="mb-3">
+                            <button class="btn btn-secondary float-start" routerLink="/">VOLVER</button>
+                            <button type="submit" [disabled]="usuarioForm.invalid" class="btn btn-success float-end">ACEPTAR</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

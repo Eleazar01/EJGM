@@ -36,6 +36,7 @@ import { CrearCursoComponent } from './crear-curso/crear-curso.component';
 import { ListarCursoComponent } from './listar-curso/listar-curso.component';
 import { HeaderComponent } from './header/header.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { CrearUsuarioComponent } from './crear-usuario/crear-usuario.component';
 
 
 @NgModule({
@@ -54,6 +55,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     ListarCursoComponent,
     HeaderComponent,
     DashboardComponent,
+    CrearUsuarioComponent,
   ],
   imports: [
     MatIconModule,

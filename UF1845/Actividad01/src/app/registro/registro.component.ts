@@ -1,6 +1,9 @@
 import { Component} from '@angular/core';
 import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
 import {ErrorStateMatcher} from '@angular/material/core';
+import { GRegistro } from '../Models/gregistro';
+import { GregistroService } from '../servicios/gregistro';
+import { ToastrService } from 'ngx-toastr';
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
@@ -22,5 +25,32 @@ export class RegistroComponent {
   matcher = new MyErrorStateMatcher();
   hide = true;
   hide2 = true;
+
+  listUsuario: GRegistro[] = []
+
+  constructor(private _gRegistroService: GregistroService,
+    private toastr: ToastrService ){
+
+}
+ngOnInit(): void{
+this.obtenerRegistro()
+}
+obtenerRegistro() {
+this._gRegistroService.getRegistros().subscribe(data => {
+console.log(data);
+this.listUsuario = data;
+}, error => {
+console.log(error);
+})
+}
+eliminarRegistro(id: any) {
+this._gRegistroService.eliminarRegistro(id).subscribe(data => {
+this.toastr.error('El usuario fue eliminado con exito' ,'Usuario Eliminado');
+this.obtenerRegistro();
+}, error => {
+console.log(error);
+})
+}
+
 }
 

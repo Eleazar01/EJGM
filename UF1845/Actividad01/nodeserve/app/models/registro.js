@@ -35,7 +35,7 @@ const RegistroSchema = mongoose.Schema({
     pais: {
         type: String,
     },
-    postal: {
+    cpostal: {
         type: Number,
     },
     profesor: {

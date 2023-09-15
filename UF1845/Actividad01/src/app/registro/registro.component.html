@@ -1,97 +1,46 @@
-<form class="example-form">
-  <!-- <mat-form-field class="example-full-width">
-    <mat-label>Company (disabled)</mat-label>
-    <input matInput disabled value="Google">
-  </mat-form-field> -->
-
-  <!-- Nombre -->
-
-  <table class="example-full-width" cellspacing="0"><tr>
-    <td><mat-form-field class="example-full-width">
-      <mat-label>Nombre</mat-label>
-      <input matInput>
-    </mat-form-field></td>
-    <td><mat-form-field class="example-full-width">
-      <mat-label>Apellidos</mat-label>
-      <input matInput>
-    </mat-form-field></td>
-  </tr></table>
-
-  <!-- Email -->
-
-  <mat-form-field class="example-full-width">
-    <mat-label>Correo electrónico</mat-label>
-    <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
-           placeholder="Ej. pat@example.com">
-    <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
-    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-      Introduce una direccion electrónica válida
-    </mat-error>
-    <mat-error *ngIf="emailFormControl.hasError('required')">
-      El correo es <strong>obligatorio</strong>
-    </mat-error>
-  </mat-form-field>
-
-  <!-- Contraseña -->
-
-  <mat-form-field appearance="fill">
-    <mat-label>Introduce una contraseña</mat-label>
-    <input matInput [type]="hide ? 'password' : 'text'">
-    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-    </button>
-  </mat-form-field>
-  <br>
-  <!-- Repite contraseña -->
-
-  <mat-form-field appearance="fill">
-    <mat-label>Repite la contraseña</mat-label>
-    <input matInput [type]="hide ? 'password' : 'text'">
-    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-      <mat-icon>{{hide2 ? 'visibility_off' : 'visibility'}}</mat-icon>
-    </button>
-  </mat-form-field>
-
-  <!-- Direccion -->
-
-  <p>
-    <mat-form-field class="example-full-width">
-      <mat-label>dirección</mat-label>
-      <textarea matInput placeholder="Ej. Calle Juan Rejón"></textarea>
-    </mat-form-field>
-    <mat-form-field class="example-full-width">
-      <mat-label>Direccion adicional</mat-label>
-      <textarea matInput placeholder="Ej. Calle Juan Rejón"></textarea>
-    </mat-form-field>
-  </p>
-
-  <!-- Telefono -->
-
-  <mat-form-field class="example-full-width">
-    <mat-label>Teléfono</mat-label>
-    <span matPrefix>+34 &nbsp;</span>
-    <input type="tel" matInput placeholder="928 556 662">
-  </mat-form-field>
-
-  <!-- Residencia -->
-
-  <table class="example-full-width" cellspacing="0"><tr>
-    <td><mat-form-field class="example-full-width">
-      <mat-label>Ciudad</mat-label>
-      <input matInput placeholder="Ej. Las Palmas de G.C.">
-    </mat-form-field></td>
-    <td><mat-form-field class="example-full-width">
-      <mat-label>País</mat-label>
-      <input matInput placeholder="Ej. España">
-    </mat-form-field></td>
-    <td><mat-form-field class="example-full-width">
-      <mat-label>Código postal</mat-label>
-      <input matInput #postalCode maxlength="5" placeholder="Ej. 94105" value="">
-      <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
-    </mat-form-field></td>
-  </tr></table>
-
-</form>
-
-
-
+<div class="container mt5">
+  <div class="row">
+      <div class="w80">
+          <div class="card">
+              <div class="card-body">
+                  <span class="titulo">LISTADO DE USUARIOS</span>
+                  <button class="btn btn-success float-end" routerLink="/crearUsuario">NUEVO</button>
+                  <table *ngIf="listUsuario.length > 0" class="table">
+                      <thead>
+                        <tr>
+                          <th scope="col">nombre</th>
+                          <th scope="col">apellidos</th>
+                          <th scope="col">email</th>
+                          <th scope="col">password</th>
+                          <th scope="col">password</th>
+                          <th scope="col">direccion</th>
+                          <th scope="col">direccion2</th>
+                          <th scope="col">telefono</th>
+                          <th scope="col">ciudad</th>
+                          <th scope="col">pais</th>
+                          <th scope="col">cpostal</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let usuario of listUsuario">
+                          <th scope="row">{{usuario.nombre}}</th>
+                          <td>{{usuario.apellidos}}</td>
+                          <td>{{usuario.email}}</td>
+                          <td>{{usuario.password}}</td>
+                          <td>{{usuario.direccion}}</td>
+                          <td>{{usuario.direccion2}}</td>
+                          <td>{{usuario.telefono}}</td>
+                          <td>{{usuario.ciudad}}</td>
+                          <td>{{usuario.pais}}</td>
+                          <td>{{usuario.cpostal}}</td>
+                          <td><i [routerLink]="['/crearUsuario', usuario._id]"class="fa-solid fa-pen-to-square text-primary"></i></td>
+                          <td><i (click)="eliminarRegistro(usuario._id)"class="fa-solid fa-trash text-danger"></i></td>
+                          <td><mat-icon routerLink="/alumno">open_in_new</mat-icon></td>
+                        </tr>
+                      </tbody>
+                    </table>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
