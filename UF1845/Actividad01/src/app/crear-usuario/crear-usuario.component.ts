@@ -31,7 +31,8 @@ titulo = 'Registro de usuario';
       telefono: ['', Validators.required],
       ciudad: ['', Validators.required],
       pais: ['', Validators.required],
-      cpostal: ['', Validators.required]
+      cpostal: ['', Validators.required],
+      profesor: ['']
     })
     this.id = this.aRouter.snapshot.paramMap.get('id');
   }
@@ -52,7 +53,8 @@ titulo = 'Registro de usuario';
       telefono: this.usuarioForm.get('telefono')?.value,
       ciudad: this.usuarioForm.get('ciudad')?.value,
       pais: this.usuarioForm.get('pais')?.value,
-      cpostal: this.usuarioForm.get('cpostal')?.value
+      cpostal: this.usuarioForm.get('cpostal')?.value,
+      profesor: this.usuarioForm.get('profesor')?.value
     }
 
     if(this.id !== null){
@@ -91,7 +93,8 @@ titulo = 'Registro de usuario';
           telefono: data.telefono,
           ciudad: data.ciudad,
           pais: data.pais,
-          cpostal: data.cpostal
+          cpostal: data.cpostal,
+          profesor: data.profesor
         })
       })
     }

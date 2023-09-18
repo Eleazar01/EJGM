@@ -10,8 +10,9 @@ export class GRegistro{
     public ciudad: string
     public pais: string
     public cpostal: Number
+    public profesor: Boolean
     
-	constructor(_id : string, nombre: string, apellidos: string, email: string, password: string, direccion: string, direccion2: string, telefono: string, ciudad: string, pais: string, cpostal: Number){
+	constructor(_id : string, nombre: string, apellidos: string, email: string, password: string, direccion: string, direccion2: string, telefono: string, ciudad: string, pais: string, cpostal: Number, profesor: boolean){
         this._id = _id;
         this.nombre = nombre;
         this.apellidos = apellidos;
@@ -23,6 +24,7 @@ export class GRegistro{
         this.ciudad = ciudad;
         this.pais = pais;
         this.cpostal = cpostal;
+        this.profesor = profesor;
         
     }
     
