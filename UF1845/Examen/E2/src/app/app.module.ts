@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { ToastrModule } from 'ngx-toastr'; 
 
 
 import { AppComponent } from './app.component';
@@ -18,6 +19,7 @@ import { ConsultaComponent } from './componentes/consulta/consulta.component';
 import { CabeceraComponent } from './componentes/cabecera/cabecera.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { CrearcursoComponent } from './componentes/crearcurso/crearcurso.component';
+import { PevaluaComponent } from './componentes/pevalua/pevalua.component';
 
 
 
@@ -37,12 +39,15 @@ import { CrearcursoComponent } from './componentes/crearcurso/crearcurso.compone
     CabeceraComponent,
     FooterComponent,
     CrearcursoComponent,
+    PevaluaComponent,
   ],
   imports: [
+
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -8,7 +8,6 @@ import { save_cursoService } from 'src/app/Servicios/curso.service';
   styleUrls: ['../../app.component.css']
 })
 export class AlumnosComponent implements OnInit{
-  public alumnosall = new Array<AlumnoBD>
   public imagen : string 
   public alumnosAll: Array<AlumnoBD>
   
