@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const tareasController = require('../controllers/tareas');
 
-// api/tareass
+// api/tareas
 router.post('/', tareasController.creartareas);
 router.get('/', tareasController.obtenertareass);
 router.put('/:id', tareasController.actualizartareas);

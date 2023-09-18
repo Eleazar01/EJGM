@@ -1,0 +1,247 @@
+:root{
+    --color1 : #cdeae8;
+    --color2 : #0d3f7c;
+    --color3 : #00214a;
+    --color4 : #04bbec;
+    --color5 : #ea25b5;
+    --color6 : #ff82f4;
+}
+body{
+    background-color: var(--color2);
+}
+
+/* header */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color4);
+    border-radius: 0 0 40px 40px;
+}
+header nav{
+    margin-top: 3em;
+    text-align: end;
+    padding: 1.5em;
+}
+header img {
+    width: 6em;
+    height: 6em;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 400px;
+}
+header button{
+    width: 7.5em;
+    height: 2em;
+    margin-left: 6px;
+    background-color: var(--color2);
+    border-radius: 10px;
+    color: var(--color4);
+}
+button{
+    width: 7.5em;
+    height: 2em;
+    margin-left: 6px;
+    background-color: var(--color2);
+    border-radius: 10px;
+    color: var(--color4);
+}
+.cuerpo{
+    display: flex;
+    color: var(--color4);
+}
+
+/* aside */
+
+.perfil{
+    display: flex;
+    width: 30%;
+    margin: 3em;
+}
+.perfil{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.perfil img{
+    width: 10em;
+    height: 10em;
+    justify-content: center;
+}
+.cursoalumno{
+    width: 70%;
+    text-align: center;
+}
+
+/* cuerpo */
+
+/* ACCESO */
+
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 59.5vh;
+}
+.login form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3em;
+}
+.login form p a{
+    color: var(--color1);
+}
+.login form input{
+    margin-top: 10px;
+}
+
+/* ALUMNOS */
+
+.alumnos{
+    text-align: center;
+    height: 57vh;
+}
+.alumnos ul{
+    list-style: none;
+    color: var(--color1);
+    font-size: 1.2em;
+}
+.alumnos ul li{
+    margin-top: 0.8em;
+}
+.alumnos ul li a{
+    text-decoration:  none;
+    color: var(--color1);
+}
+
+/* CURSOS */
+
+.cursos{
+    text-align: center;
+    height: 29.5vh;
+}
+.cursos ul{
+    list-style: none;
+    color: var(--color1);
+    font-size: 1.2em;
+}
+.cursos ul li{
+    margin-top: 0.8em;
+}
+.cursos ul li a{
+    text-decoration:  none;
+    color: var(--color1);
+}
+
+/* PROFESORES */
+
+.profesores{
+    height: 57vh;
+    text-align: center;
+}
+.profesores ul{
+    list-style: none;
+    color: var(--color1);
+    font-size: 1.2em;
+}
+.profesores ul li{
+    margin-top: 0.8em;
+}
+.profesores ul li a{
+    text-decoration:  none;
+    color: var(--color1);
+}
+
+/* REGISTRO */
+
+.registro{
+    height: 45vh;
+}
+.registro form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3em;
+}
+.registro form input{
+    margin-top: 5px;
+    border-radius: 5px;
+    width: 200px;
+}
+.registro form button{
+    margin-top: 5px;
+}
+
+/* CONTACTO */
+
+.contacto{
+    height: 53vh;
+}
+.contacto form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3em;
+}
+.contacto form input{
+    margin-top: 5px;
+    border-radius: 5px;
+    width: 260px;
+}
+.contacto form textarea{
+    margin-top: 5px;
+    border-radius: 5px;
+    width: 400px;
+}
+.contacto form button{
+    margin-top: 5px;
+}
+.temporal{
+    display: flex;
+}
+
+/* footer */
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color4);
+    border-radius: 40px 40px 0 0;
+}
+footer img {
+    width: 6em;
+    height: 6em;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 400px;
+}
+footer ul{
+    margin-top: 20px;
+}
+footer ul a{
+    
+    text-decoration: none;
+}
+footer ul li{
+    margin-top: 20px;
+    list-style: none;
+}
+.redes{
+    display: flex;
+}
+.redes img{
+    width: 30px;
+    height: 30px;
+}
+.logos{
+    display: flex;
+    align-items: flex-end;
+}

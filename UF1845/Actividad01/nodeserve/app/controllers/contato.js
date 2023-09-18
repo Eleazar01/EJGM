@@ -1,6 +1,6 @@
 const contacto = require("../models/contacto");
 
-exports.crearcontacto = async (req, res) => {
+exports.crearContacto = async (req, res) => {
     try {
         let contacto;
         // Creamos nuestro contacto
@@ -12,7 +12,7 @@ exports.crearcontacto = async (req, res) => {
         res.status(500).send('Hubo un error');
     }
 }
-exports.obtenercontactos = async (req, res) => {
+exports.obtenerContacto = async (req, res) => {
     try {
         const contactos = await contacto.find();
         res.json(contactos)        
@@ -21,18 +21,18 @@ exports.obtenercontactos = async (req, res) => {
         res.status(500).send('Hubo un error');
     }
 }
-exports.actualizarcontacto = async (req, res) => {
+exports.actualizarContacto = async (req, res) => {
     try {
-        const { nombre, descripcion, categoria, duracion, temas} = req.body;
+        const { nombre, asunto, email, tema, texto} = req.body;
         let contacto = await contacto.findById(req.params.id);
         if(!contacto) {
             res.status(404).json({ msg: 'No existe el contacto' })
         }
         contacto.nombre = nombre;
-        contacto.descripcion = descripcion;
-        contacto.categoria = categoria;
-        contacto.duracion = duracion;
-        contacto.temas = temas;
+        contacto.asunto = asunto;
+        contacto.email = email;
+        contacto.tema = tema;
+        contacto.texto = texto;
         contacto = await contacto.findOneAndUpdate({ _id: req.params.id },contacto, { new: true} )
         res.json(contacto);       
     } catch (error) {
@@ -40,7 +40,7 @@ exports.actualizarcontacto = async (req, res) => {
         res.status(500).send('Hubo un error');
     }
 }
-exports.obtenercontacto = async (req, res) => {
+exports.obtenerContacto = async (req, res) => {
     try {
         let contacto = await contacto.findById(req.params.id);
         if(!contacto) {
@@ -52,7 +52,7 @@ exports.obtenercontacto = async (req, res) => {
         res.status(500).send('Hubo un error');
     }
 }
-exports.eliminarcontacto = async (req, res) => {
+exports.eliminarContacto = async (req, res) => {
     try {
         let contacto = await contacto.findById(req.params.id);
         if(!contacto) {
