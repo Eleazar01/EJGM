@@ -1,72 +1,75 @@
-<div class="container mt-15">
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="card">
-                <div class="card-body text-center">
-                    <span class="titulo">{{ titulo | uppercase }}</span>
-                    <form class="mb-3" [formGroup]="pevaluaForm" (ngSubmit)="agregarpevalua()">
-
-                        <!-- Nombre -->
-
-                        <div class="mb-3">
-                            <input type="text" formControlName="nombre" class="form-control" placeholder="Nombre">
-                            <div class="text-danger" *ngIf="pevaluaForm.get('nombre')?.hasError('required') && pevaluaForm.get('nombre')?.touched">
-                                <span>El nombre es obligatorio</span>
+<div class="caja">
+    <div class="container mt-15">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <span class="titulo">{{ titulo | uppercase }}</span>
+                        <form class="mb-3" [formGroup]="pevaluaForm" (ngSubmit)="agregarpevalua()">
+    
+                            <!-- Nombre -->
+    
+                            <div class="mb-3">
+                                <input type="text" formControlName="nombre" class="form-control" placeholder="Nombre">
+                                <div class="text-danger" *ngIf="pevaluaForm.get('nombre')?.hasError('required') && pevaluaForm.get('nombre')?.touched">
+                                    <span>El nombre es obligatorio</span>
+                                </div>
                             </div>
-                        </div>
-
-                        <!-- Apellidos -->
-
-                        <div class="mb-3">
-                            <input type="text" formControlName="apellidos" class="form-control" placeholder="Apellidos">
-                            <div class="text-danger" *ngIf="pevaluaForm.get('apellidos')?.hasError('required') && pevaluaForm.get('apellidos')?.touched">
-                                <span>El nombre es obligatorio</span>
+    
+                            <!-- Apellidos -->
+    
+                            <div class="mb-3">
+                                <input type="text" formControlName="apellidos" class="form-control" placeholder="Apellidos">
+                                <div class="text-danger" *ngIf="pevaluaForm.get('apellidos')?.hasError('required') && pevaluaForm.get('apellidos')?.touched">
+                                    <span>El nombre es obligatorio</span>
+                                </div>
                             </div>
-                        </div>
-
-                        <!-- IdTarea -->
-
-                        <div class="mb-3">
-                            <input type="text" formControlName="idTarea" class="form-control" placeholder="Número de Tarea">
-                            <div class="text-danger" *ngIf="pevaluaForm.get('idTarea')?.hasError('required') && pevaluaForm.get('idTarea')?.touched">
-                                <span>El nombre es obligatorio</span>
+    
+                            <!-- IdTarea -->
+    
+                            <div class="mb-3">
+                                <input type="text" formControlName="idTarea" class="form-control" placeholder="Número de Tarea">
+                                <div class="text-danger" *ngIf="pevaluaForm.get('idTarea')?.hasError('required') && pevaluaForm.get('idTarea')?.touched">
+                                    <span>El nombre es obligatorio</span>
+                                </div>
                             </div>
-                        </div>
-
-                        <!-- Description -->
-
-                        <div class="mb-3">
-                            <input type="text" formControlName="description" class="form-control" placeholder="Duración">
-                            <div class="text-danger" *ngIf="pevaluaForm.get('description')?.hasError('required') && pevaluaForm.get('description')?.touched">
-                                <span>La duración es obligatoria</span>
+    
+                            <!-- Description -->
+    
+                            <div class="mb-3">
+                                <input type="text" formControlName="description" class="form-control" placeholder="Duración">
+                                <div class="text-danger" *ngIf="pevaluaForm.get('description')?.hasError('required') && pevaluaForm.get('description')?.touched">
+                                    <span>La duración es obligatoria</span>
+                                </div>
                             </div>
-                        </div>
-
-                        <!-- Puntuacion -->
-
-                        <div class="mb-3">
-                            <input type="text" formControlName="puntuacion" class="form-control" placeholder="Puntuación">
-                            <div class="text-danger" *ngIf="pevaluaForm.get('puntuacion')?.hasError('required') && pevaluaForm.get('puntuacion')?.touched">
-                                <span>El nombre es obligatorio</span>
+    
+                            <!-- Puntuacion -->
+    
+                            <div class="mb-3">
+                                <input type="text" formControlName="puntuacion" class="form-control" placeholder="Puntuación">
+                                <div class="text-danger" *ngIf="pevaluaForm.get('puntuacion')?.hasError('required') && pevaluaForm.get('puntuacion')?.touched">
+                                    <span>El nombre es obligatorio</span>
+                                </div>
                             </div>
-                        </div>
-
-                        <!-- Estado -->
-
-                        <div class="mb-3">
-                            <input type="text" formControlName="estado" class="form-control" placeholder="Estado">
-                            <div class="text-danger" *ngIf="pevaluaForm.get('estado')?.hasError('required') && pevaluaForm.get('estado')?.touched">
-                                <span>El nombre es obligatorio</span>
+    
+                            <!-- Estado -->
+    
+                            <div class="mb-3">
+                                <input type="text" formControlName="estado" class="form-control" placeholder="Estado">
+                                <div class="text-danger" *ngIf="pevaluaForm.get('estado')?.hasError('required') && pevaluaForm.get('estado')?.touched">
+                                    <span>El nombre es obligatorio</span>
+                                </div>
                             </div>
-                        </div>
-                        
-                        <div class="mb-3">
-                            <button class="btn btn-secondary float-start" routerLink="/">VOLVER</button>
-                            <button type="submit" [disabled]="pevaluaForm.invalid" class="btn btn-success float-end">ACEPTAR</button>
-                        </div>
-                    </form>
+                            
+                            <div class="mb-3">
+                                <button class="btn btn-secondary float-start" routerLink="/">VOLVER</button>
+                                <button type="submit" [disabled]="pevaluaForm.invalid" class="btn btn-success float-end">ACEPTAR</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
