@@ -58,7 +58,7 @@ const controller = {
     updateEvalua: function (req,res) {
         var pevaluaId = req.params.id;
         var update = req.body;
-        pevalua.findByIdAndUpdate(pevaluaId, update, {new: true}, (err, pevaluaUpdate)=>{
+        User.findByIdAndUpdate(pevaluaId, update, {new: true}, (err, pevaluaUpdate)=>{
             if (err) return res.status(500).send({message: 'Error al actualizar'});
             if (!pevaluaUpdate) return res.status(404).send({message: 'No existe el pevalua para actualizar'});
             return res.status(200).send({
