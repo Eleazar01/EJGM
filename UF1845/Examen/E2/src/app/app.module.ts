@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr'; 
 import { ReactiveFormsModule } from '@angular/forms';
-
+import {MatSelectModule} from '@angular/material/select'; 
 
 import { AppComponent } from './app.component';
 import { CursosComponent } from './componentes/cursos/cursos.component';
@@ -43,7 +43,7 @@ import { PevaluaComponent } from './componentes/pevalua/pevalua.component';
     PevaluaComponent,
   ],
   imports: [
-
+    MatSelectModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,

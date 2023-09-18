@@ -1,5 +1,7 @@
 const express = require('express')
 
+const cors = require('cors')
+
 const app = express()
 
 const port = 3001
@@ -16,6 +18,8 @@ app.use(cursosRouters)
 
 const PevaluaRouters = require('./routes/pevalua')
 app.use(PevaluaRouters)
+
+app.use(cors());
 
 //Conexion con base datos
 
