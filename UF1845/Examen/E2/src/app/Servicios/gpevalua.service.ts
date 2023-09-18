@@ -8,7 +8,7 @@ import { Gpevalua } from '../models/gpevalua';
 })
 export class GpevaluaService {
 
-  url= 'http://localhost:3001'
+  url= 'http://localhost:3001/api/pevalua'
 
   constructor(private http: HttpClient) { }
 
