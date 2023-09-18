@@ -3,10 +3,10 @@ const router = express.Router();
 const registroController = require('../controllers/registrocontroller');
 
 // api/registros
-router.post('/', registroController.crearregistro);
-router.get('/', registroController.obtenerregistros);
-router.put('/:id', registroController.actualizarregistro);
-router.get('/:id', registroController.obtenerregistro);
-router.delete('/:id', registroController.eliminarregistro);
+router.post('/', registroController.crearRegistro);
+router.get('/', registroController.obtenerRegistros);
+router.put('/:id', registroController.actualizarRegistro);
+router.get('/:id', registroController.obtenerRegistro);
+router.delete('/:id', registroController.eliminarRegistro);
 
 module.exports = router;

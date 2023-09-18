@@ -1,71 +1,65 @@
-const registro = require("../models/registroModel");
+const curso = require("../models/CursoModel");
 
-exports.crearregistro = async (req, res) => {
+exports.crearCurso = async (req, res) => {
     try {
-        let registro;
-        // Creamos nuestro registro
-        registro = new registro(req.body);
-        await registro.save();
-        res.send(registro);      
+        let curso;
+        // Creamos nuestro curso
+        curso = new curso(req.body);
+        await curso.save();
+        res.send(curso);      
     } catch (error) {
         console.log(error);
         res.status(500).send('Hubo un error');
     }
 }
-exports.obtenerregistros = async (req, res) => {
+exports.obtenerCursos = async (req, res) => {
     try {
-        const registros = await registro.find();
-        res.json(registros)        
+        const cursos = await curso.find();
+        res.json(cursos)        
     } catch (error) {
         console.log(error);
         res.status(500).send('Hubo un error');
     }
 }
-exports.actualizarregistro = async (req, res) => {
+exports.actualizarCurso = async (req, res) => {
     try {
-        const { nombre, apellidos, email, password, direccion, direccion2,telefono, ciudad, pais, cpostal, profesor} = req.body;
-        let registro = await registro.findById(req.params.id);
-        if(!registro) {
-            res.status(404).json({ msg: 'No existe el registro' })
+        const { nombre, descripcion, categoria, duracion, temas} = req.body;
+        let curso = await curso.findById(req.params.id);
+        if(!curso) {
+            res.status(404).json({ msg: 'No existe el curso' })
         }
-        registro.nombre = nombre;
-        registro.apellidos = apellidos;
-        registro.email = email;
-        registro.password = password;
-        registro.direccion = direccion;
-        registro.direccion2 = direccion2;
-        registro.telefono = telefono;
-        registro.ciudad = ciudad;
-        registro.pais = pais;
-        registro.cpostal = cpostal;
-        registro.profesor = profesor;
-        registro = await registro.findOneAndUpdate({ _id: req.params.id },registro, { new: true} )
-        res.json(registro);       
+        curso.nombre = nombre;
+        curso.descripcion = descripcion;
+        curso.categoria = categoria;
+        curso.duracion = duracion;
+        curso.temas = temas;
+        curso = await curso.findOneAndUpdate({ _id: req.params.id },curso, { new: true} )
+        res.json(curso);       
     } catch (error) {
         console.log(error);
         res.status(500).send('Hubo un error');
     }
 }
-exports.obtenerregistro = async (req, res) => {
+exports.obtenerCurso = async (req, res) => {
     try {
-        let registro = await registro.findById(req.params.id);
-        if(!registro) {
-            res.status(404).json({ msg: 'No existe el registro' })
+        let curso = await curso.findById(req.params.id);
+        if(!curso) {
+            res.status(404).json({ msg: 'No existe el curso' })
         }     
-        res.json(registro);       
+        res.json(curso);       
     } catch (error) {
         console.log(error);
         res.status(500).send('Hubo un error');
     }
 }
-exports.eliminarregistro = async (req, res) => {
+exports.eliminarCurso = async (req, res) => {
     try {
-        let registro = await registro.findById(req.params.id);
-        if(!registro) {
-            res.status(404).json({ msg: 'No existe el registro' })
+        let curso = await curso.findById(req.params.id);
+        if(!curso) {
+            res.status(404).json({ msg: 'No existe el curso' })
         }    
-        await registro.findOneAndRemove({ _id: req.params.id })
-        res.json({ msg: 'registro eliminado con exito' });       
+        await curso.findOneAndRemove({ _id: req.params.id })
+        res.json({ msg: 'curso eliminado con exito' });       
     } catch (error) {
         console.log(error);
         res.status(500).send('Hubo un error');

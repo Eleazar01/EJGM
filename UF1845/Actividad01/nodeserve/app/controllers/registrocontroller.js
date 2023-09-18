@@ -1,6 +1,6 @@
 const registro = require("../models/registro");
 
-exports.crearregistro = async (req, res) => {
+exports.crearRegistro = async (req, res) => {
     try {
         let registro;
         // Creamos nuestro registro
@@ -12,7 +12,7 @@ exports.crearregistro = async (req, res) => {
         res.status(500).send('Hubo un error');
     }
 }
-exports.obtenerregistros = async (req, res) => {
+exports.obtenerRegistros = async (req, res) => {
     try {
         const registros = await registro.find();
         res.json(registros)        
@@ -21,18 +21,24 @@ exports.obtenerregistros = async (req, res) => {
         res.status(500).send('Hubo un error');
     }
 }
-exports.actualizarregistro = async (req, res) => {
+exports.actualizarRegistro = async (req, res) => {
     try {
-        const { nombre, descripcion, categoria, duracion, temas} = req.body;
+        const { nombre, apellidos, email, password, direccion, direccion2,telefono, ciudad, pais, cpostal, profesor} = req.body;
         let registro = await registro.findById(req.params.id);
         if(!registro) {
             res.status(404).json({ msg: 'No existe el registro' })
         }
         registro.nombre = nombre;
-        registro.descripcion = descripcion;
-        registro.categoria = categoria;
-        registro.duracion = duracion;
-        registro.temas = temas;
+        registro.apellidos = apellidos;
+        registro.email = email;
+        registro.password = password;
+        registro.direccion = direccion;
+        registro.direccion2 = direccion2;
+        registro.telefono = telefono;
+        registro.ciudad = ciudad;
+        registro.pais = pais;
+        registro.cpostal = cpostal;
+        registro.profesor = profesor;
         registro = await registro.findOneAndUpdate({ _id: req.params.id },registro, { new: true} )
         res.json(registro);       
     } catch (error) {
@@ -40,7 +46,7 @@ exports.actualizarregistro = async (req, res) => {
         res.status(500).send('Hubo un error');
     }
 }
-exports.obtenerregistro = async (req, res) => {
+exports.obtenerRegistro = async (req, res) => {
     try {
         let registro = await registro.findById(req.params.id);
         if(!registro) {
@@ -52,7 +58,7 @@ exports.obtenerregistro = async (req, res) => {
         res.status(500).send('Hubo un error');
     }
 }
-exports.eliminarregistro = async (req, res) => {
+exports.eliminarRegistro = async (req, res) => {
     try {
         let registro = await registro.findById(req.params.id);
         if(!registro) {
