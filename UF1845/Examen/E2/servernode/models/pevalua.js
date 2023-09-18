@@ -10,7 +10,8 @@ const PevaluaSchema = new mongoose.Schema(
             required: true
         },
         apellidos: {
-            type: String
+            type: String,
+            required: true
         },
         idTarea: {
             type: String,
@@ -21,7 +22,8 @@ const PevaluaSchema = new mongoose.Schema(
             required: true
         },
         puntuacion: {
-            type: Number
+            type: Number,
+            required: true
         },
         estado: {
             type: Boolean

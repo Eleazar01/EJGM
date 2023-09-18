@@ -5,16 +5,58 @@
                 <div class="card-body text-center">
                     <span class="titulo">{{ titulo | uppercase }}</span>
                     <form class="mb-3" [formGroup]="pevaluaForm" (ngSubmit)="agregarpevalua()">
+
+                        <!-- Nombre -->
+
                         <div class="mb-3">
                             <input type="text" formControlName="nombre" class="form-control" placeholder="Nombre">
                             <div class="text-danger" *ngIf="pevaluaForm.get('nombre')?.hasError('required') && pevaluaForm.get('nombre')?.touched">
                                 <span>El nombre es obligatorio</span>
                             </div>
                         </div>
+
+                        <!-- Apellidos -->
+
                         <div class="mb-3">
-                            <input type="text" formControlName="duracion" class="form-control" placeholder="Duración">
-                            <div class="text-danger" *ngIf="pevaluaForm.get('duracion')?.hasError('required') && pevaluaForm.get('duracion')?.touched">
+                            <input type="text" formControlName="apellidos" class="form-control" placeholder="Apellidos">
+                            <div class="text-danger" *ngIf="pevaluaForm.get('apellidos')?.hasError('required') && pevaluaForm.get('apellidos')?.touched">
+                                <span>El nombre es obligatorio</span>
+                            </div>
+                        </div>
+
+                        <!-- IdTarea -->
+
+                        <div class="mb-3">
+                            <input type="text" formControlName="idTarea" class="form-control" placeholder="Número de Tarea">
+                            <div class="text-danger" *ngIf="pevaluaForm.get('idTarea')?.hasError('required') && pevaluaForm.get('idTarea')?.touched">
+                                <span>El nombre es obligatorio</span>
+                            </div>
+                        </div>
+
+                        <!-- Description -->
+
+                        <div class="mb-3">
+                            <input type="text" formControlName="description" class="form-control" placeholder="Duración">
+                            <div class="text-danger" *ngIf="pevaluaForm.get('description')?.hasError('required') && pevaluaForm.get('description')?.touched">
                                 <span>La duración es obligatoria</span>
+                            </div>
+                        </div>
+
+                        <!-- Puntuacion -->
+
+                        <div class="mb-3">
+                            <input type="text" formControlName="puntuacion" class="form-control" placeholder="Puntuación">
+                            <div class="text-danger" *ngIf="pevaluaForm.get('puntuacion')?.hasError('required') && pevaluaForm.get('puntuacion')?.touched">
+                                <span>El nombre es obligatorio</span>
+                            </div>
+                        </div>
+
+                        <!-- Estado -->
+
+                        <div class="mb-3">
+                            <input type="text" formControlName="estado" class="form-control" placeholder="Estado">
+                            <div class="text-danger" *ngIf="pevaluaForm.get('estado')?.hasError('required') && pevaluaForm.get('estado')?.touched">
+                                <span>El nombre es obligatorio</span>
                             </div>
                         </div>
                         

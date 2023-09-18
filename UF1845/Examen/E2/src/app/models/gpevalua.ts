@@ -1,9 +1,17 @@
 export class Gpevalua{
 	public _id?: string
 	public nombre: string
-	public duracion: number
-	constructor(nombre: string, duracion: number,){
+	public apellidos: string
+	public idTarea: string
+	public description: string
+	public puntuacion: number
+	public estado: boolean
+	constructor(nombre: string, apellidos: string, idTarea: string,description: string, puntuacion: number, estado: boolean,){
         this.nombre = nombre;
-        this.duracion = duracion;
+        this.apellidos = apellidos;
+        this.idTarea = idTarea;
+        this.description = description;
+        this.puntuacion = puntuacion;
+        this.estado = estado;
     }
 }

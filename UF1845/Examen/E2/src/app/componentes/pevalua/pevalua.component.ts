@@ -12,6 +12,7 @@ import { GpevaluaService } from 'src/app/Servicios/gpevalua.service'
   templateUrl: './pevalua.component.html',
   styleUrls: ['./pevalua.component.css']
 })
+
 export class PevaluaComponent implements OnInit{
 pevaluaForm: FormGroup;
 titulo = 'Crear pevalua';
@@ -23,7 +24,11 @@ titulo = 'Crear pevalua';
               private aRouter: ActivatedRoute) { 
     this.pevaluaForm = this.fb.group({
       nombre: ['', Validators.required],
-      duracion: ['', Validators.required]
+      apellidos: ['', Validators.required],
+      idTarea: ['', Validators.required],
+      description: ['', Validators.required],
+      puntuacion: ['', Validators.required],
+      estado: [''],
     })
     this.id = this.aRouter.snapshot.paramMap.get('id');
   }
@@ -36,7 +41,11 @@ titulo = 'Crear pevalua';
 
     const pevalua: Gpevalua = {
       nombre: this.pevaluaForm.get('nombre')?.value,
-      duracion: this.pevaluaForm.get('duracion')?.value  
+      apellidos: this.pevaluaForm.get('apellidos')?.value, 
+      idTarea: this.pevaluaForm.get('idTarea')?.value, 
+      description: this.pevaluaForm.get('description')?.value, 
+      puntuacion: this.pevaluaForm.get('puntuacion')?.value, 
+      estado: this.pevaluaForm.get('estado')?.value 
     }
 
     if(this.id !== null){
@@ -67,7 +76,11 @@ titulo = 'Crear pevalua';
       this._pevaluaService.obtenerPevalua(this.id).subscribe(data => {
         this.pevaluaForm.setValue({
           nombre: data.nombre,
-          duracion: data.duracion,
+          apellidos: data.apellidos,
+          idTarea: data.idTarea,
+          description: data.description,
+          puntuacion: data.puntuacion,
+          estado: data.estado,
         })
       })
     }

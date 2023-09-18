@@ -14,8 +14,9 @@ app.use(userRouters)
 const cursosRouters = require('./routes/cursos')
 app.use(cursosRouters)
 
-// const PevaluaRouters = require('./routes/pevalua')
-// app.use(PevaluaRouters)
+const PevaluaRouters = require('./routes/pevalua')
+app.use(PevaluaRouters)
+
 //Conexion con base datos
 
 
