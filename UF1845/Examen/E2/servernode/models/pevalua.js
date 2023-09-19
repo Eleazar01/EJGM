@@ -26,7 +26,7 @@ const PevaluaSchema = new mongoose.Schema(
             required: true
         },
         estado: {
-            type: Boolean
+            type: String
         }        
     }
 )

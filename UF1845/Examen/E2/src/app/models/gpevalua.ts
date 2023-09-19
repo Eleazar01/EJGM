@@ -5,13 +5,14 @@ export class Gpevalua{
 	public idTarea: string
 	public description: string
 	public puntuacion: number
-	public estado: boolean
-	constructor(nombre: string, apellidos: string, idTarea: string,description: string, puntuacion: number, estado: boolean,){
+	public estado: string
+	constructor(nombre: string, apellidos: string, idTarea: string,description: string, puntuacion: number, estado: string,){
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.idTarea = idTarea;
         this.description = description;
         this.puntuacion = puntuacion;
         this.estado = estado;
+       
     }
 }
