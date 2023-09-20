@@ -10,6 +10,7 @@ conectarDB()
 
 app.use(cors());
 app.use(express.json());
+app.use('/api/usuarios', require('./routes/usuarioRoutes'));
 
 app.listen(3700), () => console.log('Servidor en linea');
 
