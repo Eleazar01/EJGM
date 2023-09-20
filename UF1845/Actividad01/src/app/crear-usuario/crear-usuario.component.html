@@ -24,78 +24,59 @@
                             </div>
                         </div>
 
-                        <!-- Email -->
+                        <!-- Fnacimiento -->
 
                         <div class="mb-3">
-                            <input type="email" formControlName="email" class="form-control" placeholder="Correo electrónico">
+                            <input type="text" formControlName="Fnacimiento" class="form-control" placeholder="Fnacimiento">
+                            <div class="text-danger" *ngIf="usuarioForm.get('Fnacimiento')?.hasError('required') && usuarioForm.get('Fnacimiento')?.touched">
+                                <span>La fecha de nacimiento es obligatoria</span>
+                            </div>
+                        </div>
+
+                        <!-- email -->
+
+                        <div class="mb-3">
+                            <input type="email" formControlName="email" class="form-control" placeholder="Introduce email">
                             <div class="text-danger" *ngIf="usuarioForm.get('email')?.hasError('required') && usuarioForm.get('email')?.touched">
-                                <span>El correo electrónico es obligatoria</span>
+                                <span>El correo es obligatorio</span>
                             </div>
                         </div>
 
-                        <!-- Contraseña -->
+                        <!-- telefono -->
 
                         <div class="mb-3">
-                            <input type="password" formControlName="password" class="form-control" placeholder="Introduce la Contraseña">
-                            <div class="text-danger" *ngIf="usuarioForm.get('password')?.hasError('required') && usuarioForm.get('password')?.touched">
-                                <span>La contraseña es obligatoria</span>
-                            </div>
-                        </div>
-
-                        <!-- Direccion -->
-
-                        <div class="mb-3">
-                            <input type="text" formControlName="direccion" class="form-control" placeholder="Introduce tu dirección">
-                            <div class="text-danger" *ngIf="usuarioForm.get('direccion')?.hasError('required') && usuarioForm.get('direccion')?.touched">
+                            <input type="tel" formControlName="telefono" class="form-control" placeholder="Introduce tu telefono">
+                            <div class="text-danger" *ngIf="usuarioForm.get('telefono')?.hasError('required') && usuarioForm.get('telefono')?.touched">
                                 <span>La dirección es obligatoria</span>
                             </div>
                         </div>
 
-                        <!-- Direccion adicional -->
+                        <!-- foto -->
 
                         <div class="mb-3">
-                            <input type="text" formControlName="direccion2" class="form-control" placeholder="Introduce una dirreción adicional">
-                            <!-- <div class="text-danger" *ngIf="usuarioForm.get('direccion2')?.hasError('required') && usuarioForm.get('direccion2')?.touched">
-                                <span>Los temas son obligatorios</span>
-                            </div> -->
-                        </div>
-
-                        <!-- Telefono -->
-
-                        <div class="mb-3">
-                            <input type="tel" formControlName="telefono" class="form-control" placeholder="Introduce un teléfono de contacto">
-                            <div class="text-danger" *ngIf="usuarioForm.get('telefono')?.hasError('required') && usuarioForm.get('telefono')?.touched">
-                                <span>El teléfono es obligatorio</span>
+                            <input type="text" formControlName="foto" class="form-control" placeholder="Introduce una foto">
+                            <div class="text-danger" *ngIf="usuarioForm.get('foto')?.hasError('required') && usuarioForm.get('foto')?.touched">
+                                <span>La foto es obligatoria</span>
                             </div>
                         </div>
 
-                        <!-- Ciudad -->
+                        <!-- pass -->
 
                         <div class="mb-3">
-                            <input type="text" formControlName="ciudad" class="form-control" placeholder="Introduce el nombre de la ciudad donde vives">
-                            <div class="text-danger" *ngIf="usuarioForm.get('ciudad')?.hasError('required') && usuarioForm.get('ciudad')?.touched">
-                                <span>La ciudad es obligatoria</span>
+                            <input type="password" formControlName="pass" class="form-control" placeholder="Introduce un pass">
+                            <div class="text-danger" *ngIf="usuarioForm.get('pass')?.hasError('required') && usuarioForm.get('pass')?.touched">
+                                <span>La constraseña es obligatoria</span>
                             </div>
                         </div>
 
-                        <!-- Pais -->
+                        <!-- tipo -->
 
                         <div class="mb-3">
-                            <input type="text" formControlName="pais" class="form-control" placeholder="Introduce tu país de residencia">
-                            <div class="text-danger" *ngIf="usuarioForm.get('pais')?.hasError('required') && usuarioForm.get('pais')?.touched">
-                                <span>La país es obligatorio</span>
+                            <input type="text" formControlName="tipo" class="form-control" placeholder="Introduce el tipo">
+                            <div class="text-danger" *ngIf="usuarioForm.get('tipo')?.hasError('required') && usuarioForm.get('tipo')?.touched">
+                                <span>El tipo es obligatorio</span>
                             </div>
                         </div>
-
-                        <!-- Código Postal -->
-
-                        <div class="mb-3">
-                            <input type="number" formControlName="cpostal" class="form-control" placeholder="Introduce tu código postal">
-                            <div class="text-danger" *ngIf="usuarioForm.get('cpostal')?.hasError('required') && usuarioForm.get('cpostal')?.touched">
-                                <span>El código postal es obligatorio</span>
-                            </div>
-                        </div>
-
 
                         <!-- Enviar -->
 

@@ -3,7 +3,8 @@ const Usuario = require('../models/usuarioModel');
 exports.crearUsuarios = async (req, res) => {
     
     try {
-        let usuario = new Usuario(req.body)
+        let usuario
+        usuario = new Usuario(req.body)
         await usuario.save()
         res.send(usuario)
     }catch(error){

@@ -24,15 +24,12 @@ titulo = 'Registro de usuario';
     this.usuarioForm = this.fb.group({
       nombre: ['', Validators.required],
       apellidos: ['', Validators.required],
+      Fnacimiento: ['', Validators.required],
       email: ['', Validators.required],
-      password: ['', Validators.required],
-      direccion: ['', Validators.required],
-      direccion2: [''],
       telefono: ['', Validators.required],
-      ciudad: ['', Validators.required],
-      pais: ['', Validators.required],
-      cpostal: ['', Validators.required],
-      profesor: ['']
+      foto: ['', Validators.required],
+      pass: ['', Validators.required],
+      tipo: ['', Validators.required],
     })
     this.id = this.aRouter.snapshot.paramMap.get('id');
   }
@@ -41,20 +38,19 @@ titulo = 'Registro de usuario';
     this.esEditar();
   }
 
+  //crear Usuario
+
   agregarUsuario() {
 
     const USUARIO: GRegistro = {
       nombre: this.usuarioForm.get('nombre')?.value,
       apellidos: this.usuarioForm.get('apellidos')?.value,
+      Fnacimiento: this.usuarioForm.get('Fnacimiento')?.value,
       email: this.usuarioForm.get('email')?.value,
-      password: this.usuarioForm.get('password')?.value,
-      direccion: this.usuarioForm.get('direccion')?.value,
-      direccion2: this.usuarioForm.get('direccion2')?.value,
       telefono: this.usuarioForm.get('telefono')?.value,
-      ciudad: this.usuarioForm.get('ciudad')?.value,
-      pais: this.usuarioForm.get('pais')?.value,
-      cpostal: this.usuarioForm.get('cpostal')?.value,
-      profesor: this.usuarioForm.get('profesor')?.value
+      foto: this.usuarioForm.get('foto')?.value,
+      pass: this.usuarioForm.get('pass')?.value,
+      tipo: this.usuarioForm.get('tipo')?.value
     }
 
     if(this.id !== null){
@@ -86,15 +82,12 @@ titulo = 'Registro de usuario';
         this.usuarioForm.setValue({
           nombre: data.nombre,
           apellidos: data.apellidos,
+          Fnacimiento: data.Fnacimiento,
           email: data.email,
-          password: data.password,
-          direccion: data.direccion,
-          direccion2: data.direccion2,
           telefono: data.telefono,
-          ciudad: data.ciudad,
-          pais: data.pais,
-          cpostal: data.cpostal,
-          profesor: data.profesor
+          foto: data.foto,
+          pass: data.pass,
+          tipo: data.tipo
         })
       })
     }
