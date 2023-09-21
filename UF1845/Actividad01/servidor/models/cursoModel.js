@@ -21,14 +21,6 @@ const CursoSchema = new Schema({
     temas: {
         type: String,
         required: true
-    },
-    imagen: {
-        type: String,
-        required: true
-    },
-    pass: {
-        type: String,
-        required: true
     }
     
 });
