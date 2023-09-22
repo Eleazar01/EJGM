@@ -1,0 +1,26 @@
+.header{
+    background-color: #111551e1;
+    padding: 20px;
+    height: 60px;
+    border-radius: 10px;
+    
+}
+.header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+       
+}
+.header li{
+    list-style: none;
+    margin-left: 15px;
+
+}
+
+.header li a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #55dce3;
+    font-weight: 700;
+    
+}

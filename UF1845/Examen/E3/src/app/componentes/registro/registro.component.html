@@ -1,0 +1,41 @@
+<div class="container mt5">
+  <div class="row">
+      <div class="w80">
+          <div class="card">
+              <div class="card-body">
+                  <span class="titulo">LISTADO DE USUARIOS</span>
+                  <button class="btn btn-success float-end" routerLink="/crearUsuario">NUEVO</button>
+                  <table *ngIf="listUsuario.length > 0" class="table">
+                      <thead>
+                        <tr>
+                          <th scope="col">nombre</th>
+                          <th scope="col">apellidos</th>
+                          <th scope="col">Fnacimiento</th>
+                          <th scope="col">email</th>
+                          <th scope="col">telefono</th>
+                          <th scope="col">foto</th>
+                          <th scope="col">pass</th>
+                          <th scope="col">tipo</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let usuario of listUsuario">
+                          <th scope="row">{{usuario.nombre}}</th>
+                          <td>{{usuario.apellidos}}</td>
+                          <td>{{usuario.Fnacimiento}}</td>
+                          <td>{{usuario.email}}</td>
+                          <td>{{usuario.telefono}}</td>
+                          <td>{{usuario.foto}}</td>
+                          <td>{{usuario.pass}}</td>
+                          <td>{{usuario.tipo}}</td>
+                          <td><i [routerLink]="['/crearUsuario', usuario._id]"class="fa-solid fa-pen-to-square text-primary"></i></td>
+                          <td><i (click)="eliminarRegistro(usuario._id)"class="fa-solid fa-trash text-danger"></i></td>
+                          <td><mat-icon routerLink="/alumno">open_in_new</mat-icon></td>
+                        </tr>
+                      </tbody>
+                    </table>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
