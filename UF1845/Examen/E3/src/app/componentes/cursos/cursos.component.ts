@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import { GcursoService } from '../servicios/gcurso.service';
-import { GCurso } from '../Models/gcurso';
+import { GCurso } from '../models/gcurso';
 
 @Component({
   selector: 'app-cursos',

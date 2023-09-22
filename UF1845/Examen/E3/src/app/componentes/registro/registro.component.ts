@@ -1,7 +1,7 @@
 import { Component} from '@angular/core';
 import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
 import {ErrorStateMatcher} from '@angular/material/core';
-import { GRegistro } from '../Models/gregistro';
+import { GRegistro } from '../models/gregistro';
 import { GregistroService } from '../servicios/gregistro';
 import { ToastrService } from 'ngx-toastr';
 

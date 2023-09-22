@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { GRegistro } from '../Models/gregistro';
+import { GRegistro } from '../models/gregistro';
 
 @Injectable({
   providedIn: 'root'
