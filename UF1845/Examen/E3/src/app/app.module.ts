@@ -8,6 +8,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select'; 
 import {MatInputModule} from '@angular/material/input';
 import {DragDropModule} from '@angular/cdk/drag-drop'; 
+import {MatIconModule} from '@angular/material/icon';
 
 //otros modulos
 import { ToastrModule } from 'ngx-toastr';
@@ -36,6 +37,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ],
   imports: [
     FormsModule,
+    MatIconModule,
     ToastrModule.forRoot(),
     DragDropModule,
     MatInputModule,
