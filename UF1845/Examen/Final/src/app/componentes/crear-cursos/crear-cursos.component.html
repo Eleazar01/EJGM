@@ -4,7 +4,7 @@
             <div class="card">
                 <div class="card-body text-center">
                     <span class="titulo">{{ titulo | uppercase }}</span>
-                    <form class="mb-3" [FormGroup]="cursoForm" (ngSubmit)="agregarCurso()">
+                    <form class="mb-3" [formGroup]="cursoForm" (ngSubmit)="agregarCurso()">
                         <div class="mb-3">
                             <input type="text" formControlName="nombre" class="form-control" placeholder="Curso">
                             <div class="text-danger" *ngIf="cursoForm.get('nombre')?.hasError('required') && cursoForm.get('nombre')?.touched">
@@ -43,7 +43,7 @@
                         </div>
                         <div class="mb-3">
                             <button class="btn btn-secondary float-start" routerLink="/">VOLVER</button>
-                            <button type="submit" [disable]="cursoForm.invalid" class="btn btn-success float-end">ACEPTAR</button>
+                            <button type="submit" [disabled]="cursoForm.invalid" class="btn btn-success float-end">ACEPTAR</button>
                         </div>
                     </form>
                 </div>

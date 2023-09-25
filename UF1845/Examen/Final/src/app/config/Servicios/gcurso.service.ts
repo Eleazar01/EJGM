@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class GcursoService {
 
-  url= 'http://localhost:3700/api/cursos/'
+  url= 'http://127.0.0.1:3700/api/cursos/'
 
   constructor(private http: HttpClient) { }
 
