@@ -1,5 +1,7 @@
 const Curso = require("../models/CursoModel");
 
+// Guardar
+
 exports.crearCurso = async (req, res) => {
     try {
         let curso;
@@ -12,6 +14,9 @@ exports.crearCurso = async (req, res) => {
         res.status(500).send('Hubo un error');
     }
 }
+
+//Listar varios
+
 exports.obtenerCursos = async (req, res) => {
     try {
         const cursos = await Curso.find();
@@ -21,6 +26,9 @@ exports.obtenerCursos = async (req, res) => {
         res.status(500).send('Hubo un error');
     }
 }
+
+//Editar
+
 exports.actualizarCurso = async (req, res) => {
     try {
         const { nombre, descripcion, categoria, imagen, duracion, temas} = req.body;
@@ -41,6 +49,9 @@ exports.actualizarCurso = async (req, res) => {
         res.status(500).send('Hubo un error');
     }
 }
+
+//Mostrar uno
+
 exports.obtenerCurso = async (req, res) => {
     try {
         let curso = await Curso.findById(req.params.id);
@@ -53,6 +64,9 @@ exports.obtenerCurso = async (req, res) => {
         res.status(500).send('Hubo un error');
     }
 }
+
+//Eliminar
+
 exports.eliminarCurso = async (req, res) => {
     try {
         let curso = await Curso.findById(req.params.id);

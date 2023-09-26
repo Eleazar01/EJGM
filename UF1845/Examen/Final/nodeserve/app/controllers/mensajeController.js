@@ -1,5 +1,7 @@
 const Mensaje = require("../models/mensajeModels");
 
+// Guardar
+
 exports.crearMensaje = async (req, res) => {
     try {
         let mensaje;
@@ -12,6 +14,9 @@ exports.crearMensaje = async (req, res) => {
         res.status(500).send('Hubo un error');
     }
 }
+
+//Listar varios
+
 exports.obtenerMensajes = async (req, res) => {
     try {
         const mensajes = await Mensaje.find();
@@ -21,6 +26,9 @@ exports.obtenerMensajes = async (req, res) => {
         res.status(500).send('Hubo un error');
     }
 }
+
+//Editar
+
 exports.actualizarMensaje = async (req, res) => {
     try {
         const { nombre, email, telefono, asunto, textomensaje} = req.body;
@@ -40,6 +48,9 @@ exports.actualizarMensaje = async (req, res) => {
         res.status(500).send('Hubo un error');
     }
 }
+
+//Mostrar uno
+
 exports.obtenerMensaje = async (req, res) => {
     try {
         let mensaje = await Mensaje.findById(req.params.id);
@@ -52,6 +63,9 @@ exports.obtenerMensaje = async (req, res) => {
         res.status(500).send('Hubo un error');
     }
 }
+
+//Eliminar
+
 exports.eliminarMensaje = async (req, res) => {
     try {
         let mensaje = await Mensaje.findById(req.params.id);

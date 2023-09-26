@@ -1,5 +1,7 @@
 const Usuario = require("../models/UsuarioModel");
 
+// Guardar
+
 exports.crearUsuario = async (req, res) => {
 
     try {
@@ -17,6 +19,8 @@ exports.crearUsuario = async (req, res) => {
     }
 }
 
+//Listar varios
+
 exports.obtenerUsuarios = async (req, res) => {
 
     try {
@@ -30,6 +34,8 @@ exports.obtenerUsuarios = async (req, res) => {
     }
 
 }
+
+//Editar
 
 exports.actualizarUsuario = async (req, res) => {
 
@@ -55,6 +61,7 @@ exports.actualizarUsuario = async (req, res) => {
     }
 }
 
+//Mostrar uno
 
 exports.obtenerUsuario = async (req, res) => {
 
@@ -72,6 +79,8 @@ exports.obtenerUsuario = async (req, res) => {
         res.status(500).send('Hubo un error');
     }
 }
+
+//Eliminar
 
 exports.eliminarUsuario = async (req, res) => {
 
