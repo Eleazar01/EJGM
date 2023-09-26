@@ -8,17 +8,19 @@ import { ListarCursosComponent } from './componentes/listar-cursos/listar-cursos
 import { ContactoComponent } from './componentes/contacto/contacto.component';
 import { CursoComponent} from './componentes/curso/curso.component';
 import { RegistroComponent } from './componentes/registro/registro.component';
+import { CrearUsuarioComponent } from './componentes/crear-usuario/crear-usuario.component';
 
 
 const routes: Routes = [
 
   {path: '', component: HomeComponent},
-  {path: 'crearcurso', component: CrearCursosComponent},
+  {path: 'crearCurso', component: CrearCursosComponent},
   {path: 'listarcursos', component: ListarCursosComponent},
   {path: 'editarCurso/:id', component: CrearCursosComponent},
   {path: 'contacto', component: ContactoComponent},
   {path: 'verCurso/:id', component: CursoComponent},
   {path: 'registro', component: RegistroComponent},
+  {path: 'crearUsuario', component: CrearUsuarioComponent},
 
   {path: '**', redirectTo: '',pathMatch:'full'}
 ];
