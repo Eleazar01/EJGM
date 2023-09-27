@@ -1,0 +1,96 @@
+
+<div class="caja">
+    <div class="container mt-15">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <span class="titulo">{{ titulo | uppercase }}</span>
+                        <form class="mb-3" [formGroup]="UsuarioForm" (ngSubmit)="agregarCurso()">
+    
+                            <!-- Nombre -->
+    
+                            <div class="mb-3">
+                                <input type="text" formControlName="nombre" class="form-control" placeholder="Nombre">
+                                <div class="text-danger" *ngIf="UsuarioForm.get('nombre')?.hasError('required') && UsuarioForm.get('nombre')?.touched">
+                                    <span>El nombre es obligatorio</span>
+                                </div>
+                            </div>
+    
+                            <!-- Apellidos -->
+    
+                            <div class="mb-3">
+                                <input type="text" formControlName="apellidos" class="form-control" placeholder="Apellidos">
+                                <div class="text-danger" *ngIf="UsuarioForm.get('apellidos')?.hasError('required') && UsuarioForm.get('apellidos')?.touched">
+                                    <span>Los apellidos son obligatorios</span>
+                                </div>
+                            </div>
+    
+                            <!-- Fnacimiento -->
+    
+                            <div class="mb-3">
+                                <input type="text" formControlName="Fnacimiento" class="form-control" placeholder="Fecha de nacimiento">
+                                <div class="text-danger" *ngIf="UsuarioForm.get('Fnacimiento')?.hasError('required') && UsuarioForm.get('Fnacimiento')?.touched">
+                                    <span>La Fecha de nacimiento es obligatoria</span>
+                                </div>
+                            </div>
+    
+                            <!-- Email -->
+    
+                            <div class="mb-3">
+                                <input type="email" formControlName="email" class="form-control" placeholder="Correo electrónico">
+                                <div class="text-danger" *ngIf="UsuarioForm.get('email')?.hasError('required') && UsuarioForm.get('email')?.touched">
+                                    <span>El correo electrónico es obligatorio</span>
+                                </div>
+                            </div>
+    
+                            <!-- Telefono -->
+    
+                            <div class="mb-3">
+                                <input type="text" formControlName="telefono" class="form-control" placeholder="Teléfono">
+                                <div class="text-danger" *ngIf="UsuarioForm.get('telefono')?.hasError('required') && UsuarioForm.get('telefono')?.touched">
+                                    <span>El telefono es obligatorio</span>
+                                </div>
+                            </div>
+    
+                            <!-- Foto -->
+    
+                            <div class="mb-3">
+                                <input type="text" formControlName="foto" class="form-control" placeholder="foto">
+                                <div class="text-danger" *ngIf="UsuarioForm.get('foto')?.hasError('required') && UsuarioForm.get('foto')?.touched">
+                                    <span>La foto es obligatoria</span>
+                                </div>
+                            </div>
+    
+                            <!-- Pass -->
+    
+                            <div class="mb-3">
+                                <input type="password" formControlName="pass" class="form-control" placeholder="Contraseña">
+                                <div class="text-danger" *ngIf="UsuarioForm.get('pass')?.hasError('required') && UsuarioForm.get('pass')?.touched">
+                                    <span>La contraseña es obligatoria</span>
+                                </div>
+                            </div>
+    
+                            <!-- Tipo -->
+    
+                            <div class="mb-3">
+                                <input type="text" formControlName="tipo" class="form-control" placeholder="Temas">
+                                <div class="text-danger" *ngIf="UsuarioForm.get('tipo')?.hasError('required') && UsuarioForm.get('tipo')?.touched">
+                                    <span>El tipo es obligatorio</span>
+                                </div>
+                            </div>
+    
+                            <!-- Guardar -->
+    
+                            <div class="mb-3">
+                                <button class="btn btn-secondary float-start" routerLink="/">VOLVER</button>
+                                <button type="submit" [disabled]="UsuarioForm.invalid" class="btn btn-success float-end">ACEPTAR</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -19,6 +19,8 @@ import { ListarCursosComponent } from './componentes/listar-cursos/listar-cursos
 import { CrearCursosComponent } from './componentes/crear-cursos/crear-cursos.component';
 import { ContactoComponent } from './componentes/contacto/contacto.component';
 import { CursoComponent } from './componentes/curso/curso.component';
+import { RegistroComponent } from './componentes/registro/registro.component';
+import { CrearUsuarioComponent } from './componentes/crear-usuario/crear-usuario.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { CursoComponent } from './componentes/curso/curso.component';
     CrearCursosComponent,
     HomeComponent,
     ContactoComponent,
-    CursoComponent
+    CursoComponent,
+    RegistroComponent,
+    CrearUsuarioComponent
   ],
   imports: [
     BrowserModule,
