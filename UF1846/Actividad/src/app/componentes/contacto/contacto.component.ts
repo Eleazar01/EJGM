@@ -23,7 +23,6 @@ export class ContactoComponent {
     this.contactoForm = this.fb.group({
       nombre: ['', Validators.required],
       email: ['', Validators.required],
-      telefono: ['', Validators.required],
       asunto: ['', Validators.required],
       textomensaje: ['', Validators.required]
     })
@@ -36,7 +35,6 @@ export class ContactoComponent {
     const MENSAJE: GMensaje  = {
       nombre: this.contactoForm.get('nombre')?.value,
       email: this.contactoForm.get('email')?.value,
-      telefono: this.contactoForm.get('telefono')?.value,
       asunto: this.contactoForm.get('asunto')?.value,
       textomensaje: this.contactoForm.get('textomensaje')?.value
     }

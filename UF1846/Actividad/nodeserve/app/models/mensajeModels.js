@@ -9,10 +9,6 @@ const MensajeSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    telefono: {
-        type: String,
-        required: true
-    },
     asunto: {
         type: String,
         required: true

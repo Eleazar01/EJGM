@@ -20,9 +20,12 @@ app.use(routermensaje);
 
 app.listen(PORT, () => console.log(`Listo por el puerto ${PORT}`));
 
-try {
+function test() {
+  try {
     sequelize.authenticate();
     console.log('La conexión se ha establecido correctamente.');
   } catch (error) {
     console.error('No se puede conectar a la base de datos:', error);
   }
+}
+test();

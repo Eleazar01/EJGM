@@ -31,14 +31,13 @@ exports.obtenerMensajes = async (req, res) => {
 
 exports.actualizarMensaje = async (req, res) => {
     try {
-        const { nombre, email, telefono, asunto, textomensaje} = req.body;
+        const { nombre, email, asunto, textomensaje} = req.body;
         let mensaje = await Mensaje.findById(req.params.id);
         if(!mensaje) {
             res.status(404).json({ msg: 'No existe el Mensaje' })
         }
         mensaje.nombre = nombre;
         mensaje.email = email;
-        mensaje.telefono = telefono;
         mensaje.asunto = asunto;
         mensaje.textomensaje= textomensaje;
         mensaje = await Mensaje.findOneAndUpdate({ _id: req.params.id },mensaje, { new: true} )
