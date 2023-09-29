@@ -1,26 +1,17 @@
 import { DataTypes } from 'sequelize';
 import db from '../config/connectdb';
 
-const Usuario = db.define('Usuario',{
-    nombre: {
+const Mensaje = db.define('mensajes',{
+    remite: {
         type: DataTypes.STRING
     },
-    apellidos: {
+    mail: {
         type: DataTypes.STRING
     },
-    Fnacimiento: {
+    asunto: {
         type: DataTypes.STRING
     },
-    email: {
-        type: DataTypes.STRING
-    },
-    telefono: {
-        type: DataTypes.STRING
-    },
-    tipo: {
-        type: DataTypes.STRING
-    },
-    foto: {
+    mensaje: {
         type: DataTypes.STRING
     }
 }, {
@@ -29,4 +20,4 @@ const Usuario = db.define('Usuario',{
 }
 );
 
-export default Usuario;
+export default Mensaje;

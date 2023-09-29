@@ -1,26 +1,20 @@
 import { DataTypes } from 'sequelize';
 import db from '../config/connectdb';
 
-const Usuario = db.define('Usuario',{
+const Tareas = db.define('Tareas',{
     nombre: {
         type: DataTypes.STRING
     },
-    apellidos: {
+    descripcion: {
         type: DataTypes.STRING
     },
-    Fnacimiento: {
+    puntuacion: {
         type: DataTypes.STRING
     },
-    email: {
+    estado: {
         type: DataTypes.STRING
     },
-    telefono: {
-        type: DataTypes.STRING
-    },
-    tipo: {
-        type: DataTypes.STRING
-    },
-    foto: {
+    importancia: {
         type: DataTypes.STRING
     }
 }, {
@@ -29,4 +23,4 @@ const Usuario = db.define('Usuario',{
 }
 );
 
-export default Usuario;
+export default Tareas;

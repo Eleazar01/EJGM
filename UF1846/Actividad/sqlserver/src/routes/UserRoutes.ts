@@ -3,10 +3,10 @@ import { deleteUsuario, getUsuario, getUsuarios, postUsuario, updateUsuario } fr
 
 const routeruser = Router();
 
-routeruser.get('/usuarios', getUsuarios);
-routeruser.get('/usuarios/:id', getUsuario);
-routeruser.delete('/usuarios/:id', deleteUsuario);
-routeruser.post('/usuarios', postUsuario);
-routeruser.put('/usuarios/:id', updateUsuario);
+routeruser.get('/usuario/', getUsuarios);
+routeruser.get('/usuario/:id', getUsuario);
+routeruser.delete('/usuario/:id', deleteUsuario);
+routeruser.post('/usuario/', postUsuario);
+routeruser.put('/usuario/:id', updateUsuario);
 
 export default routeruser;
