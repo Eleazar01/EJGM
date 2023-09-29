@@ -68,7 +68,6 @@ export class ContactoComponent {
         this.contactoForm.setValue({
           nombre: data.nombre,
           email: data.apellidos,
-          telefono: data.edad,
           asunto: data.email,
           textomensaje: data.telefono
         })

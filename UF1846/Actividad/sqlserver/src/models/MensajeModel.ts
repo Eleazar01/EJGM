@@ -2,16 +2,16 @@ import { DataTypes } from 'sequelize';
 import db from '../config/connectdb';
 
 const Mensaje = db.define('mensaje',{
-    remite: {
+    nombre: {
         type: DataTypes.STRING
     },
-    mail: {
+    email: {
         type: DataTypes.STRING
     },
     asunto: {
         type: DataTypes.STRING
     },
-    mensaje: {
+    textomensaje: {
         type: DataTypes.STRING
     }
 }, {
