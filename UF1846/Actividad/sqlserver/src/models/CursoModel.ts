@@ -16,6 +16,9 @@ const Curso = db.define('Curso',{
     },
     temas: {
         type: DataTypes.STRING
+    },
+    imagen: {
+        type: DataTypes.STRING
     }
 }, {
     createdAt: false,

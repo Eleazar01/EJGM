@@ -19,6 +19,9 @@ const Usuario = db.define('Usuario',{
     },
     tipo: {
         type: DataTypes.STRING
+    },
+    foto: {
+        type: DataTypes.STRING
     }
 }, {
     createdAt: false,
