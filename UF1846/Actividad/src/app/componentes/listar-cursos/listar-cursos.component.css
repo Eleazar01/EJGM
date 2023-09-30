@@ -1,3 +1,4 @@
+
 .fa-solid {
     cursor: pointer;
     margin-left: 1em;
@@ -24,4 +25,8 @@ img{
 button{
     width: 25%;
     margin: auto;
+    margin-top: 20px;
+}
+.titulo{
+    margin-top: 10px;
 }

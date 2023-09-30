@@ -22,6 +22,7 @@ import { ContactoComponent } from './componentes/contacto/contacto.component';
 import { CursoComponent } from './componentes/curso/curso.component';
 import { RegistroComponent } from './componentes/registro/registro.component';
 import { CrearUsuarioComponent } from './componentes/crear-usuario/crear-usuario.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { CrearUsuarioComponent } from './componentes/crear-usuario/crear-usuario
     ContactoComponent,
     CursoComponent,
     RegistroComponent,
-    CrearUsuarioComponent
+    CrearUsuarioComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
