@@ -1,14 +1,12 @@
 import { DataTypes } from 'sequelize';
 import db from '../config/connectdb';
 
-const Archivo = db.define('Archivo',{
-    idusuario: {
+const Admin = db.define('adminservices',{
+    
+    nombre: {
         type: DataTypes.STRING
     },
-    filename: {
-        type: DataTypes.STRING
-    },
-    path: {
+    descripcion: {
         type: DataTypes.STRING
     }
 }, {
@@ -17,4 +15,4 @@ const Archivo = db.define('Archivo',{
 }
 );
 
-export default Archivo;
+export default Admin;
