@@ -7,6 +7,7 @@ import routeruser from "./routes/UserRoutes";
 import routercurso from './routes/CursoRoutes';
 import routertareas from './routes/TareasRoutes';
 import routermensaje from './routes/MensajeRoutes';
+import routerarchivo from "./routes/ArchivoRoutes";
 
 const PORT = process.env.PORT || 3001;
 
@@ -17,6 +18,7 @@ app.use(routercurso);
 app.use(routeruser);
 app.use(routertareas);
 app.use(routermensaje);
+app.use(routerarchivo);
 
 app.listen(PORT, () => console.log(`Listo por el puerto ${PORT}`));
 
