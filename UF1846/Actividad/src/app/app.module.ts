@@ -5,7 +5,6 @@ import { HttpClientModule } from '@angular/common/http';
 
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomeComponent } from './componentes/home/home.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {MatIconModule} from '@angular/material/icon'
 
@@ -23,6 +22,7 @@ import { CursoComponent } from './componentes/curso/curso.component';
 import { RegistroComponent } from './componentes/registro/registro.component';
 import { CrearUsuarioComponent } from './componentes/crear-usuario/crear-usuario.component';
 import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './componentes/home/home.component';
 
 @NgModule({
   declarations: [
