@@ -22,7 +22,8 @@ const Curso = db.define('Curso',{
     }
 }, {
     createdAt: false,
-    updatedAt: false
+    updatedAt: false,
+    // freezeTableName: true
 }
 );
 
