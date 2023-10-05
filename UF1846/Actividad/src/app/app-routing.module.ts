@@ -14,7 +14,7 @@ import { CrearUsuarioComponent } from './componentes/crear-usuario/crear-usuario
 const routes: Routes = [
 
   {path: '', component: HomeComponent},
-  {path: 'crearcurso', component: CrearCursosComponent},
+  {path: 'crearcurso', component: CrearCursosComponent, canActivate[AuthGuard]},
   {path: 'listarcursos', component: ListarCursosComponent},
   {path: 'editarCurso/:id', component: CrearCursosComponent},
   {path: 'contacto', component: ContactoComponent},
