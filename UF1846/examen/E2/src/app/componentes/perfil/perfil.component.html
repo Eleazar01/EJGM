@@ -4,7 +4,7 @@
             <div class="card">
                 <div class="card-body text-center">
                     <span class="titulo">{{ titulo | uppercase }}</span>
-                    <form class="mb-3" [formGroup]="registroForm" (ngSubmit)="agregarRegistro()">
+                    <form class="mb-3" [formGroup]="registroForm" (ngSubmit)="esEditar()">
 
                         <!-- Nombre -->
 
@@ -36,7 +36,7 @@
                         <!-- email -->
 
                         <div class="mb-3">
-                            <input type="text" formControlName="email" class="form-control" placeholder="correo electrónico">
+                            <input type="email" formControlName="email" class="form-control" placeholder="correo electrónico">
                             <div class="text-danger" *ngIf="registroForm.get('email')?.hasError('required') && registroForm.get('email')?.touched">
                                 <span>El correo electrónico es obligatorio</span>
                             </div>
@@ -45,7 +45,7 @@
                         <!-- telefono -->
 
                         <div class="mb-3">
-                            <input type="text" formControlName="telefono" class="form-control" placeholder="telefono">
+                            <input type="number" formControlName="telefono" class="form-control" placeholder="telefono">
                             <div class="text-danger" *ngIf="registroForm.get('telefono')?.hasError('required') && registroForm.get('telefono')?.touched">
                                 <span>El telefono es obligatorio</span>
                             </div>
@@ -75,15 +75,15 @@
                         <div class="mb-3">
                             <label for="Imagen">Imagen</label>
                             <input type="file" formControlName="imagen" class="form-control" placeholder="Imagen">
-                            <div class="text-danger" *ngIf="registroForm.get('imagen')?.hasError('required') && registroForm.get('imagen')?.touched">
+                            <!-- <div class="text-danger" *ngIf="registroForm.get('imagen')?.hasError('required') && registroForm.get('imagen')?.touched">
                                 <span>La Imagen es obligatoria</span>
-                            </div>
+                            </div> -->
                         </div>
 
                         <!-- Botonera -->
 
                         <div class="mb-3">
-                            <button class="btn btn-secondary float-start" routerLink="/listarhistoria">VOLVER</button>
+                            <button class="btn btn-secondary float-start" routerLink="/">VOLVER</button>
                             <button type="submit" [disabled]="registroForm.invalid" class="btn btn-success float-end">ACEPTAR</button>
                         </div>
 

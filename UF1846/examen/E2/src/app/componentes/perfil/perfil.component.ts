@@ -42,40 +42,40 @@ export class PerfilComponent  implements OnInit{
       
     }
   
-    agregarRegistro() {
+    // agregarRegistro() {
   
-      const REGISTRO: GRegistro = {
-        nombre: this.registroForm.get('nombre')?.value,
-        apellidos: this.registroForm.get('apellidos')?.value,
-        Fnacimiento: this.registroForm.get('Fnacimiento')?.value,
-        email: this.registroForm.get('email')?.value,
-        telefono: this.registroForm.get('telefono')?.value,
-        foto: this.registroForm.get('foto')?.value,
-        pass: this.registroForm.get('pass')?.value,
-        tipo: this.registroForm.get('tipo')?.value,
-      }
+    //   const REGISTRO: GRegistro = {
+    //     nombre: this.registroForm.get('nombre')?.value,
+    //     apellidos: this.registroForm.get('apellidos')?.value,
+    //     Fnacimiento: this.registroForm.get('Fnacimiento')?.value,
+    //     email: this.registroForm.get('email')?.value,
+    //     telefono: this.registroForm.get('telefono')?.value,
+    //     foto: this.registroForm.get('foto')?.value,
+    //     pass: this.registroForm.get('pass')?.value,
+    //     tipo: this.registroForm.get('tipo')?.value,
+    //   }
   
-      if(this.id !== null){
-        // Editamos Registro
-        this._registroService.editarRegistro(this.id, REGISTRO).subscribe(data =>{
-          this.toastr.info('El registro fue actualizado con exito!', 'Registro Actualizado!');
-          this.router.navigate(['/']);
-        }, error => {
-          console.log(error);
-          this.registroForm.reset();
-        })
-      } else{
-        // Agregamos Registro
-        console.log(REGISTRO);
-          this._registroService.guardarRegistro(REGISTRO).subscribe(data => {
-          this.toastr.success('La historia fue registrada con exito!', 'Registro Registrada!');
-          this.router.navigate(['/']);
-        }, error => {
-          console.log(error);
-          this.registroForm.reset();
-        })
-      }
-    }
+    //   if(this.id !== null){
+    //     // Editamos Registro
+    //     this._registroService.editarRegistro(this.id, REGISTRO).subscribe(data =>{
+    //       this.toastr.info('El registro fue actualizado con exito!', 'Registro Actualizado!');
+    //       this.router.navigate(['/']);
+    //     }, error => {
+    //       console.log(error);
+    //       this.registroForm.reset();
+    //     })
+    //   } else{
+    //     // Agregamos Registro
+    //     console.log(REGISTRO);
+    //       this._registroService.guardarRegistro(REGISTRO).subscribe(data => {
+    //       this.toastr.success('La historia fue registrada con exito!', 'Registro Registrada!');
+    //       this.router.navigate(['/']);
+    //     }, error => {
+    //       console.log(error);
+    //       this.registroForm.reset();
+    //     })
+    //   }
+    // }
     
     esEditar() {
       if(this.id !== null) {
