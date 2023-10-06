@@ -1,0 +1,23 @@
+.header{
+    display: flex;
+    height: 10%;
+    justify-content: center;
+}
+app-header{
+    width: 100%;
+}
+.body{
+    display: flex;
+    height: 83%;
+    overflow: scroll;
+    justify-content: center;
+}
+
+.footer{
+    display: flex;
+    height: 10%;
+    justify-content: center;
+}
+app-footer{
+    width: 100%;
+}

@@ -1,0 +1,95 @@
+<div class="container mt-15">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body text-center">
+                    <span class="titulo">{{ titulo | uppercase }}</span>
+                    <form class="mb-3" [formGroup]="registroForm" (ngSubmit)="agregarRegistro()">
+
+                        <!-- Nombre -->
+
+                        <div class="mb-3">
+                            <input type="text" formControlName="nombre" class="form-control" placeholder="Nombre">
+                            <div class="text-danger" *ngIf="registroForm.get('nombre')?.hasError('required') && registroForm.get('nombre')?.touched">
+                                <span>El nombre es obligatorio</span>
+                            </div>
+                        </div>
+
+                        <!-- apellidos -->
+
+                        <div class="mb-3">
+                            <input type="text" formControlName="apellidos" class="form-control" placeholder="apellidos">
+                            <div class="text-danger" *ngIf="registroForm.get('apellidos')?.hasError('required') && registroForm.get('apellidos')?.touched">
+                                <span>El apellido es obligatorio</span>
+                            </div>
+                        </div>
+
+                        <!-- Fnacimiento -->
+
+                        <div class="mb-3">
+                            <input type="text" formControlName="Fnacimiento" class="form-control" placeholder="Fecha de naciemento">
+                            <div class="text-danger" *ngIf="registroForm.get('Fnacimiento')?.hasError('required') && registroForm.get('Fnacimiento')?.touched">
+                                <span>La fecha es obligatoria</span>
+                            </div>
+                        </div>
+
+                        <!-- email -->
+
+                        <div class="mb-3">
+                            <input type="text" formControlName="email" class="form-control" placeholder="correo electrónico">
+                            <div class="text-danger" *ngIf="registroForm.get('email')?.hasError('required') && registroForm.get('email')?.touched">
+                                <span>El correo electrónico es obligatorio</span>
+                            </div>
+                        </div>
+
+                        <!-- telefono -->
+
+                        <div class="mb-3">
+                            <input type="text" formControlName="telefono" class="form-control" placeholder="telefono">
+                            <div class="text-danger" *ngIf="registroForm.get('telefono')?.hasError('required') && registroForm.get('telefono')?.touched">
+                                <span>El telefono es obligatorio</span>
+                            </div>
+                        </div>
+
+                        <!-- pass -->
+
+                        <div class="mb-3">
+                            <input type="password" formControlName="pass" class="form-control" placeholder="contraseña">
+                            <!-- <div class="text-danger" *ngIf="registroForm.get('pass')?.hasError('required') && registroForm.get('pass')?.touched">
+                                <span>El pass es obligatorio</span>
+                            </div> -->
+                        </div>
+
+                        <!-- tipo -->
+
+                        <div class="mb-3">
+                            <input type="text" formControlName="tipo" class="form-control" placeholder="tipo">
+                            <!-- <div class="text-danger" *ngIf="registroForm.get('tipo')?.hasError('required') && registroForm.get('tipo')?.touched">
+                                <span>El tipo es obligatorio</span>
+                            </div> -->
+                        </div>
+
+
+                        <!-- Explorador de archivo -->
+
+                        <div class="mb-3">
+                            <label for="Imagen">Imagen</label>
+                            <input type="file" formControlName="imagen" class="form-control" placeholder="Imagen">
+                            <div class="text-danger" *ngIf="registroForm.get('imagen')?.hasError('required') && registroForm.get('imagen')?.touched">
+                                <span>La Imagen es obligatoria</span>
+                            </div>
+                        </div>
+
+                        <!-- Botonera -->
+
+                        <div class="mb-3">
+                            <button class="btn btn-secondary float-start" routerLink="/listarhistoria">VOLVER</button>
+                            <button type="submit" [disabled]="registroForm.invalid" class="btn btn-success float-end">ACEPTAR</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
