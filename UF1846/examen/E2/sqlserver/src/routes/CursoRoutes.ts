@@ -1,12 +1,13 @@
 import { Router } from 'express';
 import { deleteCurso, getCurso, getCursos, postCurso, updateCurso } from '../controllers/CursoController';
+import validateToken from '../services/validate-token';
 
-const routercurso = Router();
+const router = Router();
 
-routercurso.get('/cursos/', getCursos);
-routercurso.get('/cursos/:id', getCurso);
-routercurso.delete('/cursos/:id', deleteCurso);
-routercurso.post('/cursos/', postCurso);
-routercurso.put('/cursos/:id', updateCurso);
+router.get('/', validateToken, getCursos);
+router.get('/:id', validateToken, getCurso);
+router.delete('/:id', validateToken, deleteCurso);
+router.post('/', validateToken, postCurso);
+router.put('/:id', validateToken, updateCurso);
 
-export default routercurso;
+export default router;

@@ -1,9 +1,6 @@
-import { Request, Response } from 'express';
+import { JwtPayload } from "jsonwebtoken";
+import { Request } from "express";
 
-export interface ReqExt extends Request {
-    user?: {id: string};
-}
-
-export interface ResExt extends Response {
-    sendError?: (err: any) => void;
+export interface RequestExt extends Request {
+  user?: JwtPayload | { id: string };
 }

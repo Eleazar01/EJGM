@@ -34,6 +34,7 @@ export const deleteCurso = async (req: Request, res: Response) => {
             msg: 'El curso fue eliminado con exito!'
         })
     }
+
 }
 
 export const postCurso = async (req: Request, res: Response) => {
