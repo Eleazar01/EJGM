@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "E1": {
+    "E2": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,9 +13,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/e1",
+            "outputPath": "dist/e2",
             "index": "src/index.html",
-            "main": "src/main.ts",
+            "main": "src/main.ts",            
             "polyfills": [
               "zone.js"
             ],
@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "E1:build:production"
+              "browserTarget": "E2:build:production"
             },
             "development": {
-              "browserTarget": "E1:build:development"
+              "browserTarget": "E2:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "E1:build"
+            "browserTarget": "E2:build"
           }
         },
         "test": {

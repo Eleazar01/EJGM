@@ -1,7 +1,7 @@
 import { DataTypes } from 'sequelize';
 import sequelize from '../db/connection';
 
-export const User = sequelize.define('Usuario', {
+export const User = sequelize.define('usuarios', {
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -29,6 +29,9 @@ export const User = sequelize.define('Usuario', {
         type: DataTypes.STRING
     },
     tipo: {
+        type: DataTypes.STRING
+    },
+    foto: {
         type: DataTypes.STRING
     }
 }, {

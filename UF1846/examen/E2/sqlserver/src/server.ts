@@ -27,7 +27,7 @@ class Server {
 
     routes() {
        
-        this.app.use('/api/users', routesUser);
+        this.app.use('/api/usuarios', routesUser);
         this.app.use('/api/cursos', routesCurso);
     }
 

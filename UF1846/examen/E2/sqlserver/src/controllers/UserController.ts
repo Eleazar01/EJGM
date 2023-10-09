@@ -1,14 +1,14 @@
 import { Request, Response } from 'express';
-import Usuario from '../models/UserModel';
+import {User} from '../models/UserModel';
 
-export const getUsuarios = async (req: Request, res: Response) => {
-    const listUsuarios = await Usuario.findAll()
-    res.json(listUsuarios)
+export const getUsers = async (req: Request, res: Response) => {
+    const listUsers = await User.findAll()
+    res.json(listUsers)
 }
 
-export const getUsuario = async (req: Request, res: Response) => {
+export const getUser = async (req: Request, res: Response) => {
     const { id } = req.params;
-    const usuario = await Usuario.findByPk(id);
+    const usuario = await User.findByPk(id);
     if (usuario) {
         res.json(usuario)
     } else {
@@ -18,9 +18,9 @@ export const getUsuario = async (req: Request, res: Response) => {
     }
 }
 
-export const deleteUsuario = async (req: Request, res: Response) => {
+export const deleteUser = async (req: Request, res: Response) => {
     const { id } = req.params;
-    const usuario = await Usuario.findByPk(id);
+    const usuario = await User.findByPk(id);
     if (!usuario) {
         res.status(404).json({
             msg: `No existe un usuariocon el id ${id}`
@@ -33,10 +33,10 @@ export const deleteUsuario = async (req: Request, res: Response) => {
     }
 }
 
-export const postUsuario = async (req: Request, res: Response) => {
+export const postUser = async (req: Request, res: Response) => {
     const { body } = req;
     try {
-        await Usuario.create(body);
+        await User.create(body);
         res.json({
             msg: `El usuario fue agregado con exito!`
         })
@@ -48,11 +48,11 @@ export const postUsuario = async (req: Request, res: Response) => {
     }
 }
 
-export const updateUsuario = async (req: Request, res: Response) => {
+export const updateUser = async (req: Request, res: Response) => {
     const { body } = req;
     const { id } = req.params;
     try {
-        const usuario = await Usuario.findByPk(id);
+        const usuario = await User.findByPk(id);
     if(usuario) {
         await usuario.update(body);
         res.json({

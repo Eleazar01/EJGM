@@ -15,7 +15,7 @@
                               <th scope="col">email</th>
                               <th scope="col">telefono</th>
                               <th scope="col">foto</th>
-                              <th scope="col">pass</th>
+                              <th scope="col">password</th>
                               <th scope="col">tipo</th>
                             </tr>
                           </thead>
@@ -27,10 +27,10 @@
                               <td>{{usuario.email}}</td>
                               <td>{{usuario.telefono}}</td>
                               <td>{{usuario.foto}}</td>
-                              <td>{{usuario.pass}}</td>
+                              <td>{{usuario.password}}</td>
                               <td>{{usuario.tipo}}</td>
                               <td><i [routerLink]="['/crearUsuario', usuario._id]"class="fa-solid fa-pen-to-square text-primary"></i></td>
-                              <td><i (click)="eliminarRegistro(usuario._id)"class="fa-solid fa-trash text-danger"></i></td>
+                              <td><i (click)="eliminarUsuario(usuario._id)"class="fa-solid fa-trash text-danger"></i></td>
                               <td><mat-icon routerLink="/alumno">open_in_new</mat-icon></td>
                             </tr>
                           </tbody>

@@ -30,10 +30,10 @@ export class CrearUsuarioComponent implements OnInit{
         apellidos: ['', Validators.required],
         Fnacimiento: ['', Validators.required],
         email: ['', Validators.required],
+        password: ['', Validators.required],
         telefono: ['', Validators.required],
-        foto: ['', Validators.required],
-        pass: ['', Validators.required],
-        tipo: ['', Validators.required]
+        tipo: ['', Validators.required],
+        foto: ['', Validators.required]
       })
       this.id = this.aRouter.snapshot.paramMap.get('id');
     }
@@ -42,22 +42,22 @@ export class CrearUsuarioComponent implements OnInit{
       this.esEditar();
     }
   
-    agregarCurso() {
+    agregarUsuario() {
   
       const usuario: GRegistro = {
         nombre: this.UsuarioForm.get('nombre')?.value,
         apellidos: this.UsuarioForm.get('apellidos')?.value,
         Fnacimiento: this.UsuarioForm.get('Fnacimiento')?.value,
         email: this.UsuarioForm.get('email')?.value,
+        password: this.UsuarioForm.get('password')?.value,
         telefono: this.UsuarioForm.get('telefono')?.value,
-        foto: this.UsuarioForm.get('foto')?.value,
-        pass: this.UsuarioForm.get('pass')?.value,
-        tipo: this.UsuarioForm.get('tipo')?.value
+        tipo: this.UsuarioForm.get('tipo')?.value,
+        foto: this.UsuarioForm.get('foto')?.value
       }
   
       if(this.id !== null){
         // Editamos usuario
-        this._UsuarioService.editarRegistro(this.id, usuario).subscribe(data =>{
+        this._UsuarioService.editarUsuario(this.id, usuario).subscribe(data =>{
           this.toastr.info('El usuario fue actualizado con exito!', 'usuario Actualizado!');
           this.router.navigate(['/']);
         }, error => {
@@ -67,7 +67,7 @@ export class CrearUsuarioComponent implements OnInit{
       } else{
         // Agregamos usuario
         console.log(usuario);
-          this._UsuarioService.guardarRegistro(usuario).subscribe(data => {
+          this._UsuarioService.guardarUsuario(usuario).subscribe(data => {
           this.toastr.success('El usuario fue registrado con exito!', 'usuario Registrado!');
           this.router.navigate(['/']);
         }, error => {
@@ -79,14 +79,17 @@ export class CrearUsuarioComponent implements OnInit{
     
     esEditar() {
       if(this.id !== null) {
-        this.titulo = 'Editar usuario';
-        this._UsuarioService.obtenerRegistro(this.id).subscribe(data => {
+        this.titulo = 'Editar usuarios';
+        this._UsuarioService.obtenerUsuario(this.id).subscribe(data => {
           this.UsuarioForm.setValue({
             nombre: data.nombre,
-            descripcion: data.descripcion,
-            categoria: data.categoria,
-            duracion: data.duracion,
-            temas: data.temas
+            apellidos: data.apellidos,
+            Fnacimiento: data.Fnacimiento,
+            email: data.email,
+            password: data.password,
+            telefono: data.telefono,
+            tipo: data.tipo,
+            foto: data.foto,
           })
         })
       }

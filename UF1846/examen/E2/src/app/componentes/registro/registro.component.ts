@@ -34,20 +34,20 @@ export class RegistroComponent {
 
 }
 ngOnInit(): void{
-this.obtenerRegistro()
+this.obtenerUsuario()
 }
-obtenerRegistro() {
-this._gRegistroService.getRegistros().subscribe(data => {
+obtenerUsuario() {
+this._gRegistroService.getUsuario().subscribe(data => {
 console.log(data);
 this.listUsuario = data;
 }, error => {
 console.log(error);
 })
 }
-eliminarRegistro(id: any) {
-this._gRegistroService.eliminarRegistro(id).subscribe(data => {
+eliminarUsuario(id: any) {
+this._gRegistroService.eliminarUsuario(id).subscribe(data => {
 this.toastr.error('El usuario fue eliminado con exito' ,'Usuario Eliminado');
-this.obtenerRegistro();
+this.obtenerUsuario();
 }, error => {
 console.log(error);
 })

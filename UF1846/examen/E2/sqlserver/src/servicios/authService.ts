@@ -2,7 +2,7 @@ import { Auth } from "../interfaces/auth.interface";
 import { User } from "../interfaces/usuario.interface";
 
 // no necesita las llaves porq la exportaciones se hizo default
-import Usuario from "../models/UserModel";
+import {Usuario} from "../models/UserModel";
 
 import { encriptar, verificar } from "../utils/bcryptjs.handle";
 import { generarToken } from "../utils/jwt.handle";
