@@ -8,7 +8,7 @@ import { GRegistro } from '../Modelos/gregistro';
 })
 export class GregistroService {
 
-  url= 'http://localhost:3001/api/usuarios/'
+  url= 'http://127.0.0.1:3001/api/usuarios/'
 
   constructor(private http: HttpClient) { }
 

@@ -4,7 +4,7 @@
             <div class="card">
                 <div class="card-body text-center">
                     <span class="titulo">{{ titulo | uppercase }}</span>
-                    <form class="mb-3" [formGroup]="registroForm" (ngSubmit)="esEditarp()">
+                    <form class="mb-3" [formGroup]="registroForm" (ngSubmit)="agregarUsuario()">
 
                         <!-- Nombre -->
 <!-- 
@@ -60,7 +60,7 @@
 
                         <div class="mb-3">
                             <button class="btn btn-secondary float-start" routerLink="/">VOLVER</button>
-                            <button type="submit" [disabled]="registroForm.invalid" class="btn btn-success float-end">ACEPTAR</button>
+                            <button type="submit" class="btn btn-success float-end">ACEPTAR</button>
                         </div>
 
                     </form>
