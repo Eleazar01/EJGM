@@ -33,7 +33,7 @@ export class CrearUsuarioComponent implements OnInit{
         password: ['', Validators.required],
         telefono: ['', Validators.required],
         tipo: ['', Validators.required],
-        foto: ['', Validators.required]
+
       })
       this.id = this.aRouter.snapshot.paramMap.get('id');
     }
@@ -52,12 +52,11 @@ export class CrearUsuarioComponent implements OnInit{
         password: this.UsuarioForm.get('password')?.value,
         telefono: this.UsuarioForm.get('telefono')?.value,
         tipo: this.UsuarioForm.get('tipo')?.value,
-        foto: this.UsuarioForm.get('foto')?.value
       }
   
       if(this.id !== null){
         // Editamos usuario
-        this._UsuarioService.editarUsuario(this.id, usuario).subscribe(data =>{
+        this._UsuarioService.updateUsuario(this.id, usuario).subscribe(data =>{
           this.toastr.info('El usuario fue actualizado con exito!', 'usuario Actualizado!');
           this.router.navigate(['/']);
         }, error => {
@@ -67,7 +66,7 @@ export class CrearUsuarioComponent implements OnInit{
       } else{
         // Agregamos usuario
         console.log(usuario);
-          this._UsuarioService.guardarUsuario(usuario).subscribe(data => {
+          this._UsuarioService.postUsuario(usuario).subscribe(data => {
           this.toastr.success('El usuario fue registrado con exito!', 'usuario Registrado!');
           this.router.navigate(['/']);
         }, error => {
@@ -80,7 +79,7 @@ export class CrearUsuarioComponent implements OnInit{
     esEditar() {
       if(this.id !== null) {
         this.titulo = 'Editar usuarios';
-        this._UsuarioService.obtenerUsuario(this.id).subscribe(data => {
+        this._UsuarioService.getUsuario(this.id).subscribe(data => {
           this.UsuarioForm.setValue({
             nombre: data.nombre,
             apellidos: data.apellidos,
@@ -89,7 +88,6 @@ export class CrearUsuarioComponent implements OnInit{
             password: data.password,
             telefono: data.telefono,
             tipo: data.tipo,
-            foto: data.foto,
           })
         })
       }

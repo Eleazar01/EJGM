@@ -12,23 +12,23 @@ export class GregistroService {
 
   constructor(private http: HttpClient) { }
 
-  getUsuario(): Observable<any>{
+  getUsuarios(): Observable<any>{
     return this.http.get(this.url)
   }
 
-  eliminarUsuario(id: string): Observable<any> {
+  deleteUsuario(id: string): Observable<any> {
     return this.http.delete(this.url + id);
   }
 
-  guardarUsuario(Registro: GRegistro): Observable<any> {
+  postUsuario(Registro: GRegistro): Observable<any> {
     return this.http.post(this.url, Registro);
   }
 
-  obtenerUsuario(id: string): Observable<any> {
+  getUsuario(id: string): Observable<any> {
     return this.http.get(this.url + id);
   }
 
-  editarUsuario(id: string, Registro: GRegistro): Observable<any>{
+  updateUsuario(id: string, Registro: GRegistro): Observable<any>{
     return this.http.put(this.url + id, Registro)
 
   }

@@ -7,9 +7,9 @@ export class GRegistro{
 	public password: string
     public telefono: string
 	public tipo: string
-    public foto: string
+   
     
-	constructor(_id : string, nombre: string, apellidos: string, Fnacimiento: string, email: string, telefono: string, foto: string, pass: string, tipo: string){
+	constructor(_id : string, nombre: string, apellidos: string, Fnacimiento: string, email: string, telefono: string, pass: string, tipo: string){
         this._id = _id;
         this.nombre = nombre;
         this.apellidos = apellidos;
@@ -18,7 +18,7 @@ export class GRegistro{
         this.password = pass;
         this.telefono = telefono;
         this.tipo = tipo;       
-        this.foto = foto;
+    
     }   
     
 }

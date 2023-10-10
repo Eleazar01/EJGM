@@ -47,20 +47,12 @@
                             <!-- Telefono -->
     
                             <div class="mb-3">
-                                <input type="text" formControlName="telefono" class="form-control" placeholder="Teléfono">
+                                <input type="number" formControlName="telefono" class="form-control" placeholder="Teléfono">
                                 <div class="text-danger" *ngIf="UsuarioForm.get('telefono')?.hasError('required') && UsuarioForm.get('telefono')?.touched">
                                     <span>El telefono es obligatorio</span>
                                 </div>
                             </div>
     
-                            <!-- Foto -->
-    
-                            <div class="mb-3">
-                                <input type="text" formControlName="foto" class="form-control" placeholder="foto">
-                                <div class="text-danger" *ngIf="UsuarioForm.get('foto')?.hasError('required') && UsuarioForm.get('foto')?.touched">
-                                    <span>La foto es obligatoria</span>
-                                </div>
-                            </div>
     
                             <!-- Pass -->
     
