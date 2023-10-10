@@ -10,6 +10,7 @@ import { CursoComponent} from './componentes/curso/curso.component';
 import { RegistroComponent } from './componentes/registro/registro.component';
 import { CrearUsuarioComponent } from './componentes/crear-usuario/crear-usuario.component';
 import { PerfilComponent } from './componentes/perfil/perfil.component';
+import { AgregarArchivoComponent } from './componentes/agregar-archivo/agregar-archivo.component';
 
 
 const routes: Routes = [
@@ -22,7 +23,7 @@ const routes: Routes = [
   {path: 'verCurso/:id', component: CursoComponent},
   {path: 'registro', component: RegistroComponent},
   {path: 'crearUsuario', component: CrearUsuarioComponent},
-  {path: 'perfil', component: PerfilComponent},
+  {path: 'perfil', component: AgregarArchivoComponent},
 
   {path: '**', redirectTo: '',pathMatch:'full'}
 ];

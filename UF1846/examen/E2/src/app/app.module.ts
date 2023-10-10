@@ -24,6 +24,7 @@ import { CrearUsuarioComponent } from './componentes/crear-usuario/crear-usuario
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { PerfilComponent } from './componentes/perfil/perfil.component';
+import { AgregarArchivoComponent } from './componentes/agregar-archivo/agregar-archivo.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { PerfilComponent } from './componentes/perfil/perfil.component';
     RegistroComponent,
     CrearUsuarioComponent,
     FooterComponent,
-    PerfilComponent
+    PerfilComponent,
+    AgregarArchivoComponent
   ],
   imports: [
     BrowserModule,
