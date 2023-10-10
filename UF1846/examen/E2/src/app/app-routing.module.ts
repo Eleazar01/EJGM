@@ -23,7 +23,7 @@ const routes: Routes = [
   {path: 'verCurso/:id', component: CursoComponent},
   {path: 'registro', component: RegistroComponent},
   {path: 'crearUsuario', component: CrearUsuarioComponent},
-  {path: 'perfil', component: AgregarArchivoComponent},
+  {path: 'perfil', component: PerfilComponent},
 
   {path: '**', redirectTo: '',pathMatch:'full'}
 ];
