@@ -18,6 +18,7 @@ const user_1 = __importDefault(require("../routes/user"));
 const storage_1 = require("../routes/storage");
 const user_2 = require("./user");
 const storage_2 = __importDefault(require("./storage"));
+const UserRoutes_1 = __importDefault(require("../routes/UserRoutes"));
 class Server {
     constructor() {
         this.app = (0, express_1.default)();
@@ -35,7 +36,7 @@ class Server {
     routes() {
         this.app.use('/api/user', user_1.default);
         this.app.use('/api/cursos', user_1.default);
-        this.app.use('/api/usuarios', user_1.default);
+        this.app.use('/api/usuarios', UserRoutes_1.default);
         this.app.use('/api/upload', storage_1.routerFile);
     }
     midlewares() {
