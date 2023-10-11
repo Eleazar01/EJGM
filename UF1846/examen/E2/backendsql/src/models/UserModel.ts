@@ -2,6 +2,11 @@ import { DataTypes } from 'sequelize';
 import sequelize from '../db/connection'
 
 const Usuario = sequelize.define('usuarios',{
+    id: {
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true
+    },
     nombre: {
         type: DataTypes.STRING
     },
@@ -21,12 +26,6 @@ const Usuario = sequelize.define('usuarios',{
         type: DataTypes.STRING
     },
     tipo: {
-        type: DataTypes.STRING
-    },
-    foto: {
-        type: DataTypes.STRING
-    },
-    anotaciones: {
         type: DataTypes.STRING
     }
 }, {

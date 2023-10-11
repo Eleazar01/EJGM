@@ -9,13 +9,13 @@ export class GRegistro{
 	public tipo: string
    
     
-	constructor(_id : string, nombre: string, apellidos: string, Fnacimiento: string, email: string, telefono: string, pass: string, tipo: string){
+	constructor(_id : string, nombre: string, apellidos: string, Fnacimiento: string, email: string, telefono: string, password: string, tipo: string){
         this._id = _id;
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.Fnacimiento = Fnacimiento;
         this.email = email;
-        this.password = pass;
+        this.password = password;
         this.telefono = telefono;
         this.tipo = tipo;       
     

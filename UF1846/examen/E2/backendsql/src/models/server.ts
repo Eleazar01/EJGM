@@ -27,10 +27,10 @@ class Server {
     }
 
     routes() {
-        this.app.use('/api/user', routesUser);
-        this.app.use('/api/cursos', routesUser);
-        this.app.use('/api/usuarios', userrouter);
-        this.app.use('/api/upload', routerFile)
+        this.app.use('/api/user/', routesUser);
+        this.app.use('/api/cursos/', routesUser);
+        this.app.use('/api/usuarios/', userrouter);
+        this.app.use('/api/upload/', routerFile)
     }
 
     midlewares() {

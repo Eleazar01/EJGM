@@ -34,10 +34,10 @@ class Server {
         });
     }
     routes() {
-        this.app.use('/api/user', user_1.default);
-        this.app.use('/api/cursos', user_1.default);
-        this.app.use('/api/usuarios', UserRoutes_1.default);
-        this.app.use('/api/upload', storage_1.routerFile);
+        this.app.use('/api/user/', user_1.default);
+        this.app.use('/api/cursos/', user_1.default);
+        this.app.use('/api/usuarios/', UserRoutes_1.default);
+        this.app.use('/api/upload/', storage_1.routerFile);
     }
     midlewares() {
         // Parseo body
