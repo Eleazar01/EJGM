@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
-import { GcursoService } from '../../config/Servicios/gcurso.service';
+import { GcursoService } from 'src/app/config/Servicios/gcuerso.servicesql';
 import { GCurso } from '../../config/Modelos/gcurso';
 
 @Component({
@@ -29,7 +29,7 @@ export class ListarCursosComponent {
     }
     
     eliminarCurso(id: any) {
-      this._gcursoService.eliminarCurso(id).subscribe(data => {
+      this._gcursoService.deleteCurso(id).subscribe(data => {
         this.toastr.error('El curso fue eliminado con exito' ,'Curso Eliminado');
         this.obtenerCursos();
       }, error => {

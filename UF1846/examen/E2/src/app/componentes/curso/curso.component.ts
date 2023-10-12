@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GcursoService } from '../../config/Servicios/gcurso.service';
+import { GcursoService } from 'src/app/config/Servicios/gcuerso.servicesql';
 import { GCurso } from '../../config/Modelos/gcurso';
 
 @Component({

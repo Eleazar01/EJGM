@@ -19,6 +19,9 @@ const storage_1 = require("../routes/storage");
 const user_2 = require("./user");
 const storage_2 = __importDefault(require("./storage"));
 const UserRoutes_1 = __importDefault(require("../routes/UserRoutes"));
+const UserModel_1 = __importDefault(require("./UserModel"));
+const CursoModel_1 = __importDefault(require("./CursoModel"));
+const CursoRoutes_1 = __importDefault(require("../routes/CursoRoutes"));
 class Server {
     constructor() {
         this.app = (0, express_1.default)();
@@ -35,7 +38,7 @@ class Server {
     }
     routes() {
         this.app.use('/api/user/', user_1.default);
-        this.app.use('/api/cursos/', user_1.default);
+        this.app.use('/api/cursos/', CursoRoutes_1.default);
         this.app.use('/api/usuarios/', UserRoutes_1.default);
         this.app.use('/api/upload/', storage_1.routerFile);
     }
@@ -50,6 +53,8 @@ class Server {
             try {
                 yield user_2.User.sync();
                 yield storage_2.default.sync();
+                yield UserModel_1.default.sync();
+                yield CursoModel_1.default.sync();
             }
             catch (error) {
                 console.error('Unable to connect to the database:', error);

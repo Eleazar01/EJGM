@@ -16,8 +16,8 @@ import { AgregarArchivoComponent } from './componentes/agregar-archivo/agregar-a
 const routes: Routes = [
 
   {path: '', component: HomeComponent},
-  {path: 'crearcurso', component: CrearCursosComponent},
-  {path: 'listarcursos', component: ListarCursosComponent},
+  {path: 'crearCurso', component: CrearCursosComponent},
+  {path: 'listarCursos', component: ListarCursosComponent},
   {path: 'editarCurso/:id', component: CrearCursosComponent},
   {path: 'contacto', component: ContactoComponent},
   {path: 'verCurso/:id', component: CursoComponent},

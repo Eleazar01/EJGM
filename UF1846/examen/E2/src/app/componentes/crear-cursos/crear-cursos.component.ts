@@ -6,7 +6,7 @@ import { ToastrService } from 'ngx-toastr';
 
 // Servicio - Modelo
 import { GCurso } from '../../config/Modelos/gcurso';
-import { GcursoService } from '../../config/Servicios/gcurso.service';
+import { GcursoService } from 'src/app/config/Servicios/gcuerso.servicesql';
 
 @Component({
   selector: 'app-crear-cursos',
@@ -52,7 +52,7 @@ export class CrearCursosComponent implements OnInit{
   
       if(this.id !== null){
         // Editamos Curso
-        this._cursoService.editarCurso(this.id, CURSO).subscribe(data =>{
+        this._cursoService.updateCurso(this.id, CURSO).subscribe(data =>{
           this.toastr.info('El curso fue actualizado con exito!', 'Curso Actualizado!');
           this.router.navigate(['/']);
         }, error => {
@@ -62,7 +62,7 @@ export class CrearCursosComponent implements OnInit{
       } else{
         // Agregamos Curso
         console.log(CURSO);
-          this._cursoService.guardarCurso(CURSO).subscribe(data => {
+          this._cursoService.postCurso(CURSO).subscribe(data => {
           this.toastr.success('El curso fue registrado con exito!', 'Curso Registrado!');
           this.router.navigate(['/']);
         }, error => {
@@ -75,7 +75,7 @@ export class CrearCursosComponent implements OnInit{
     esEditar() {
       if(this.id !== null) {
         this.titulo = 'Editar curso';
-        this._cursoService.obtenerCurso(this.id).subscribe(data => {
+        this._cursoService.getCurso(this.id).subscribe(data => {
           this.cursoForm.setValue({
             nombre: data.nombre,
             descripcion: data.descripcion,

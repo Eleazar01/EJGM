@@ -6,14 +6,15 @@ export class GCurso{
 	public imagen: string
 	public duracion: number
 	public temas: string
-	public fechaCreacion?: string
-	constructor(nombre: string, descripcion: string, categoria: string, imagen: string, duracion: number, temas: string, fechaCreacion: string){
+	
+	
+	constructor(nombre: string, descripcion: string, categoria: string, imagen: string, duracion: number, temas: string){
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.categoria = categoria;
 		this.imagen = imagen
         this.duracion = duracion;
         this.temas = temas;
-		this.fechaCreacion = fechaCreacion;
+		
     }
 }

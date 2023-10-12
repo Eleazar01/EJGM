@@ -5,6 +5,9 @@ import { routerFile } from '../routes/storage'
 import { User } from './user';
 import  Archivo  from './storage'
 import  userrouter  from '../routes/UserRoutes'
+import Usuario from './UserModel';
+import Curso from './CursoModel';
+import routercurso from '../routes/CursoRoutes';
 
 
 class Server {
@@ -28,7 +31,7 @@ class Server {
 
     routes() {
         this.app.use('/api/user/', routesUser);
-        this.app.use('/api/cursos/', routesUser);
+        this.app.use('/api/cursos/', routercurso);
         this.app.use('/api/usuarios/', userrouter);
         this.app.use('/api/upload/', routerFile)
     }
@@ -45,7 +48,10 @@ class Server {
         try {
            
             await User.sync();
-            await Archivo.sync()
+            await Archivo.sync();
+            await Usuario.sync();
+            await Curso.sync();
+            
         } catch (error) {
             console.error('Unable to connect to the database:', error);
         }

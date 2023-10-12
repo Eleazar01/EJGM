@@ -16,19 +16,19 @@ export class GcursoService {
     return this.http.get(this.url)
   }
 
-  eliminarCurso(id: string): Observable<any> {
+  deleteCurso(id: string): Observable<any> {
     return this.http.delete(this.url + id);
   }
 
-  guardarCurso(curso: GCurso): Observable<any> {
+  postCurso(curso: GCurso): Observable<any> {
     return this.http.post(this.url, curso);
   }
 
-  obtenerCurso(id: string): Observable<any> {
+  getCurso(id: string): Observable<any> {
     return this.http.get(this.url + id);
   }
 
-  editarCurso(id: string, curso: GCurso): Observable<any>{
+  updateCurso(id: string, curso: GCurso): Observable<any>{
     return this.http.put(this.url + id, curso)
 
   }
